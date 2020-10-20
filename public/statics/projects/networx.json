@@ -1,0 +1,20 @@
+{
+  "title": "networx Job Search",
+  "introduction": "Whilst working within the recruitment industry I was proud to lead the proposed redesign and frontend development of the application process, this redesign affects a number of well known clients including Argos, The Cabinet Office and United Learning. </br> </br> Click the button below to view a static markup of the design.",
+  "images":[
+    {
+      "url":"networx/search",
+      "altText":""
+    },
+    {
+      "url":"networx/job",
+      "altText":""
+    },
+    {
+      "url":"networx/account",
+      "altText":""
+    }
+  ],
+  "hasExternalLink": true,
+  "externalLink": "http://www.latestvacancies.com/design/2018/redesigns/candidate-experience/"
+}

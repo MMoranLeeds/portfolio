@@ -1,0 +1,125 @@
+[
+    {
+        "reference":"in-ui-brand",
+        "title": "In Ui Brand",
+        "type":[
+            {
+                "name": "UI"
+            },
+            {
+                "name": "UX"
+            },
+            {
+                "name": "Development"
+            },
+            {
+                "name": "Accessibility"
+            },
+            {
+                "name": "Print"
+            }
+        ],
+        "image": {
+            "url": "in-ui",
+            "altText": "Laptop showing a system using a shared layout called In Ui."
+        }
+    },
+    {
+        "reference":"pattern-library",
+        "title": "In Ui Pattern Library",
+        "type":[
+            {
+                "name": "UI"
+            },
+            {
+                "name": "UX"
+            },
+            {
+                "name": "Development"
+            },
+            {
+                "name": "Accessibility"
+            }
+        ],
+        "image": {
+            "url": "pattern-library",
+            "altText": "Desktop computer displaying home page for the In Ui Pattern Library."
+        }
+    },
+    {
+        "reference":"parcel-tracker",
+        "title": "Parcel Tracker",
+        "type":[
+            {
+                "name": "UI"
+            },
+            {
+                "name": "UX"
+            },
+            {
+                "name": "Development"
+            }
+        ],
+        "image": {
+            "url": "parcel-tracker",
+            "altText": "Parcel Tracker system displaying results of parcels delivered and tracked."
+        }
+    },
+    {
+        "reference":"incommunities-forms",
+        "title": "Incommunities Forms Builder",
+        "type":[
+            {
+                "name": "UI"
+            },
+            {
+                "name": "UX"
+            },
+            {
+                "name": "Development"
+            }
+        ],
+        "image": {
+            "url": "forms-builder",
+            "altText": "Screen of the laptop depicts a view of the Forms Builder system."
+        }
+    },
+    {
+        "reference":"stovax",
+        "title": "Stovax Careers Microsite",
+        "type":[
+            {
+                "name": "UI"
+            },
+            {
+                "name": "UX"
+            },
+            {
+                "name": "Development"
+            }
+        ],
+        "image": {
+            "url": "stovax",
+            "altText": "Laptop on a table showing Stovax Careers Microsite."
+        }
+    },
+    {
+        "reference":"networx",
+        "title": "networx Job Search",
+        "type":[
+            {
+                "name": "UI"
+            },
+            {
+                "name": "UX"
+            },
+            {
+                "name": "Development"
+            }
+        ],
+        "image": {
+            "url": "networx",
+            "altText": "Responsive website shown for networx Recruitment."
+        }
+    }
+]

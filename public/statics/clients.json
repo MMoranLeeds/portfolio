@@ -1,0 +1,42 @@
+[
+  {
+    "clientName":"Argos",
+    "reference":"argos"
+  },
+  {
+    "clientName":"Evans Cycles",
+    "reference":"evans-cycles"
+  },
+  {
+    "clientName":"Government Digital Service",
+    "reference":"gds"
+  },
+  {
+    "clientName":"Hobbycraft",
+    "reference":"hobbycraft"
+  },
+  {
+    "clientName":"Incommunities Housing Association",
+    "reference":"incommunities"
+  },
+  {
+    "clientName":"London City Airport",
+    "reference":"london-city-airport"
+  },
+  {
+    "clientName":"netowrx Recruitment",
+    "reference":"networx"
+  },
+  {
+    "clientName":"Stonegate Pub Company",
+    "reference":"stonegate"
+  },
+  {
+    "clientName":"Stovax Gazco",
+    "reference":"stovax"
+  },
+  {
+    "clientName":"United Learning",
+    "reference":"united-learning"
+  }
+]

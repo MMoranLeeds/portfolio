@@ -1,0 +1,18 @@
+{
+  "title": "Incommunities Forms Builder",
+  "introduction": "Whilst working at Incommunities the digital transformation from paper based forms to computer based resulted in the need for an online form submission system.</br></br> Creating an interface that met the complex requirements of the project along with whilst ensuring that users were presented with a modern UI that fit for the digital transformation.</br></br> A custom multi stage form builder with drag and drop functionality was implemented allowing business users to create forms as and when required.",
+  "images":[
+    {
+      "url":"forms/landing-page",
+      "altText":""
+    },
+    {
+      "url":"forms/builder",
+      "altText":""
+    },
+    {
+      "url":"forms/form",
+      "altText":""
+    }
+  ]
+}

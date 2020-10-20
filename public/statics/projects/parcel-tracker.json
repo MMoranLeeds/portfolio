@@ -1,0 +1,18 @@
+{
+  "title": "Parcel Tracker",
+  "introduction": "Whilst working at Incommunities Housing Association I have been proud to lead the UI / UX Design and Front End Development on an internally hosted Parcel Tracking web application. </br> </br> Taking an existing outdated application I initially created a user centered modern layout offering users a number of quality of life improvements. </br> </br> This was then implemented as a VueJs SPA, SASS was used for styling and GulpJs for compiling automation. </br></br> The end result allows users to search for parcel deliveries with a range of filters, view each parcel with the ability to add notes and finally add any new deliveries through a step wizard process all the while on a fully responsive site.",
+  "images":[
+    {
+      "url":"parcel-tracker/parcel-search",
+      "altText":""
+    },
+    {
+      "url":"parcel-tracker/view-parcel",
+      "altText":""
+    },
+    {
+      "url":"parcel-tracker/add-parcel",
+      "altText":""
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[{
+        "title": "Parcel Tracker",
+        "image": "parcel-tracker",
+        "altText": "Two laptops displaying screens from the Parcel Tracker system.",
+        "backgroundColor": "#e6f0fe",
+        "reference": "parcel-tracker"
+    },
+    {
+        "title": "In Ui Brand",
+        "image": "inui-layout",
+        "altText": "Responsive system layout shown on a tablet and mobile device.",
+        "backgroundColor": "#cef2f4",
+        "reference": "in-ui-brand"
+    },
+    {
+        "title": "Pattern Library",
+        "image": "pattern-library",
+        "altText": "Laptop presenting the home screen of the Incommunities Pattern Library.",
+        "backgroundColor": "#dfdefe",
+        "reference": "pattern-library"
+    }
+]

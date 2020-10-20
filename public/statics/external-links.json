@@ -1,0 +1,25 @@
+[{
+        "name": "GitHub",
+        "icon": "github-icon",
+        "url": "https://github.com/MMoranLeeds/portfolio",
+        "ariaLabel": "View the source code for this project on GitHub"
+    },
+    {
+        "name": "CV Download",
+        "icon": "download-icon",
+        "url": "https://drive.google.com/file/d/1tIYpMAuxt_2-Ur_WroUtyn7UYQduYSXX/view?usp=sharing",
+        "ariaLabel": "Download a copy of my CV"
+    },
+    {
+        "name": "Email",
+        "icon": "email-icon",
+        "url": "mailto:matthewdm@live.co.uk?subject = Hi Matthew&body = I just wanted to drop you a quick email...",
+        "ariaLabel": "Get in touch by email"
+    },
+    {
+        "name": "LinkedIn",
+        "icon": "linkedin-icon",
+        "url": "https://www.linkedin.com/in/matthewmoran5/",
+        "ariaLabel": "View my LinkedIn account"
+    }
+]

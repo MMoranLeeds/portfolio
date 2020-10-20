@@ -1,0 +1,22 @@
+{
+  "title": "Pattern Library",
+  "introduction": "Working in conjunction with the customised Ui created for In Ui, a Pattern Library was created to act a central reference area for other members of the team. </br></br> Code snippets alongside UI component examples were made available to assit with common UI and UX patterns. Consistency was greatly improved as a result meaning once again that users we're recieving a consistent UX across systems.</br></br> Further development was integrated to implement a UX playground allowing Prototypes created in Adobe XD to be displayed to business with ease.",
+  "images":[
+    {
+      "url":"pattern-library/landing-page",
+      "altText":""
+    },
+    {
+      "url":"pattern-library/iconography",
+      "altText":""
+    },
+    {
+      "url":"pattern-library/prototype",
+      "altText":""
+    },
+    {
+      "url":"pattern-library/about",
+      "altText":""
+    }
+  ]
+}
