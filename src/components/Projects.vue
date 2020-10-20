@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     fetchProjects: function () {
-      const baseURI = "/statics/projectsPreview.json";
+      const baseURI = "/statics/projects-preview.json";
       this.$http
         .get(baseURI)
         .then((result) => {
