@@ -1,6 +1,6 @@
 <template>
   <section data-section-testimonials>
-    <carousel v-bind:per-page="1" v-bind:navigationEnabled="true" paginationActiveColor="#fff" paginationColor="#fff" navigationNextLabel="<svg><use href='#arrow-icon' /></svg>" navigationPrevLabel="<svg><use href='#arrow-icon' /></svg>" v-bind:navigationClickTargetSize="10" v-bind:paginationPadding="0" v-bind:paginationSize="20">
+    <carousel v-bind:per-page="1" v-bind:navigationEnabled="true" paginationActiveColor="#fff" paginationColor="#fff" navigationNextLabel="<svg><use href='#arrow-icon' /></svg>" navigationPrevLabel="<svg><use href='#arrow-icon' /></svg>" v-bind:navigationClickTargetSize="10" v-bind:paginationPadding="0" v-bind:paginationSize="20" v-bind:minSwipeDistance="200">
       <slide v-for="(testimonial, i) in testimonials" v-bind:key="i">
         <blockquote>
           <p v-html="testimonial.bodyContent"></p>
