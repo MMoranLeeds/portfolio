@@ -56,6 +56,7 @@ export default {
         .catch((error) => {
           console.log(error);
           this.axiosError = true;
+          this.$router.push("/NotFound");
         })
         .finally(() => {
           setTimeout(() => (this.handleLoading = true), 750);
