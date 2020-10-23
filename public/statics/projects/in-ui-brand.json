@@ -1,14 +1,17 @@
 {
   "title": "In Ui Brand",
   "introduction": "Upon joining Incommunities Housing Association I took the lead in designing and implementing a fully customised shared user interface to be used across a number of internally based systems.</br></br> An internally based CDN was used to distriubute the relevant styling dependencies and as such maintainability across all systems was vastly increased. </br></br> Sub-branding was implemented through a number of SASS mixins, this provided a sense of independence towards each system whilst at the same time being a familiar interface to the end user. </br></br> The UI was subsequently branded as In Ui alongside a campaign to highlight the extensive work that had taken place in order to benefit users day to day roles.</br></br> The result of this extensive piece of work is that users now benefit from a consistent UX, responsive systems regardless of the screen size and a custom built branded interface.",
-  "images":[
-    {
-      "url":"inui/posters",
-      "altText": "Image showing a number of branded posters for the In Ui brand."
+  "images": [{
+      "url": "inui/posters",
+      "altText": "Image showing a number of branded posters for the In Ui brand.",
+      "thumb": "/img/projects/inui/posters.png",
+      "src": "/img/projects/inui/posters.png"
     },
     {
-      "url":"inui/business-cards",
-      "altText": "A number of business cards displaying the In Ui branded logo alongside call to action words."
+      "url": "inui/business-cards",
+      "altText": "A number of business cards displaying the In Ui branded logo alongside call to action words.",
+      "thumb": "/img/projects/inui/business-cards.png",
+      "src": "/img/projects/inui/business-cards.png"
     }
   ]
 }

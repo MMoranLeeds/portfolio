@@ -190,7 +190,7 @@ main {
 
             &:before {
                 font-weight: 600;
-                opacity: .025;
+                opacity: .05;
                 top: 0;
                 left: 0;
                 @include fluid(font-size, 60, 300);

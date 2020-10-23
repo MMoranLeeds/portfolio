@@ -4,19 +4,27 @@
   "images":[
     {
       "url":"pattern-library/landing-page",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/pattern-library/landing-page.png",
+      "src": "/img/projects/pattern-library/landing-page.png"
     },
     {
       "url":"pattern-library/iconography",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/pattern-library/iconography.png",
+      "src": "/img/projects/pattern-library/iconography.png"
     },
     {
       "url":"pattern-library/prototype",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/pattern-library/prototype.png",
+      "src": "/img/projects/pattern-library/prototype.png"
     },
     {
       "url":"pattern-library/about",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/pattern-library/about.png",
+      "src": "/img/projects/pattern-library/about.png"
     }
   ]
 }

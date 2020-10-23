@@ -3,15 +3,21 @@
   "introduction": "As part of client implementation I had the opportunity to design and take lead on the Stovax Careers site. </br></br> Industry leaders Stovax were after something that was both in keeping with the internationally recognised brand, whilst at the same time ensured that candidates were greeted with a clean modern look. Click the button below to view the live Careers Site.",
   "images": [{
       "url": "stovax/landing-page",
-      "altText": ""
+      "altText": "",
+      "thumb": "/img/projects/stovax/landing-page.png",
+      "src": "/img/projects/stovax/landing-page.png"
     },
     {
       "url": "stovax/meet-the-team",
-      "altText": ""
+      "altText": "",
+      "thumb": "/img/projects/stovax/meet-the-team.png",
+      "src": "/img/projects/stovax/meet-the-team.png"
     },
     {
       "url": "stovax/search",
-      "altText": ""
+      "altText": "",
+      "thumb": "/img/projects/stovax/search.png",
+      "src": "/img/projects/stovax/search.png"
     }
   ],
   "hasExternalLink": true,

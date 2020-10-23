@@ -4,15 +4,21 @@
   "images":[
     {
       "url":"networx/search",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/networx/search.png",
+      "src": "/img/projects/networx/search.png"
     },
     {
       "url":"networx/job",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/networx/job.png",
+      "src": "/img/projects/networx/job.png"
     },
     {
       "url":"networx/account",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/networx/account.png",
+      "src": "/img/projects/networx/account.png"
     }
   ],
   "hasExternalLink": true,

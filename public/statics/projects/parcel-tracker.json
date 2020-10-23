@@ -4,15 +4,21 @@
   "images":[
     {
       "url":"parcel-tracker/parcel-search",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/parcel-tracker/parcel-search.png",
+      "src": "/img/projects/parcel-tracker/parcel-search.png"
     },
     {
       "url":"parcel-tracker/view-parcel",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/parcel-tracker/view-parcel.png",
+      "src": "/img/projects/parcel-tracker/view-parcel.png"
     },
     {
       "url":"parcel-tracker/add-parcel",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/parcel-tracker/add-parcel.png",
+      "src": "/img/projects/parcel-tracker/add-parcel.png"
     }
   ]
 }

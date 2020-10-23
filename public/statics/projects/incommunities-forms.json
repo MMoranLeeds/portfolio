@@ -4,15 +4,21 @@
   "images":[
     {
       "url":"forms/landing-page",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/forms/landing-page.png",
+      "src": "/img/projects/forms/landing-page.png"
     },
     {
       "url":"forms/builder",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/forms/builder.png",
+      "src": "/img/projects/forms/builder.png"
     },
     {
       "url":"forms/form",
-      "altText":""
+      "altText":"",
+      "thumb": "/img/projects/forms/form.png",
+      "src": "/img/projects/forms/form.png"
     }
   ]
 }
