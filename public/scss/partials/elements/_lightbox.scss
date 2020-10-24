@@ -31,7 +31,7 @@
       img {
         max-height: 100vh;
         margin: 0 auto;
-        user-select: none;
+        touch-action: pinch-zoom;
       }
     }
 
