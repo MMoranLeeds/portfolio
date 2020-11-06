@@ -179,6 +179,7 @@ q:after {
 body {
     background-color: #f4f4f4;
     overflow-x: hidden;
+    transition: background-color 0.3s;
 
     @include darkMode{
         background-color: $dark-mode-secondary;
