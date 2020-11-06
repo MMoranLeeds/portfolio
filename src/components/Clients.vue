@@ -1,7 +1,7 @@
 <template>
   <section data-section-clients>
     <ul>
-      <li v-for="(client, i) in clients" :key="i">
+      <li v-for="(client, i) in clients" v-bind:key="i">
         <img
           v-bind:src="'/img/clients/' + client.reference + '.svg'"
           v-bind:alt="client.clientName + ' logo'"

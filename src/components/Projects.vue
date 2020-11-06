@@ -1,7 +1,7 @@
 <template>
   <section data-section-projects>
     <div class="projects">
-      <article class="project" v-for="(project, i) in projects" :key="i">
+      <article class="project" v-for="(project, i) in projects" v-bind:key="i">
         <div class="content">
           <h4>{{project.title}}</h4>
           <router-link
