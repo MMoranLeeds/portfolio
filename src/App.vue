@@ -2,9 +2,8 @@
   <div id="app">
     <nav>
       <Navigation />
+      <DarkModeToggle />
     </nav>
-
-    <DarkModeToggle />
 
     <transition name="fade-up-down" mode="out-in">
       <router-view />

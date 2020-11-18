@@ -3,7 +3,10 @@
     <section>
       <ul>
         <li v-for="(image, i) in project.images" v-bind:key="i">
-          <button v-on:click="openGallery(i)">
+          <button
+            aria-label="Click to view this image"
+            v-on:click="openGallery(i)"
+          >
             <svg>
               <use href="#zoom-icon" />
             </svg>
@@ -67,7 +70,7 @@ export default {
       id: this.$route.params.project,
       project: [],
       axiosError: false,
-      handleLoading: false
+      handleLoading: false,
     };
   },
   methods: {

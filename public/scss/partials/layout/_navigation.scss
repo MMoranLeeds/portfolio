@@ -1,6 +1,6 @@
 nav,
 footer {
-    &>div {
+    &>div:not(.theme-selector) {
         display: flex;
         justify-content: space-between;
         align-items: center;
