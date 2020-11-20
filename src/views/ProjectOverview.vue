@@ -93,9 +93,21 @@ export default {
     openGallery(i) {
       this.$refs.lightbox.showImage(i);
     },
+    removeOverflowClasses() {
+      const html = document.getElementsByTagName("html")[0];
+      const body = document.getElementsByTagName("body")[0];
+
+      if (html.classList.contains("no-scroll") && body.classList.contains("vib-open")) {
+        html.classList.remove("no-scroll");
+        body.classList.remove("vib-open");
+      }
+    },
   },
   created() {
     this.fetchProjects();
+  },
+  beforeDestroy() {
+    this.removeOverflowClasses();
   },
 };
 </script>
