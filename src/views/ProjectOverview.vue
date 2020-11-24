@@ -10,10 +10,18 @@
             <svg>
               <use href="#zoom-icon" />
             </svg>
-            <img
+            <template v-if="!isIe11">
+              <img
+              v-bind:src="'/img/projects/' + image.url + '.webp'"
+              v-bind:alt="image.altText"
+            />
+            </template>
+            <template v-else>
+              <img
               v-bind:src="'/img/projects/' + image.url + '.png'"
               v-bind:alt="image.altText"
             />
+            </template>
           </button>
         </li>
       </ul>
@@ -71,6 +79,7 @@ export default {
       project: [],
       axiosError: false,
       handleLoading: false,
+      isIe11: false,
     };
   },
   methods: {
@@ -102,9 +111,16 @@ export default {
         body.classList.remove("vib-open");
       }
     },
+    checkForIe11() {
+      var ua = window.navigator.userAgent;
+      if (ua.indexOf("Trident/7.0") > -1) {
+        this.isIe11 = true;
+      }
+    },
   },
   created() {
     this.fetchProjects();
+    this.checkForIe11();
   },
   beforeDestroy() {
     this.removeOverflowClasses();

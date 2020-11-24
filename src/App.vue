@@ -27,6 +27,6 @@ export default {
     SvgList,
     Navigation,
     DarkModeToggle,
-  },
+  }
 };
 </script>

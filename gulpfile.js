@@ -1,14 +1,22 @@
 // Initialize Modules
+const gulp = require('gulp');
 const {src, dest, watch, series, parallel} = require('gulp');
 const sass = require('gulp-sass');
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
+const webp = require('gulp-webp');
 
 // File Path Variables
 const files = {
   scssPath: 'public/scss/**/*.scss'
+}
+
+// Images File Path Variables
+const imageFiles = {
+  pngPath: 'public/img/**/*.png',
+  jpgPath: 'public/img/**/*.jpg'
 }
 
 // SASS Task
@@ -25,12 +33,28 @@ function scssTask(){
 
 // Watch Task
 function watchTask(){
-  watch([files.scssPath],
-        parallel(scssTask));
+  watch([files.scssPath, imageFiles.pngPath, imageFiles.jpgPath],
+        parallel(scssTask, pngImages, jpgImages));
+}
+
+// WEBP Conversion Tasks
+
+function pngImages(){
+  return src(imageFiles.pngPath)
+  .pipe(webp())
+  .pipe(gulp.dest('public/img')
+  );
+}
+
+function jpgImages(){
+  return src(imageFiles.jpgPath)
+  .pipe(webp())
+  .pipe(gulp.dest('public/img')
+  );
 }
 
 // Default Task
 exports.default = series(
-  parallel(scssTask),
+  parallel(scssTask, pngImages, jpgImages),
   watchTask
 );

@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "PersonalIntroduction",
+  name: "Testimonials",
   data() {
     return {
       testimonials: [],

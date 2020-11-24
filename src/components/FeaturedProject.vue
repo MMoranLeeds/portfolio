@@ -1,18 +1,37 @@
 <template>
   <section data-section-featured>
     <article>
-      <img
+      <template v-if="!isIe11">
+        <img
+          v-bind:src="'img/header-projects/' + featured.image + '.webp'"
+          v-bind:alt="featured.altText"
+          loading="lazy"
+          v-if="!handleLoading"
+        />
+      </template>
+
+      <template v-else> 
+        <img
         v-bind:src="'img/header-projects/' + featured.image + '.jpg'"
         v-bind:alt="featured.altText"
         loading="lazy"
         v-if="!handleLoading"
       />
+      </template>
 
       <div class="content">
-        <h3>{{featured.title}}</h3>
+        <h3>{{ featured.title }}</h3>
         <p v-html="featured.bodyContent"></p>
 
-        <router-link class="button" v-bind:aria-label="'View the ' + featured.title + 'project'" v-bind:to="{name: 'ProjectOverview', params:{project:featured.reference}}">View</router-link>
+        <router-link
+          class="button"
+          v-bind:aria-label="'View the ' + featured.title + 'project'"
+          v-bind:to="{
+            name: 'ProjectOverview',
+            params: { project: featured.reference },
+          }"
+          >View</router-link
+        >
       </div>
     </article>
   </section>
@@ -20,12 +39,13 @@
 
 <script>
 export default {
-  name: "PersonalIntroduction",
+  name: "FeaturedProject",
   data() {
     return {
       featured: [],
       axiosError: false,
       handleLoading: true,
+      isIe11: false,
     };
   },
   methods: {
@@ -44,9 +64,16 @@ export default {
           this.handleLoading = false;
         });
     },
+    checkForIe11() {
+      var ua = window.navigator.userAgent;
+      if (ua.indexOf("Trident/7.0") > -1) {
+        this.isIe11 = true;
+      }
+    },
   },
   created() {
     this.fetchFeaturedProject();
+    this.checkForIe11();
   },
 };
 </script>
