@@ -2,6 +2,7 @@
 @import "segments/projects";
 @import "segments/testimonials";
 @import "segments/clients";
+
 main {
     min-height: calc(100vh- 205px);
 
@@ -16,7 +17,7 @@ main {
             min-height: calc(100vh - 100px);
             background-color: $blue;
 
-            @include darkMode{
+            @include darkMode {
                 background-color: $dark-mode-primary;
             }
 
@@ -27,7 +28,7 @@ main {
                 padding: 25px 70px 25px 50px;
                 font-weight: 600;
 
-                @include darkMode{
+                @include darkMode {
                     color: $off-white;
                 }
 
@@ -47,17 +48,22 @@ main {
                         display: flex;
                         align-items: center;
 
-                        a {
+                        a,
+                        button {
                             color: #fff;
+                            text-align: left;
+                            flex: 1;
 
-                            @include darkMode{
+                            &:not(:disabled) {
+                                &:hover {
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                            }
+
+                            @include darkMode {
                                 color: $off-white;
                             }
-                        }
-
-                        a,
-                        span{
-                            flex:1;
                         }
 
                         svg {
@@ -66,7 +72,7 @@ main {
                             margin-right: $rem-size-2;
                             fill: #fff;
 
-                            @include darkMode{
+                            @include darkMode {
                                 fill: $off-white;
                             }
                         }
@@ -139,7 +145,7 @@ main {
                     &:nth-of-type(1) {
                         grid-area: project-1;
 
-                        @include browserHack(ie){
+                        @include browserHack(ie) {
                             -ms-grid-row: 1;
                             -ms-grid-row-span: 3;
                             -ms-grid-column: 1;
@@ -157,7 +163,7 @@ main {
                     &:nth-of-type(2) {
                         grid-area: project-2;
 
-                        @include browserHack(ie){
+                        @include browserHack(ie) {
                             -ms-grid-row: 1;
                             -ms-grid-column: 3;
                         }
@@ -165,8 +171,8 @@ main {
 
                     &:nth-of-type(3) {
                         grid-area: project-3;
-                        
-                        @include browserHack(ie){
+
+                        @include browserHack(ie) {
                             -ms-grid-row: 3;
                             -ms-grid-column: 3;
                         }
@@ -195,7 +201,7 @@ main {
                 left: 0;
                 @include fluid(font-size, 60, 300);
 
-                @include darkMode{
+                @include darkMode {
                     color: lighten(#fff, 80%);
                 }
             }
@@ -224,5 +230,11 @@ main {
     &-leave-to {
         opacity: 0;
         transform: translateY(-10px);
+    }
+}
+
+canvas{
+    &#confetti-canvas{
+        z-index: 1;
     }
 }

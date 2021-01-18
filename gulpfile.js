@@ -34,7 +34,7 @@ function scssTask(){
 // Watch Task
 function watchTask(){
   watch([files.scssPath, imageFiles.pngPath, imageFiles.jpgPath],
-        parallel(scssTask, pngImages, jpgImages));
+        parallel(scssTask));
 }
 
 // WEBP Conversion Tasks

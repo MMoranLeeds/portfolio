@@ -22,6 +22,7 @@ main.home {
 
                     img {
                         height: 100%;
+                        transition: .3s ease-in-out;
 
                         @include darkMode {
                             filter: brightness(1) invert(1) grayscale(1);

@@ -1,8 +1,8 @@
 <template>
   <aside>
-    <h1>{{personalDetails.name}}</h1>
+    <h1>{{ personalDetails.name }}</h1>
 
-    <h2>{{personalDetails.title}}</h2>
+    <h2>{{ personalDetails.title }}</h2>
 
     <p v-html="personalDetails.introduction"></p>
 
@@ -12,7 +12,9 @@
           <use href="#mobile-icon" />
         </svg>
 
-        <a aria-label="Call me on 07759 952 035" href="tel:07759952035">{{personalDetails.contactNumber}}</a>
+        <a aria-label="Call me on 07759 952 035" href="tel:07759952035">{{
+          personalDetails.contactNumber
+        }}</a>
       </li>
 
       <li>
@@ -24,7 +26,8 @@
           href="mailto:matthewdm@live.co.uk?subject = Hi Matthew&amp;body = I just wanted to drop you a quick email..."
           target="_blank"
           aria-label="Get in touch by email at matthewdm@live.co.uk"
-        >{{personalDetails.contactEmail}}</a>
+          >{{ personalDetails.contactEmail }}</a
+        >
       </li>
 
       <li>
@@ -37,16 +40,23 @@
           target="_blank"
           rel="noopener"
           aria-label="I'm currently located in East Morton"
-        >{{personalDetails.contactAddress}}</a>
+          >{{ personalDetails.contactAddress }}</a
+        >
       </li>
 
       <li>
         <svg>
           <use href="#degree-icon" />
         </svg>
-        <span>
-          {{personalDetails.degree}}
-        </span>
+        <button
+          type="button"
+          v-on:click="celebration()"
+          v-bind:disabled="confettiFalling"
+          aria-label="Click to celebrate with me"
+          v-tooltip.bottom="'Click to celebrate with me'"
+        >
+          {{ personalDetails.degree }}
+        </button>
       </li>
     </ul>
   </aside>
@@ -62,6 +72,7 @@ export default {
       personalDetails: [],
       axiosError: false,
       handleLoading: true,
+      confettiFalling: false,
     };
   },
   methods: {
@@ -83,10 +94,23 @@ export default {
     },
     personalInformationAnimation: function () {
       gsap.from("aside > *", {
-        duration: .75,
+        duration: 0.75,
         opacity: 0,
-        y: 50
+        y: 50,
       });
+    },
+    celebration() {
+      this.$confetti.start({
+        particles: [
+          {
+            type: "rect",
+          },
+        ],
+      });
+      this.confettiFalling = true;
+
+      setTimeout(() => this.$confetti.stop(), 1500);
+      setTimeout(() => (this.confettiFalling = false), 6000);
     },
   },
   created() {
