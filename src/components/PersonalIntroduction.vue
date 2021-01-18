@@ -52,8 +52,8 @@
           type="button"
           v-on:click="celebration()"
           v-bind:disabled="confettiFalling"
-          aria-label="Click to celebrate with me"
-          v-tooltip.bottom="'Click to celebrate with me'"
+          aria-label="Click to celebrate"
+          v-tooltip.bottom="'Click to celebrate'"
         >
           {{ personalDetails.degree }}
         </button>
