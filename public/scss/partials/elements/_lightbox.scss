@@ -1,7 +1,7 @@
 /* general style */
 
 .vib {
-  &-open{
+  &-open {
     overflow: hidden;
   }
 
@@ -12,7 +12,7 @@
   &-hidden {
     opacity: 0;
   }
-  
+
   &-container {
     position: fixed;
     display: flex;
@@ -22,14 +22,14 @@
     left: 0;
     top: 0;
     z-index: 2000;
-    user-select: initial!important;
-    touch-action: initial!important;
+    user-select: initial !important;
+    touch-action: initial !important;
     @include eq-size(100%);
 
     .vib-content {
       position: relative;
       display: block;
-    
+
       img {
         max-height: 100vh;
         margin: 0 auto;
@@ -59,7 +59,7 @@
         margin: 2px 2px 0 2px;
         overflow: hidden;
         width: 50px;
-      
+
         &-active {
           background-position: center;
           background-size: cover;
@@ -86,6 +86,11 @@
       position: fixed;
       bottom: 0;
       width: 100%;
+
+      &>div:first-of-type {
+        flex: 1;
+        margin: $rem-size-2;
+      }
     }
 
     .vib-close {
@@ -102,7 +107,7 @@
       padding: 15px 12px 15px 20px;
       border-bottom-left-radius: 50%;
     }
-    
+
     .vib-arrow {
       background-color: rgba($black, 0.5);
       border: none;
@@ -115,14 +120,14 @@
       height: 65px;
       margin-top: -60px;
       width: 60px;
-    
+
       &-left {
         left: 0;
         padding-right: 20px;
         border-top-right-radius: 50%;
         border-bottom-right-radius: 50%;
       }
-      
+
       &-right {
         right: 0;
         padding-left: 20px;
