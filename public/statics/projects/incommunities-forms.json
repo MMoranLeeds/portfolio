@@ -6,19 +6,22 @@
       "url":"forms/landing-page",
       "altText":"",
       "thumb": "/img/projects/forms/landing-page.png",
-      "src": "/img/projects/forms/landing-page.png"
+      "src": "/img/projects/forms/landing-page.png",
+      "caption": "User overview of all available forms to be filled out"
     },
     {
       "url":"forms/builder",
       "altText":"",
       "thumb": "/img/projects/forms/builder.png",
-      "src": "/img/projects/forms/builder.png"
+      "src": "/img/projects/forms/builder.png",
+      "caption": "Admin form builder functionality enabling drag and drop interaction whilst creating employee online forms"
     },
     {
       "url":"forms/form",
       "altText":"",
       "thumb": "/img/projects/forms/form.png",
-      "src": "/img/projects/forms/form.png"
+      "src": "/img/projects/forms/form.png",
+      "caption": "User filling out required information in a wizard step form"
     }
   ]
 }

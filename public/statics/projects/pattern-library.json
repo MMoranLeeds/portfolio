@@ -6,25 +6,29 @@
       "url":"pattern-library/landing-page",
       "altText":"",
       "thumb": "/img/projects/pattern-library/landing-page.png",
-      "src": "/img/projects/pattern-library/landing-page.png"
+      "src": "/img/projects/pattern-library/landing-page.png",
+      "caption": "Pattern library landing page with call to action buttons to navigate the site"
     },
     {
       "url":"pattern-library/iconography",
       "altText":"",
       "thumb": "/img/projects/pattern-library/iconography.png",
-      "src": "/img/projects/pattern-library/iconography.png"
+      "src": "/img/projects/pattern-library/iconography.png",
+      "caption": "Iconography collection with search implementation and code snippet copy functionality built in"
     },
     {
       "url":"pattern-library/prototype",
       "altText":"",
       "thumb": "/img/projects/pattern-library/prototype.png",
-      "src": "/img/projects/pattern-library/prototype.png"
+      "src": "/img/projects/pattern-library/prototype.png",
+      "caption": "UX Playground example showing Adobe XD Prototype embeded enabling the organisation to review with ease"
     },
     {
       "url":"pattern-library/about",
       "altText":"",
       "thumb": "/img/projects/pattern-library/about.png",
-      "src": "/img/projects/pattern-library/about.png"
+      "src": "/img/projects/pattern-library/about.png",
+      "caption": "Overview of what the Incommunities Pattern Library does and the general basis of methodology it is based on"
     }
   ]
 }

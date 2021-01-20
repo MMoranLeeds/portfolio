@@ -5,13 +5,15 @@
       "url": "inui/posters",
       "altText": "Image showing a number of branded posters for the In Ui brand.",
       "thumb": "/img/projects/inui/posters.png",
-      "src": "/img/projects/inui/posters.png"
+      "src": "/img/projects/inui/posters.png",
+      "caption": "InUi branded posters used to promote the built in house shared custom user interface"
     },
     {
       "url": "inui/business-cards",
       "altText": "A number of business cards displaying the In Ui branded logo alongside call to action words.",
       "thumb": "/img/projects/inui/business-cards.png",
-      "src": "/img/projects/inui/business-cards.png"
+      "src": "/img/projects/inui/business-cards.png",
+      "caption": "InUi cards used around the office to reiterate how InUi meets business technology goals such as Scalable and Adaptive"
     }
   ]
 }

@@ -6,19 +6,22 @@
       "url":"networx/search",
       "altText":"",
       "thumb": "/img/projects/networx/search.png",
-      "src": "/img/projects/networx/search.png"
+      "src": "/img/projects/networx/search.png",
+      "caption": "Job search landing page with branded featured clients call to action links"
     },
     {
       "url":"networx/job",
       "altText":"",
       "thumb": "/img/projects/networx/job.png",
-      "src": "/img/projects/networx/job.png"
+      "src": "/img/projects/networx/job.png",
+      "caption": "Job advert for client Argos"
     },
     {
       "url":"networx/account",
       "altText":"",
       "thumb": "/img/projects/networx/account.png",
-      "src": "/img/projects/networx/account.png"
+      "src": "/img/projects/networx/account.png",
+      "caption": "Job seeker account allowing full access to view job related details such as favourited roles"
     }
   ],
   "hasExternalLink": true,

@@ -28,7 +28,7 @@
       <LightBox
         ref="lightbox"
         v-bind:media="project.images"
-        v-bind:show-caption="false"
+        v-bind:show-caption="true"
         v-bind:show-light-box="false"
       />
     </section>
