@@ -94,6 +94,14 @@
                     height: 100%;
                     object-position: 50%;
                     object-fit: cover;
+
+                    &[src$=".webp"] {
+                        height: 250px;
+
+                        @include mediaQuery(large-laptop) {
+                            height: 200px;
+                        }
+                    }
                 }
             }
         }
