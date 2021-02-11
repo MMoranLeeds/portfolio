@@ -22,6 +22,7 @@ ul.external-links {
             padding: calc(#{$rem-size-2} + #{$rem-size-1} / 2);
             display: block;
             @include eq-size(100%);
+            position: relative;
         }
 
         svg {

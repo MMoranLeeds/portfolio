@@ -181,7 +181,7 @@ body {
     overflow-x: hidden;
     transition: background-color 0.3s;
 
-    @include darkMode{
+    @include darkMode {
         background-color: $dark-mode-secondary;
     }
 
@@ -189,7 +189,7 @@ body {
         background-color: $dark-mode-secondary;
     }
 
-    *{
+    * {
         transition: background-color 0.3s, fill 0.3s;
     }
 }
@@ -322,7 +322,7 @@ img {
     height: auto;
     max-width: 100%;
 
-    @include darkMode{
+    @include darkMode {
         filter: brightness(.8) contrast(1.2);
     }
 }
@@ -394,6 +394,8 @@ table {
 .off-screen {
     position: absolute;
     left: -99999px;
+    top: 0;
+    visibility: hidden;
 }
 
 .bold {
