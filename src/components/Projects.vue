@@ -30,6 +30,8 @@
                 "
                 v-bind:alt="project.image.altText"
                 loading="lazy"
+                width="500"
+                height="500"
               />
             </template>
 
@@ -40,6 +42,8 @@
                 "
                 v-bind:alt="project.image.altText"
                 loading="lazy"
+                width="500"
+                height="500"
               />
             </template>
           </router-link>

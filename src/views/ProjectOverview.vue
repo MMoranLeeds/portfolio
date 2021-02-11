@@ -14,12 +14,16 @@
               <img
               v-bind:src="'/img/projects/' + image.url + '.webp'"
               v-bind:alt="image.altText"
+              width="500"
+              height="500"
             />
             </template>
             <template v-else>
               <img
               v-bind:src="'/img/projects/' + image.url + '.png'"
               v-bind:alt="image.altText"
+              width="500"
+              height="500"
             />
             </template>
           </button>

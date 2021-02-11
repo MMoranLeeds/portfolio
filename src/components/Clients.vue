@@ -5,6 +5,8 @@
         <img
           v-bind:src="'/img/clients/' + client.reference + '.svg'"
           v-bind:alt="client.clientName + ' logo'"
+          width="500"
+          height="100"
         />
       </li>
     </ul>
