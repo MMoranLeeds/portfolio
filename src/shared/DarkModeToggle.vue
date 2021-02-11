@@ -1,8 +1,9 @@
 <template>
-  <div class="theme-selector" v-tooltip="darkModePreference ? 'Light theme.' : 'Dark theme.'">
+  <div class="theme-selector">
     <button
       type="button"
       v-on:click="toggleDarkMode()"
+      v-tooltip="darkModePreference ? 'Light theme.' : 'Dark theme.'"
     >
       <svg v-if="darkModePreference">
         <use href="#light-mode-icon" />
