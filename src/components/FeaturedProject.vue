@@ -7,8 +7,6 @@
           v-bind:alt="featured.altText"
           loading="lazy"
           v-if="!handleLoading"
-          width="500"
-          height="500"
         />
       </template>
 
