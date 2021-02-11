@@ -15,10 +15,7 @@
           v-tooltip="link.ariaLabel"
           rel="noopener"
         >
-          <span class="off-screen">
-            {{ link.ariaLabel }}
-          </span>
-          <svg>
+          <svg v-bind:aria-label="link.ariaLabel">
             <use v-bind:href="'#' + link.icon" />
           </svg>
         </a>
