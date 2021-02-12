@@ -16,8 +16,6 @@
         v-bind:alt="featured.altText"
         loading="lazy"
         v-if="!handleLoading"
-        width="500"
-        height="500"
       />
       </template>
 
@@ -29,9 +27,10 @@
           class="button"
           v-bind:aria-label="'View the ' + featured.title + 'project'"
           v-bind:to="{
-            name: 'ProjectOverview',
-            params: { project: featured.reference },
+            name: 'Project Overview',
+            params: { 'project': featured.reference, 'title': featured.title },
           }"
+          v-if="!handleLoading"
           >View</router-link
         >
       </div>

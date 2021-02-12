@@ -12,17 +12,15 @@
             </svg>
             <template v-if="!isIe11">
               <img
-              v-bind:src="'/img/projects/' + image.url + '.webp'"
-              v-bind:alt="image.altText"
-            />
+                v-bind:src="'/img/projects/' + image.url + '.webp'"
+                v-bind:alt="image.altText"
+              />
             </template>
             <template v-else>
               <img
-              v-bind:src="'/img/projects/' + image.url + '.png'"
-              v-bind:alt="image.altText"
-              width="500"
-              height="500"
-            />
+                v-bind:src="'/img/projects/' + image.url + '.png'"
+                v-bind:alt="image.altText"
+              />
             </template>
           </button>
         </li>
@@ -91,6 +89,7 @@ export default {
         .get(baseURI)
         .then((result) => {
           this.project = result.data;
+          this.setDynamicDocumentTitle();
         })
         .catch((error) => {
           console.log(error);
@@ -108,7 +107,10 @@ export default {
       const html = document.getElementsByTagName("html")[0];
       const body = document.getElementsByTagName("body")[0];
 
-      if (html.classList.contains("no-scroll") && body.classList.contains("vib-open")) {
+      if (
+        html.classList.contains("no-scroll") &&
+        body.classList.contains("vib-open")
+      ) {
         html.classList.remove("no-scroll");
         body.classList.remove("vib-open");
       }
@@ -118,6 +120,10 @@ export default {
       if (ua.indexOf("Trident/7.0") > -1) {
         this.isIe11 = true;
       }
+    },
+    setDynamicDocumentTitle() {
+      let documentTitle = `${process.env.VUE_APP_TITLE}` + ' - ' + this.project.title;
+      document.title = documentTitle;
     },
   },
   created() {

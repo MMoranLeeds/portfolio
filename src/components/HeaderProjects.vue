@@ -7,8 +7,8 @@
     >
       <router-link
         v-bind:to="{
-          name: 'ProjectOverview',
-          params: { project: project.reference },
+          name: 'Project Overview',
+          params: { 'project': project.reference, 'title': project.title },
         }"
         v-bind:aria-label="
           'Click here to view the ' + project.title + ' project.'
@@ -33,8 +33,6 @@
             v-bind:alt="project.altText"
             loading="lazy"
             v-if="!handleLoading"
-            width="500"
-            height="500"
           />
         </template>
       </router-link>

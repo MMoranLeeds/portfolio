@@ -13,12 +13,12 @@ const routes = [{
   },
   {
     path: '/project/:project',
-    name: 'ProjectOverview',
-    component: ProjectOverview
+    name: 'Project Overview',
+    component: ProjectOverview,
   },
   {
     path: '*',
-    name: 'NotFound',
+    name: 'Not Found',
     component: NotFound
   }
 ]
@@ -42,6 +42,18 @@ const router = new VueRouter({
       y: 0
     };
   }
+})
+
+router.beforeEach((to, from, next) => {
+  let documentTitle = `${process.env.VUE_APP_TITLE}`;
+  if(to.params.title){
+    documentTitle += ` - ${to.params.title}`
+  }
+  else if(to.name === 'Not Found'){
+    documentTitle += ` - 404`
+  }
+  document.title = documentTitle;
+  next();
 })
 
 export default router

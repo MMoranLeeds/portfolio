@@ -1,5 +1,5 @@
 <template>
-  <section data-section-projects>
+  <section data-section-projects >
     <div class="projects">
       <article class="project" v-for="(project, i) in projects" v-bind:key="i">
         <div class="content">
@@ -7,8 +7,8 @@
           <router-link
             class="button"
             v-bind:to="{
-              name: 'ProjectOverview',
-              params: { project: project.reference },
+              name: 'Project Overview',
+              params: { 'project': project.reference, 'title': project.title },
             }"
             v-bind:aria-label="'View the ' + project.title + ' project.'"
             >View</router-link
@@ -17,8 +17,8 @@
         <div class="image">
           <router-link
             v-bind:to="{
-              name: 'ProjectOverview',
-              params: { project: project.reference },
+              name: 'Project Overview',
+              params: { 'project': project.reference, 'title': project.title },
             }"
             v-bind:aria-label="'View the ' + project.title + ' project.'"
             tabindex="-1"
@@ -40,8 +40,6 @@
                 "
                 v-bind:alt="project.image.altText"
                 loading="lazy"
-                width="500"
-                height="500"
               />
             </template>
           </router-link>
