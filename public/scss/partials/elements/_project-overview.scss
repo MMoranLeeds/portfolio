@@ -12,7 +12,7 @@
     }
 
     aside {
-        box-shadow: 0 0 10px 2px rgba(0, 0, 0, .075);
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.075);
         width: 100%;
         max-width: 400px;
         align-self: flex-start;
@@ -72,11 +72,10 @@
     section {
         flex: 1;
 
-
         li {
             background-color: #fff;
             border: 1px solid $grey;
-            box-shadow: 0 3px 8px -2px rgba(0, 0, 0, .15);
+            box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.15);
             padding: $rem-size-2;
 
             button {
@@ -86,36 +85,47 @@
                 cursor: pointer;
                 @include pseudo;
 
-                &:before{
+                &:before {
                     background-color: rgba($black, 0.75);
                     @include eq-size(100%);
                     @include transition;
                     opacity: 0;
                     z-index: 1;
+
+                    @include browserHack(ie) {
+                        left: 0;
+                        top: 0;
+                    }
                 }
 
                 svg {
-                    fill:#fff;
+                    fill: #fff;
                     position: absolute;
                     @include eq-size(75px);
                     z-index: 2;
                     @include transition;
                     opacity: 0;
+
+                    @include browserHack(ie) {
+                        left: 50%;
+                        top: 505;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
                 }
             }
 
-            &:hover{
-                button{
+            &:hover {
+                button {
                     &:before,
-                    svg{
+                    svg {
                         opacity: 1;
                     }
                 }
             }
 
-            button:focus{
+            button:focus {
                 &:before,
-                svg{
+                svg {
                     opacity: 1;
                 }
             }
@@ -147,7 +157,7 @@
                 align-items: center;
                 justify-content: center;
                 border: 1px solid $grey;
-                box-shadow: 0 3px 8px -2px rgba(0, 0, 0, .15);
+                box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.15);
 
                 @include darkMode {
                     background-color: $dark-mode-tertiary;
@@ -190,21 +200,21 @@
 
 #vuejs-icon {
     .green {
-        fill: #41B883;
+        fill: #41b883;
     }
 
     .grey {
-        fill: #35495E;
+        fill: #35495e;
     }
 }
 
 #photoshop-icon {
     .dark-blue {
-        fill: #001E36;
+        fill: #001e36;
     }
 
     .light-blue {
-        fill: #31A8FF;
+        fill: #31a8ff;
     }
 }
 
@@ -214,7 +224,7 @@
     }
 
     .orange {
-        fill: #FF9A00;
+        fill: #ff9a00;
     }
 }
 
@@ -224,22 +234,22 @@
     }
 
     .light-purple {
-        fill: #FF61F6;
+        fill: #ff61f6;
     }
 }
 
 #sass-icon {
     .pink {
-        fill: #CF649A;
+        fill: #cf649a;
     }
 }
 
 #gulp-icon {
     .red-container {
-        fill: #DA4648;
+        fill: #da4648;
     }
 
     .white-text {
-        fill: #FFFFFF;
+        fill: #ffffff;
     }
 }
