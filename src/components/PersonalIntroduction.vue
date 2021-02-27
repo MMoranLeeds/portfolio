@@ -23,7 +23,7 @@
         </svg>
 
         <a
-          href="mailto:matthewdm@live.co.uk?subject = Hi Matthew&amp;body = I just wanted to drop you a quick email..."
+          href="mailto:matthewdm@live.co.uk?subject=I%20just%20wanted%20to%20drop%20you%20a%20quick%20email&body=Hi%20Matthew,%0D%0A%0D%0A"
           target="_blank"
           aria-label="Get in touch by email at matthewdm@live.co.uk"
           >{{ personalDetails.contactEmail }}</a
