@@ -1,0 +1,48 @@
+.Cookie {
+    &--mdm {
+        background-color: rgba(#fff, .95);
+        border-top: 5px solid #424851;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 50px;
+        min-height: 105px;
+        @include pseudo;
+
+        @include mediaQuery(tablet){
+            padding:15px 40px;
+        }
+
+        &:after {
+            content: "🍪";
+            right: -25px;
+            top: -25px;
+            opacity: 0.35;
+            font-size: $rem-size-12;
+        }
+
+        p {
+            padding-bottom: initial;
+        }
+
+        button {
+            background: $blue;
+            border: 2px solid darken($blue, 20%);
+            border-radius: 5px;
+            padding: 0.625em 3.125em;
+            color: #fff;
+            @include transition;
+            cursor: pointer;
+            font-weight: 500;
+            text-shadow: 1px 2px 2px rgba(40, 40, 40, .35);
+
+            &:hover,
+            &:focus {
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12), 0 6px 18px rgba(0, 0, 0, 0.12);
+                transform: translate3d(0, -2px, 0);
+                background-color: lighten($blue, 5%);
+                text-decoration: underline;
+            }
+        }
+    }
+}

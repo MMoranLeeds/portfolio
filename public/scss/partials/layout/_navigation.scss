@@ -1,6 +1,6 @@
 nav,
 footer {
-    &>div:not(.theme-selector) {
+    &>div:not(.theme-selector):not(.Cookie) {
         display: flex;
         justify-content: space-between;
         align-items: center;
