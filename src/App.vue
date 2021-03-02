@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav>
-      <Cookie />
+      <CookieConsent />
       <Navigation />
       <DarkModeToggle />
     </nav>
@@ -22,14 +22,14 @@
 import SvgList from "@/shared/SVG.vue";
 import Navigation from "@/shared/Navigation.vue";
 import DarkModeToggle from "@/shared/DarkModeToggle.vue";
-import Cookie from "@/shared/Cookie.vue";
+import CookieConsent from "@/shared/CookieConsent.vue";
 
 export default {
   components: {
     SvgList,
     Navigation,
     DarkModeToggle,
-    Cookie,
+    CookieConsent
   },
 };
 </script>
