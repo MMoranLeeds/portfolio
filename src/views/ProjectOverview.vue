@@ -2,7 +2,7 @@
   <main class="project-overview" v-if="handleLoading">
     <section>
       <ul>
-        <li v-for="(image, i) in project.images" v-bind:key="i">
+        <li v-for="(image, i) in projectDetails.images" v-bind:key="i">
           <button
             aria-label="Click to view this image"
             v-on:click="openGallery(i)"
@@ -27,22 +27,22 @@
       </ul>
       <LightBox
         ref="lightbox"
-        v-bind:media="project.images"
+        v-bind:media="projectDetails.images"
         v-bind:show-caption="true"
         v-bind:show-light-box="false"
       />
     </section>
     <aside>
       <div class="content">
-        <h1>{{ project.title }}</h1>
+        <h1>{{ projectDetails.title }}</h1>
 
-        <p v-html="project.introduction"></p>
+        <p v-html="projectDetails.introduction"></p>
       </div>
-      <div class="actions" v-if="project.hasExternalLink">
+      <div class="actions" v-if="projectDetails.hasExternalLink">
         <a
           class="button"
-          v-if="project.externalLink != null"
-          v-bind:href="project.externalLink"
+          v-if="projectDetails.externalLink != null"
+          v-bind:href="projectDetails.externalLink"
           target="_blank"
           >View</a
         >
@@ -75,8 +75,8 @@ export default {
   },
   data() {
     return {
-      id: this.$route.params.project,
-      project: [],
+      project: this.$route.params.project,
+      projectDetails: [],
       axiosError: false,
       handleLoading: false,
       isIe11: false,
@@ -84,11 +84,11 @@ export default {
   },
   methods: {
     fetchProjects: function () {
-      const baseURI = "/statics/projects/" + this.id + ".json";
+      const baseURI = "/statics/projects/" + this.project + ".json";
       this.$http
         .get(baseURI)
         .then((result) => {
-          this.project = result.data;
+          this.projectDetails = result.data;
           this.setDynamicDocumentTitle();
         })
         .catch((error) => {
@@ -97,7 +97,7 @@ export default {
           this.$router.push("/NotFound");
         })
         .finally(() => {
-          setTimeout(() => (this.handleLoading = true), 750);
+          this.handleLoading = true;
         });
     },
     openGallery(i) {
@@ -122,7 +122,7 @@ export default {
       }
     },
     setDynamicDocumentTitle() {
-      let documentTitle = `${process.env.VUE_APP_TITLE}` + ' - ' + this.project.title;
+      let documentTitle = `${process.env.VUE_APP_TITLE}` + ' - ' + this.projectDetails.title;
       document.title = documentTitle;
     },
   },

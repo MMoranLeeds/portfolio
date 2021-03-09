@@ -1,23 +1,31 @@
 <template>
   <section data-section-featured>
     <article>
-      <template v-if="!isIe11">
-        <img
-          v-bind:src="'img/header-projects/' + featured.image + '.webp'"
-          v-bind:alt="featured.altText"
-          loading="lazy"
-          v-if="!handleLoading"
-        />
-      </template>
-
-      <template v-else> 
-        <img
-        v-bind:src="'img/header-projects/' + featured.image + '.jpg'"
-        v-bind:alt="featured.altText"
-        loading="lazy"
+      <router-link
+        v-bind:to="{
+            name: 'Project Overview',
+            params: { project: featured.reference, title: featured.title },
+          }"
+        v-bind:aria-label="'View the ' + featured.title + 'project'"
+        tabindex="-1"
         v-if="!handleLoading"
-      />
-      </template>
+      >
+        <template v-if="!isIe11">
+          <img
+            v-bind:src="'img/header-projects/' + featured.image + '.webp'"
+            v-bind:alt="featured.altText"
+            loading="lazy"
+          />
+        </template>
+
+        <template v-else>
+          <img
+            v-bind:src="'img/header-projects/' + featured.image + '.jpg'"
+            v-bind:alt="featured.altText"
+            loading="lazy"
+          />
+        </template>
+      </router-link>
 
       <div class="content">
         <h3>{{ featured.title }}</h3>
@@ -28,7 +36,7 @@
           v-bind:aria-label="'View the ' + featured.title + 'project'"
           v-bind:to="{
             name: 'Project Overview',
-            params: { 'project': featured.reference, 'title': featured.title },
+            params: { project: featured.reference, title: featured.title },
           }"
           v-if="!handleLoading"
           >View</router-link
