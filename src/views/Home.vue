@@ -1,17 +1,17 @@
 <template>
   <main class="home" role="main">
-    <header id="introduction">
+    <header>
       <PersonalIntroduction />
       <HeaderProjects />
     </header>
 
-    <FeaturedProject id="featured" />
+    <FeaturedProject />
 
-    <Projects id="projects" />
+    <Projects />
 
-    <Testimonials id="testimonials" />
+    <Testimonials />
 
-    <Clients id="clients" />
+    <Clients />
   </main>
 </template>
 
