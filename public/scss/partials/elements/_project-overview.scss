@@ -11,7 +11,7 @@
         padding: 25px;
     }
 
-    aside {
+    .project-details {
         box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.075);
         width: 100%;
         max-width: 400px;
@@ -175,7 +175,7 @@
             }
         }
 
-        aside {
+        .project-details {
             .content {
                 div {
                     @include loading-shimmer;

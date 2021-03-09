@@ -1,51 +1,53 @@
 <template>
-  <section data-section-projects >
-    <div class="projects">
-      <article class="project" v-for="(project, i) in projects" v-bind:key="i">
-        <div class="content">
-          <h4>{{ project.title }}</h4>
-          <router-link
-            class="button"
-            v-bind:to="{
-              name: 'Project Overview',
-              params: { 'project': project.reference, 'title': project.title },
-            }"
-            v-bind:aria-label="'View the ' + project.title + ' project.'"
-            >View</router-link
-          >
-        </div>
-        <div class="image">
-          <router-link
-            v-bind:to="{
-              name: 'Project Overview',
-              params: { 'project': project.reference, 'title': project.title },
-            }"
-            v-bind:aria-label="'View the ' + project.title + ' project.'"
-            tabindex="-1"
-          >
-            <template v-if="!isIe11">
-              <img
-                v-bind:src="
-                  '/img/projects/previews/' + project.image.url + '.webp'
-                "
-                v-bind:alt="project.image.altText"
-                loading="lazy"
-              />
-            </template>
+  <section data-section-projects>
+    <ul class="projects">
+      <li class="project" v-for="(project, i) in projects" v-bind:key="i">
+        <article>
+          <div class="content">
+            <h4>{{ project.title }}</h4>
+            <router-link
+              class="button"
+              v-bind:to="{
+                name: 'Project Overview',
+                params: { project: project.reference, title: project.title },
+              }"
+              v-bind:aria-label="'View the ' + project.title + ' project.'"
+              >View</router-link
+            >
+          </div>
+          <div class="image">
+            <router-link
+              v-bind:to="{
+                name: 'Project Overview',
+                params: { project: project.reference, title: project.title },
+              }"
+              v-bind:aria-label="'View the ' + project.title + ' project.'"
+              tabindex="-1"
+            >
+              <template v-if="!isIe11">
+                <img
+                  v-bind:src="
+                    '/img/projects/previews/' + project.image.url + '.webp'
+                  "
+                  v-bind:alt="project.image.altText"
+                  loading="lazy"
+                />
+              </template>
 
-            <template v-else>
-              <img
-                v-bind:src="
-                  '/img/projects/previews/' + project.image.url + '.jpg'
-                "
-                v-bind:alt="project.image.altText"
-                loading="lazy"
-              />
-            </template>
-          </router-link>
-        </div>
-      </article>
-    </div>
+              <template v-else>
+                <img
+                  v-bind:src="
+                    '/img/projects/previews/' + project.image.url + '.jpg'
+                  "
+                  v-bind:alt="project.image.altText"
+                  loading="lazy"
+                />
+              </template>
+            </router-link>
+          </div>
+        </article>
+      </li>
+    </ul>
   </section>
 </template>
 

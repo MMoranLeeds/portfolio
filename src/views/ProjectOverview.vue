@@ -32,7 +32,7 @@
         v-bind:show-light-box="false"
       />
     </section>
-    <aside>
+    <div class="project-details">
       <div class="content">
         <h1>{{ projectDetails.title }}</h1>
 
@@ -47,7 +47,7 @@
           >View</a
         >
       </div>
-    </aside>
+    </div>
   </main>
   <main v-else class="project-overview project-loading">
     <section>
@@ -58,11 +58,11 @@
       </div>
     </section>
 
-    <aside>
+    <div class="project-details">
       <div class="content">
         <div v-for="i in 10" v-bind:key="i"></div>
       </div>
-    </aside>
+    </div>
   </main>
 </template>
 

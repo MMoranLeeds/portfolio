@@ -1,5 +1,5 @@
 <template>
-  <aside>
+  <div class="person-details">
     <h1>{{ personalDetails.name }}</h1>
 
     <h2>{{ personalDetails.title }}</h2>
@@ -59,7 +59,7 @@
         </button>
       </li>
     </ul>
-  </aside>
+  </div>
 </template>
 
 <script>
@@ -93,10 +93,11 @@ export default {
         });
     },
     personalInformationAnimation: function () {
-      gsap.from("aside > *", {
+      gsap.from(".person-details > *", {
         duration: 0.75,
         opacity: 0,
         y: 50,
+        stagger: .25
       });
     },
     celebration() {
