@@ -19,6 +19,12 @@
         display: block;
     }
 
+    @include darkMode {
+        background-color: $dark-mode-primary;
+        border-color: $dark-mode-tertiary;
+        color: $off-white;
+    }
+
     &:after {
         content: "\1F36A";
         right: -25px;
@@ -44,21 +50,22 @@
             outline-color: $blue;
         }
     }
-}
-.appear {
-    &-enter,
-    &-leave {
-        &-active {
-            transition: 1s;
+
+    &.appear {
+        &-enter,
+        &-leave {
+            &-active {
+                transition: 1s;
+            }
         }
-    }
-
-    &-enter-active {
-        transition-delay: 1s;
-    }
-
-    &-enter,
-    &-leave-to {
-        transform: translateY(100%);
+    
+        &-enter-active {
+            transition-delay: 1s;
+        }
+    
+        &-enter,
+        &-leave-to {
+            transform: translateY(100%);
+        }
     }
 }
