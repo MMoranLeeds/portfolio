@@ -1,3 +1,5 @@
+@use "../../global/" as *;
+
 main.home{
     section{
         &[data-section-projects] {

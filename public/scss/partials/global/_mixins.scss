@@ -1,4 +1,6 @@
-﻿@mixin loading-shimmer($duration: 1.25s, $timing-function: linear, $delay: 0s, $iteration-count: infinite, $fill-mode: forwards) {
+﻿@use './variables' as *;
+
+@mixin loading-shimmer($duration: 1.25s, $timing-function: linear, $delay: 0s, $iteration-count: infinite, $fill-mode: forwards) {
     background: linear-gradient(to right, rgb(246, 246, 246) 8%, rgb(234, 234, 234) 18%, rgb(245, 245, 245) 33%);
     background-size: 800px 104px;
     @include animation(loading-shimmer $duration $timing-function $delay $iteration-count $fill-mode);
@@ -43,7 +45,7 @@
     }
 }
 
-@mixin transition($what: all 0.3s, ...) {
+@mixin transition($what: all 0.3s) {
     transition: $what;
 }
 

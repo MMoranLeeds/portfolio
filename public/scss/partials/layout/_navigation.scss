@@ -1,3 +1,5 @@
+@use "../global" as *;
+
 nav,
 footer {
     &>div:not(.theme-selector):not(.cookie) {

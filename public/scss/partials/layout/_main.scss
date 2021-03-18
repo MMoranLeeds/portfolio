@@ -1,7 +1,10 @@
-@import "segments/featured";
-@import "segments/projects";
-@import "segments/testimonials";
-@import "segments/clients";
+@use "../global" as *;
+
+
+@use "segments/featured";
+@use "segments/projects";
+@use "segments/testimonials";
+@use "segments/clients";
 
 main {
     min-height: calc(100vh- 205px);

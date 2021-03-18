@@ -1,3 +1,5 @@
+@use "../global" as *;
+
 .tooltip {
     display: block;
     z-index: 10000;

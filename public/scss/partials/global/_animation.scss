@@ -1,4 +1,7 @@
-﻿@include keyframes(tooltip) {
+﻿@use './variables' as *;
+@use './mixins' as *;
+
+@include keyframes(tooltip) {
     0% {
         transform: translateX(-50%) scale(0);
         opacity: 0;

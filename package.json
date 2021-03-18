@@ -11,6 +11,7 @@
     "axios": "^0.20.0",
     "core-js": "^3.6.4",
     "gsap": "^3.5.1",
+    "gulp-dart-sass": "^1.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "v-tooltip": "^2.0.3",
     "vue": "^2.6.11",

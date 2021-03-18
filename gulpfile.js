@@ -1,7 +1,7 @@
 // Initialize Modules
 const gulp = require('gulp');
 const {src, dest, watch, series, parallel} = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
