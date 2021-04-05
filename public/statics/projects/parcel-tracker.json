@@ -5,22 +5,22 @@
     {
       "url":"parcel-tracker/parcel-search",
       "altText":"",
-      "thumb": "/img/projects/parcel-tracker/parcel-search.png",
-      "src": "/img/projects/parcel-tracker/parcel-search.png",
+      "thumb": "/img/projects/parcel-tracker/parcel-search.webp",
+      "src": "/img/projects/parcel-tracker/parcel-search.webp",
       "caption": "Search page displaying currently delivered parcels with filters to increase usability"
     },
     {
       "url":"parcel-tracker/view-parcel",
       "altText":"",
-      "thumb": "/img/projects/parcel-tracker/view-parcel.png",
-      "src": "/img/projects/parcel-tracker/view-parcel.png",
+      "thumb": "/img/projects/parcel-tracker/view-parcel.webp",
+      "src": "/img/projects/parcel-tracker/view-parcel.webp",
       "caption": "Parcel overview with history and current delivery status"
     },
     {
       "url":"parcel-tracker/add-parcel",
       "altText":"",
-      "thumb": "/img/projects/parcel-tracker/add-parcel.png",
-      "src": "/img/projects/parcel-tracker/add-parcel.png",
+      "thumb": "/img/projects/parcel-tracker/add-parcel.webp",
+      "src": "/img/projects/parcel-tracker/add-parcel.webp",
       "caption": "Wizard allowing users to add newly delivered parcels to the tracking system"
     }
   ]

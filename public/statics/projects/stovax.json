@@ -4,22 +4,22 @@
   "images": [{
       "url": "stovax/landing-page",
       "altText": "",
-      "thumb": "/img/projects/stovax/landing-page.png",
-      "src": "/img/projects/stovax/landing-page.png",
+      "thumb": "/img/projects/stovax/landing-page.webp",
+      "src": "/img/projects/stovax/landing-page.webp",
       "caption": "Stovax careers landing page"
     },
     {
       "url": "stovax/meet-the-team",
       "altText": "",
-      "thumb": "/img/projects/stovax/meet-the-team.png",
-      "src": "/img/projects/stovax/meet-the-team.png",
+      "thumb": "/img/projects/stovax/meet-the-team.webp",
+      "src": "/img/projects/stovax/meet-the-team.webp",
       "caption": "Meet the team page with alternating team based information"
     },
     {
       "url": "stovax/search",
       "altText": "",
-      "thumb": "/img/projects/stovax/search.png",
-      "src": "/img/projects/stovax/search.png",
+      "thumb": "/img/projects/stovax/search.webp",
+      "src": "/img/projects/stovax/search.webp",
       "caption": "Current vacancies search page with available role displayed"
     }
   ],
