@@ -4,7 +4,7 @@
       <ul>
         <li v-for="(image, i) in projectDetails.images" v-bind:key="i">
           <button
-            aria-label="Click to view this image"
+            v-bind:aria-label="`View image ` + [i+1] + ` of the ` + projectDetails.title + ` project.`"
             v-on:click="openGallery(i)"
           >
             <svg>
