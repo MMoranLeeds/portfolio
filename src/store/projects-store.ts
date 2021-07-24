@@ -22,7 +22,7 @@ export const projectsStore: Module<any, any> = {
                 hasExternalLink: true,
                 externalLink: "https://hwinteriors.netlify.app/",
                 previewImage: {
-                    url: "in-ui",
+                    url: "hw-interiors-ltd",
                     altText: "Laptop showing a system using a shared layout called In Ui."
                 },
                 headerProjectDetails: {
