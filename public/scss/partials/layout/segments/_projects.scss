@@ -1,0 +1,13 @@
+@use "../../global/" as *;
+
+main.home{
+    section{
+        &[data-section-projects] {
+            padding: 175px 0 0;
+
+            &:before {
+                content: 'projects';
+            }
+        }
+    }
+}

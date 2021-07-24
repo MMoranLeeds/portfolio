@@ -1,0 +1,194 @@
+@use "../global" as *;
+
+/* general style */
+
+.vib {
+  &-open {
+    overflow: hidden;
+  }
+
+  &-hideable {
+    @include transition;
+  }
+
+  &-hidden {
+    opacity: 0;
+  }
+
+  &-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    left: 0;
+    top: 0;
+    z-index: 2000;
+    user-select: initial !important;
+    touch-action: initial !important;
+    @include eq-size(100%);
+
+    .vib-content {
+      position: relative;
+      display: block;
+
+      img {
+        max-height: 100vh;
+        margin: 0 auto;
+        touch-action: pinch-zoom;
+      }
+    }
+
+    .vib-thumbnail-wrapper {
+      position: fixed;
+      background: rgba(0, 0, 0, 0.35);
+      padding: $rem-size-2;
+      text-align: center;
+      white-space: nowrap;
+      display: inline-block;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      top: 0px;
+
+      .vib-thumbnail {
+        background-position: center;
+        background-size: cover;
+        border-radius: 4px;
+        box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.2);
+        cursor: pointer;
+        display: inline-block;
+        height: 50px;
+        margin: 2px 2px 0 2px;
+        overflow: hidden;
+        width: 50px;
+
+        &-active {
+          background-position: center;
+          background-size: cover;
+          border-radius: 4px;
+          box-shadow: inset 0 0 0 2px white;
+          cursor: pointer;
+          display: inline-block;
+          height: 50px;
+          margin: 2px 2px 0 2px;
+          overflow: hidden;
+          width: 50px;
+        }
+      }
+    }
+
+    .vib-footer {
+      color: white;
+      background: rgba(0, 0, 0, 0.65);
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      & > div:first-of-type {
+        flex: 1;
+        margin: $rem-size-2;
+      }
+    }
+
+    .vib-close {
+      background-color: rgba($black, 0.5);
+      border: none;
+      cursor: pointer;
+      outline: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      vertical-align: bottom;
+      height: 65px;
+      width: 60px;
+      padding: 15px 12px 15px 20px;
+      border-bottom-left-radius: 50%;
+    }
+
+    .vib-arrow {
+      background-color: rgba($black, 0.5);
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 10px;
+      position: absolute;
+      top: 50%;
+      user-select: none;
+      height: 65px;
+      margin-top: -60px;
+      width: 60px;
+
+      &-left {
+        left: 0;
+        padding-right: 20px;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+      }
+
+      &-right {
+        right: 0;
+        padding-left: 20px;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+      }
+    }
+  }
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+/* elements styling */
+
+@media (min-width: 500px) {
+  .vib-thumbnail-arrow {
+    width: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .vib-arrow {
+    width: 60px;
+  }
+}
+
+/* image transitions */
+
+.vib-image-transition-enter-active,
+.vib-image-transition-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.vib-image-transition-enter,
+.vib-image-transition-leave-to {
+  opacity: 0;
+}
+
+.vib-image-no-transition-enter-active,
+.vib-image-no-transition-leave-active {
+  transition: none;
+}
+
+.vib-image-no-transition-enter,
+.vib-image-no-transition-leave-to {
+  opacity: 0;
+}
+
+/* container transitions */
+
+.vib-container-transition-enter-active,
+.vib-container-transition-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.vib-container-transition-enter,
+.vib-container-transition-leave-to {
+  opacity: 0;
+}

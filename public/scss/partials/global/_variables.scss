@@ -1,0 +1,54 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+$font-family: 'Open Sans',
+sans-serif;
+
+$primary: rgb(0, 154, 178);
+$secondary: rgb(229, 0, 125);
+$tertiary: rgb(87, 87, 86);
+$green: #388505;
+$blue: #2574A9;
+$orange: rgb(255, 136, 57);
+$yellow: rgb(255, 198, 48);
+$red: #E22C2C;
+$black: rgb(40, 40, 40);
+$grey: rgb(217, 217, 217);
+$brown: rgb(74, 65, 42);
+$purple: rgb(132, 47, 167);
+$off-white: rgb(248, 248, 248);
+$dark-mode-primary:#121212;
+$dark-mode-secondary:#1e1e1e;
+$dark-mode-tertiary: #363636;
+$dark-mode-quaternary: #2e2e2e;
+
+$desktop: 1920px;
+$large-laptop: 1500px;
+$laptop: 1280px;
+$netbook: 1000px;
+$tablet: 860px;
+$mobile: 560px;
+
+$rem-size-0: 0rem;
+$rem-size-1: 0.3125rem;
+$rem-size-1-5: 0.4375rem;
+$rem-size-2: 0.625rem;
+$rem-size-3: 0.9375rem;
+$rem-size-4: 1.25rem;
+$rem-size-5: 1.563rem;
+$rem-size-6: 1.875rem;
+$rem-size-7: 2.188rem;
+$rem-size-8: 2.5rem;
+$rem-size-9: 2.813rem;
+$rem-size-10: 3.125rem;
+$rem-size-11: 3.438rem;
+$rem-size-12: 3.75rem;
+$rem-size-13: 4.063rem;
+$rem-size-14: 4.375rem;
+$rem-size-15: 4.688rem;
+$rem-size-16: 5rem;
+$rem-size-17: 5.313rem;
+$rem-size-18: 5.625rem;
+$rem-size-19: 5.938rem;
+$rem-size-20: 6.25rem;
+
+$imagePath: "/img";

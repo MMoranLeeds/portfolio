@@ -1,0 +1,465 @@
+﻿@use './variables' as *;
+@use './mixins' as *;
+
+*,
+*:before,
+*:after,
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    -webkit-font-smoothing: antialiased;
+}
+
+*:before,
+*:after {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+}
+
+::selection {
+    background-color: darken($blue, 3%);
+    text-shadow: none;
+    color: rgb(255, 255, 255);
+}
+
+input::placeholder,
+input::-webkit-input-placeholder,
+input::-moz-placeholder {
+    opacity: 0.85;
+}
+
+a {
+    color: darken($blue, 20%);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+address {
+    font-style: normal;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: $font-family;
+}
+
+button,
+input,
+select,
+textarea {
+    appearance: none;
+}
+
+button,
+input,
+p,
+select,
+textarea {
+    font-size: 1rem;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+body {
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    transition: background-color 0.3s;
+
+    @include darkMode {
+        background-color: $dark-mode-secondary;
+    }
+
+    &.dark-mode {
+        background-color: $dark-mode-secondary;
+    }
+
+    * {
+        transition: background-color 0.3s, fill 0.3s;
+    }
+}
+
+body {
+
+    &.no-scroll,
+    &.modal-open {
+        overflow: hidden;
+    }
+}
+
+button {
+    background-color: transparent;
+}
+
+.clear {
+    clear: both;
+}
+
+*:disabled {
+    cursor: not-allowed;
+}
+
+:disabled.clean-disabled * {
+    cursor: initial;
+}
+
+:disabled.clean-disabled .button {
+    cursor: pointer;
+}
+
+.d-none {
+    display: none !important;
+}
+
+:focus {
+    outline-color: $blue;
+    transition: none !important;
+}
+
+nav,
+main.home>header {
+    :focus {
+        outline-color: #fff;
+    }
+}
+
+fieldset {
+    min-width: initial;
+    display: block;
+}
+
+form {
+    &:not(.width-auto) {
+        width: 100%;
+    }
+}
+
+h1 {
+    @include fluid(font-size, 30, 36);
+}
+
+h2 {
+    @include fluid(font-size, 26, 30);
+}
+
+h3 {
+    @include fluid(font-size, 22, 26);
+}
+
+h4 {
+    @include fluid(font-size, 18, 22);
+}
+
+h5 {
+    @include fluid(font-size, 16, 18);
+}
+
+h6 {
+    font-size: 16px;
+}
+
+h1:not(:last-child),
+h2:not(:last-child),
+h3:not(:last-child),
+h4:not(:last-child),
+h5:not(:last-child),
+h6:not(:last-child),
+p:not(:last-child) {
+    padding-bottom: $rem-size-2;
+}
+
+h1:empty,
+h2:empty,
+h3:empty,
+h4:empty,
+h5:empty,
+h6:empty,
+p:empty {
+    padding-bottom: $rem-size-0;
+}
+
+p:empty {
+    display: none;
+}
+
+address p:last-of-type {
+    padding-bottom: $rem-size-2;
+}
+
+html,
+body {
+    min-height: 100vh;
+    -webkit-overflow-scrolling: touch;
+    color: $black;
+}
+
+html {
+    font-size: 1em;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+
+    @include darkMode {
+        filter: brightness(.8) contrast(1.2);
+    }
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: none;
+    color: darken($blue, 10%);
+    font-weight: 700;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+ol,
+ul {
+    &:not(.has-bullet-points) {
+        list-style: none;
+    }
+
+    &.has-bullet-points {
+        padding-left: 20px;
+
+        &.list-style-disc {
+            list-style: disc;
+        }
+    }
+
+    &:not(:last-child) {
+        padding-bottom: $rem-size-2;
+    }
+}
+
+p {
+    word-break: break-word;
+}
+
+section {
+    width: 100%;
+    position: relative;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.svg-inline-items {
+    display: none;
+    opacity: 0;
+    visibility: visible;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    caption {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.off-screen {
+    position: absolute;
+    left: -99999px;
+    top: 0;
+    opacity: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+svg,
+symbol {
+    .primary {
+        fill: $primary;
+    }
+
+    .secondary {
+        fill: $secondary;
+    }
+
+    .tertiary {
+        fill: $tertiary;
+    }
+}
+
+.skip-to-content {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    z-index: 999;
+    padding: $rem-size-4;
+    background-color: $black;
+    color: #ffffff;
+    font-size: $rem-size-4;
+
+    &:active,
+    &:focus,
+    &:hover {
+        left: 0;
+        top: 0;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        outline-color: yellow;
+    }
+}
+
+.sub-header {
+    @include fluid(font-size, 18, 20);
+    font-weight: 700;
+
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.error-text {
+    color: $red;
+}
+
+.word-break-initial,
+.word-break-initial * {
+    word-break: initial !important;
+}

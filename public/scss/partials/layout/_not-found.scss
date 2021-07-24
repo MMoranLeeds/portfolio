@@ -1,0 +1,58 @@
+@use "../global" as *;
+
+.not-found {
+    padding: $rem-size-5;
+
+    .user-lost {
+        margin: 0 auto;
+        max-width: 1000px;
+        text-align: center;
+
+        @include darkMode {
+            color: $off-white;
+        }
+
+        *:not(.button) {
+            font-family: "Roboto Mono", monospace;
+        }
+
+        svg {
+            transform-origin: bottom center;
+            margin: $rem-size-4 0;
+            @include animation(wobble 5s 1s infinite);
+            @include eq-size(200px);
+
+            .st0 {
+                fill: #C9BFC8;
+            }
+
+            .st1 {
+                fill: #BAAFB9;
+            }
+
+            .st2 {
+                fill: #AA9EA9;
+            }
+
+            .st3 {
+                fill: #E5E1E5;
+            }
+
+            .st4 {
+                fill: #D7D0D6;
+            }
+
+            .st5 {
+                fill: #F9F7F8;
+            }
+
+            .st6 {
+                fill: #EFEDEF;
+            }
+
+            .st7 {
+                fill: #9B8E99;
+            }
+        }
+    }
+}

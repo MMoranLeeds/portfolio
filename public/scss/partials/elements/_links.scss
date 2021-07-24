@@ -1,0 +1,54 @@
+@use "../global" as *;
+
+ul.external-links {
+    display: flex;
+
+    li {
+        border-radius: 100%;
+        background-color: #fff;
+        box-shadow: 0 3px 8px -2px rgba(0, 0, 0, .25);
+        @include eq-size(50px);
+        @include transition;
+        border: 2px solid transparent;
+
+        @include darkMode {
+            border-color: $off-white;
+            background-color: $dark-mode-tertiary;
+        }
+
+        &:not(:last-child) {
+            margin-right: $rem-size-2;
+        }
+
+        a {
+            padding: calc(#{$rem-size-2} + #{$rem-size-1} / 2);
+            display: block;
+            @include eq-size(100%);
+            position: relative;
+        }
+
+        svg {
+            fill: #1476cb;
+            display: block;
+            @include eq-size(100%);
+
+            @include darkMode {
+                fill: $off-white;
+            }
+        }
+
+        &:hover,
+        &:focus-within {
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .24), 0 0 4px rgba(0, 0, 0, .12), 0 6px 18px rgba(0, 0, 0, .12);
+            transform: translate3d(0, -2px, 0);
+        }
+
+        @include mediaQuery(tablet) {
+            @include eq-size(40px);
+
+            a {
+                padding: $rem-size-2;
+            }
+        }
+    }
+}

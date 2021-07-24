@@ -1,0 +1,249 @@
+﻿@use './variables' as *;
+
+@mixin loading-shimmer($duration: 1.25s, $timing-function: linear, $delay: 0s, $iteration-count: infinite, $fill-mode: forwards) {
+    background: linear-gradient(to right, rgb(246, 246, 246) 8%, rgb(234, 234, 234) 18%, rgb(245, 245, 245) 33%);
+    background-size: 800px 104px;
+    @include animation(loading-shimmer $duration $timing-function $delay $iteration-count $fill-mode);
+}
+
+@mixin pseudo($position: relative, $display: block) {
+    @if $position=="relative" {
+        position: relative;
+
+        &:before,
+        &:after {
+            position: absolute;
+        }
+    }
+
+    @else if $position=="absolute" {
+        position: absolute;
+
+        &:before,
+        &:after {
+            position: relative;
+        }
+    }
+
+    @else if $position=="fixed" {
+        position: fixed;
+
+        &:before,
+        &:after {
+            position: absolute;
+        }
+    }
+
+    @else {
+        @error "Property #{$position} must be relative, absolute or fixed.";
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        display: $display;
+    }
+}
+
+@mixin transition($what: all 0.3s) {
+    transition: $what;
+}
+
+@mixin truncate($truncate-width) {
+    max-width: $truncate-width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin clampText($clamp-line-number) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $clamp-line-number;
+}
+
+@mixin eq-size($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin fluid($property, $min-value, $max-value, $min-screen-size: 320, $max-screen-size: 1920, $clip: true, $clipAtStart: true, $clipAtEnd: true) {
+    $multiplier: ($max-value - $min-value) / ($max-screen-size - $min-screen-size) * 100;
+    $totalAddition: ($min-value * $max-screen-size - $max-value * $min-screen-size) / ($max-screen-size - $min-screen-size);
+    $formula: calc(#{$multiplier + 0vw} + #{$totalAddition + 0px});
+
+    @if $clip and $clipAtStart {
+        @media (max-width: #{$min-screen-size + 0px}) {
+            #{$property}: $min-value + 0px;
+        }
+    }
+
+    @if $clip and $clipAtEnd {
+        @media (min-width: #{$max-screen-size + 0px}) {
+            #{$property}: $max-value + 0px;
+        }
+    }
+
+    #{$property}: $formula;
+}
+
+@mixin keyframes($animation-name) {
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($value) {
+    animation: #{$value};
+}
+
+@mixin mediaQuery($resolution, $minMax: max, $pixels: $desktop) {
+    @if $resolution==xl {
+        @media only screen and (min-width: $desktop) {
+            @content;
+        }
+    }
+
+    @else if $resolution==dekstop {
+        @media only screen and ($minMax + -width: $desktop) {
+            @content;
+        }
+    }
+
+    @else if $resolution==large-laptop {
+        @media only screen and ($minMax + -width: $large-laptop) {
+            @content;
+        }
+    }
+
+    @else if $resolution==laptop {
+        @media only screen and ($minMax + -width: $laptop) {
+            @content;
+        }
+    }
+
+    @else if $resolution==small-laptop {
+        @media only screen and ($minMax + -width: $small-laptop) {
+            @content;
+        }
+    }
+
+    @else if $resolution==netbook {
+        @media only screen and ($minMax + -width: $netbook) {
+            @content;
+        }
+    }
+
+    @else if $resolution==tablet {
+        @media only screen and ($minMax + -width: $tablet) {
+            @content;
+        }
+    }
+
+    @else if $resolution==tablet-landscape {
+        @media only screen and ($minMax + -width: $tablet) and (orientation: landscape) {
+            @content;
+        }
+    }
+
+    @else if $resolution==mobile {
+        @media only screen and ($minMax + -width: $mobile) {
+            @content;
+        }
+    }
+
+    @else if $resolution==mobile-landscape {
+        @media only screen and ($minMax + -width: $mobile) and (orientation: landscape) {
+            @content;
+        }
+    }
+
+    @else if $resolution==custom-width {
+        @media only screen and ($minMax + -width: $pixels + px) {
+            @content;
+        }
+    }
+
+    @else if $resolution==custom-height {
+        @media only screen and ($minMax + -height: $pixels + px) {
+            @content;
+        }
+    }
+}
+
+@mixin browserHack($browser) {
+    @if $browser==edge {
+        @supports (-ms-ime-align:auto) {
+            @content;
+        }
+    }
+
+    @else if $browser==ie {
+
+        @media all and (-ms-high-contrast: none),
+        (-ms-high-contrast: active) {
+            @content;
+        }
+    }
+
+    @else if $browser==ie9 {
+        @media all and (min-width:0\0) and (min-resolution:.001dpcm) {
+            @content;
+        }
+    }
+
+    @else if $browser==unsupported {
+        @supports (-ms-ime-align:auto) {
+            @content;
+        }
+
+        @media all and (-ms-high-contrast: none),
+        (-ms-high-contrast: active) {
+            @content;
+        }
+
+        @media all and (min-width:0\0) and (min-resolution:.001dpcm) {
+            @content;
+        }
+    }
+
+    @else if $browser==firefox {
+        @-moz-document url-prefix() {
+            @content;
+        }
+    }
+
+    @else if $browser==ios {
+        body.ios & {
+            @content;
+        }
+    }
+
+    @else if $browser==android {
+        body.android & {
+            @content;
+        }
+    }
+
+    @else if $browser==mobileDevice {
+
+        body.ios &,
+        body.android & {
+            @content;
+        }
+    }
+}
+
+@mixin darkMode() {
+    @media (prefers-color-scheme: dark) {
+        body.dark-mode &{
+            @content;
+        }
+    }
+
+    body.dark-mode &{
+        @content;
+    }
+    
+}

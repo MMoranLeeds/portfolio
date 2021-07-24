@@ -1,0 +1,72 @@
+@use "../../global/" as *;
+
+main.home {
+    section {
+        &[data-section-clients] {
+            padding: 250px 87.5px 50px;
+
+
+            &:before {
+                content: 'clients';
+            }
+
+            ul {
+                @include grid(1fr 1fr 1fr 1fr 1fr, 100);
+                position: relative;
+                z-index: 1;
+                padding: 0 50px;
+
+                li {
+                    height: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        height: 100%;
+                        transition: .3s ease-in-out;
+
+                        @include darkMode {
+                            filter: brightness(1) invert(1) grayscale(1);
+                        }
+                    }
+                }
+
+                @include mediaQuery(custom-width, max, 1400) {
+                    @include grid(1fr 1fr 1fr 1fr, 75);
+                }
+
+                @include mediaQuery(laptop) {
+                    @include grid(1fr 1fr 1fr 1fr, 50);
+                }
+
+                @include mediaQuery(custom-width, max, 1100) {
+                    @include grid(1fr 1fr 1fr, 75);
+                }
+
+                @include mediaQuery(tablet) {
+                    @include grid(1fr 1fr, 50);
+
+                    li {
+                        height: 50px;
+                    }
+                }
+
+                @include browserHack(ie) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: -25px;
+
+                    li {
+                        flex: 0 1 175px;
+                        margin: 25px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

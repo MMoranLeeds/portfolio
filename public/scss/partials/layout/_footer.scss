@@ -1,0 +1,32 @@
+@use "../global" as *;
+
+footer {
+    & > div {
+        background-color: #fff;
+        border-top: 5px solid $blue;
+
+        @include darkMode {
+            border-color: $dark-mode-tertiary;
+        }
+
+        & > a {
+            svg {
+                fill: $blue;
+
+                @include darkMode {
+                    fill: $off-white;
+                }
+            }
+        }
+
+        ul.external-links {
+            li {
+                border-color: $blue;
+
+                @include darkMode {
+                    border-color: $off-white;
+                }
+            }
+        }
+    }
+}

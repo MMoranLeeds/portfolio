@@ -1,0 +1,73 @@
+@use "../global" as *;
+
+.cookie {
+    background-color: rgba(#fff, 0.95);
+    border-top: 5px solid #424851;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    min-height: 105px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    overflow: hidden;
+    @include pseudo(fixed);
+
+    @include mediaQuery(tablet) {
+        padding: 15px 40px 15px 25px;
+        min-height: initial;
+        display: block;
+    }
+
+    @include darkMode {
+        background-color: $dark-mode-primary;
+        border-color: $dark-mode-tertiary;
+        color: $off-white;
+    }
+
+    &:after {
+        content: "\1F36A";
+        right: -25px;
+        top: -25px;
+        opacity: 0.35;
+        font-size: $rem-size-12;
+        max-width: 65px;
+    }
+
+    p {
+        padding-bottom: initial;
+    }
+
+    button {
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:focus {
+            outline-color: $blue;
+        }
+    }
+
+    &.appear {
+        &-enter,
+        &-leave {
+            &-active {
+                transition: 1s;
+            }
+        }
+    
+        &-enter-active {
+            transition-delay: 1s;
+        }
+    
+        &-enter,
+        &-leave-to {
+            transform: translateY(100%);
+        }
+    }
+}

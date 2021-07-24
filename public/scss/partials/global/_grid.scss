@@ -1,0 +1,20 @@
+﻿@mixin grid-columns($property) {
+    -ms-grid-columns: $property;
+    grid-template-columns: $property;
+}
+
+@mixin grid($columns, $gap) {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: $columns;
+    grid-template-columns: $columns;
+    grid-gap: $gap + px;
+}
+
+@mixin grid-template($property) {
+    grid-template-areas: $property;
+}
+
+@mixin grid-area($property) {
+    grid-area: $property;
+}

@@ -1,0 +1,44 @@
+@use "../global" as *;
+
+.theme-selector {
+    position: fixed;
+    bottom: 120px;
+    right: 0;
+    z-index: 10;
+    color: #fff;
+    @include transition;
+
+    @include mediaQuery(custom-height, max, 200) {
+        bottom:10%;
+    }
+
+    &>button {
+        width: 50px;
+        height: 50px;
+        padding: calc(#{$rem-size-2} + #{$rem-size-1} / 2);
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border: 2px solid $blue;
+        border-right: none;
+        background-color: rgba($off-white, .875);
+        box-shadow: 0 0 13px 5px rgba(40, 40, 40, .15);
+        cursor: pointer;
+        overflow: hidden;
+        @include transition;
+
+        @include darkMode {
+            border-color: $off-white;
+            background-color: $dark-mode-tertiary;
+
+            svg {
+                fill: $off-white;
+            }
+        }
+
+        svg {
+            display: block;
+            height: 100%;
+            width:calc(50px - #{$rem-size-4});
+        }
+    }
+}

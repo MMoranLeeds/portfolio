@@ -1,0 +1,190 @@
+@use "../../global/" as *;
+
+main.home{
+    section{
+        &[data-section-testimonials] {
+            padding: 175px 0 0;
+
+            &:before {
+                content: 'testimonials';
+            }
+
+            .VueCarousel-slide {
+                padding-bottom: 5px;
+            }
+
+            .VueCarousel-pagination {
+                margin-top: $rem-size-4;
+
+                .VueCarousel-dot-container {
+                    display: flex;
+                    justify-content: center;
+
+
+                    button {
+                        border: 1px solid $blue;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @include pseudo;
+
+                        &:not(:first-child) {
+                            margin-left: $rem-size-1;
+                        }
+
+                        &:not(:last-child) {
+                            margin-right: $rem-size-1;
+                        }
+
+                        &:before {
+                            @include eq-size(50%);
+                            border-radius: 100%;
+                            background-color: transparent;
+                            @include transition;
+                        }
+
+                        &.VueCarousel-dot--active {
+                            &:before {
+                                background-color: $blue;
+                            }
+                        }
+
+                        @include browserHack(ie){
+                            &:before{
+                                left:50%;
+                                top:50%;
+                                transform: translateX(-50%) translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .VueCarousel-navigation {
+
+                .VueCarousel-navigation-prev {
+                    left: 100px;
+
+                    svg {
+                        transform: rotate(180deg);
+                    }
+
+                    &:not(.VueCarousel-navigation--disabled) {
+                        &:hover {
+                            transform: translate3d(0, -2px, 0) translateY(-50%) translateX(-100%);
+                        }
+                    }
+                }
+
+                .VueCarousel-navigation-next {
+                    right: 100px;
+
+                    &:not(.VueCarousel-navigation--disabled) {
+                        &:hover {
+                            transform: translate3d(0, -2px, 0) translateY(-50%) translateX(100%);
+                        }
+                    }
+                }
+
+                &--disabled {
+                    cursor: not-allowed;
+                }
+
+                button {
+                    @include eq-size(50px);
+                    border-radius: 100%;
+                    border: 1px solid $blue;
+                    background-color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 3px 8px -2px rgba(0, 0, 0, .25);
+                    @include transition;
+
+                    svg {
+                        @include eq-size(100%);
+                        display: block;
+                        fill: $black;
+                    }
+
+                    &:not(.VueCarousel-navigation--disabled) {
+                        &:hover {
+                            box-shadow: 0 4px 4px rgba(0, 0, 0, .24), 0 0 4px rgba(0, 0, 0, .12), 0 6px 18px rgba(0, 0, 0, .12);
+                        }
+                    }
+                }
+
+                @include mediaQuery(laptop) {
+                    display: none;
+                }
+            }
+
+            blockquote {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                color: lighten($black, 10%);
+                padding: 50px;
+                border-left: 8px solid $blue;
+                background: rgb(237, 237, 237);
+                box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+                @include pseudo;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                @include darkMode {
+                    background-color: $dark-mode-tertiary;
+                    border-left-color: $dark-mode-quaternary;
+                    color: $off-white;
+
+                    &:before{
+                        color: $off-white;
+                    }
+                }
+
+                @include browserHack(ie){
+                    display: block;
+                }
+
+                @include mediaQuery(netbook){
+                    max-height: 300px;
+                    overflow: auto;
+                }
+
+                &:before {
+                    content: "\201C";
+                    color: darken($blue, 15%);
+                    font-size: 100px;
+                    position: absolute;
+                    left: 15px;
+                    top: 15px;
+                    font-family: sans-serif;
+                }
+
+                p {
+                    font-style: italic;
+                    flex: 1;
+                }
+
+                h4 {
+                    font-weight: bold;
+                }
+
+                @include mediaQuery(laptop) {
+                    padding: 25px;
+
+                    &:before {
+                        font-size: 50px;
+                        top: 5px;
+                        left: 5px;
+                    }
+                }
+            }
+
+            @include mediaQuery(tablet) {
+                padding: 175px 25px;
+            }
+        }
+    }
+}

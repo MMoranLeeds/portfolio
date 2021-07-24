@@ -1,32 +1,66 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <AccessibilitySkip />
+    <nav>
+      <CookieConsent />
+      <Navigation />
+      <DarkModeToggle />
+    </nav>
+
+    <transition name="fade-up-down" mode="out-in">
+      <router-view />
+    </transition>
+
+    <footer>
+      <Navigation />
+    </footer>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import { namespace } from "vuex-class";
+import { Component, Vue } from "vue-property-decorator";
+import AccessibilitySkip from "@/shared/AccessibilitySkip.vue";
+import CookieConsent from "@/shared/CookieConsent.vue";
+import Navigation from "@/shared/Navigation.vue";
+import DarkModeToggle from "@/shared/DarkModeToggle.vue";
 
-#nav {
-  padding: 30px;
+const clientsModule = namespace("clients");
+const uiModule = namespace("ui");
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+@Component({
+  components: {
+    AccessibilitySkip,
+    CookieConsent,
+    Navigation,
+    DarkModeToggle,
+  },
+})
+export default class Home extends Vue {
+  @clientsModule.Getter clients!: Array<string>;
 
-    &.router-link-exact-active {
-      color: #42b983;
+  @uiModule.Action checkIsIe11!: () => void;
+
+  mounted(): void {
+    window.addEventListener("keydown", this.userTabbing);
+  }
+
+  userTabbing(e: { keyCode: number; }): void {
+    const el = document.body;
+
+    if (e.keyCode === 9) {
+      el.classList.add("user-tabbing");
+      window.removeEventListener("keydown", this.userTabbing);
+      window.addEventListener("mousedown", this.userMouse);
     }
   }
+
+  userMouse(): void {
+    const el = document.body;
+
+    el.classList.remove("user-tabbing");
+    window.addEventListener("keydown", this.userTabbing);
+    window.removeEventListener("mousedown", this.userMouse);
+  }
 }
-</style>
+</script>

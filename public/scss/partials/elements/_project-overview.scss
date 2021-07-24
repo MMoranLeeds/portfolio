@@ -1,0 +1,257 @@
+@use "../global" as *;
+
+.project-overview {
+    padding: 50px;
+    display: flex;
+
+    @include mediaQuery(laptop) {
+        padding: 25px 50px;
+    }
+
+    @include mediaQuery(netbook) {
+        display: block;
+        padding: 25px;
+    }
+
+    .project-details {
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.075);
+        width: 100%;
+        max-width: 400px;
+        align-self: flex-start;
+        background-color: #fff;
+        margin-left: $rem-size-4;
+        position: sticky;
+        top: 25px;
+
+        @include darkMode {
+            background-color: $dark-mode-tertiary;
+            color: $off-white;
+        }
+
+        .content {
+            padding: $rem-size-5;
+
+            h1 {
+                font-weight: 400;
+                font-size: 28px;
+                text-align: center;
+            }
+        }
+
+        .actions {
+            padding: $rem-size-3 $rem-size-5;
+            background-color: $off-white;
+            border-top: 1px solid $grey;
+
+            @include darkMode {
+                background-color: $dark-mode-tertiary;
+                border-top-color: $off-white;
+
+                .button {
+                    background-color: transparent;
+                }
+            }
+
+            .button {
+                width: 100%;
+                background-color: #fff;
+                text-align: center;
+            }
+        }
+
+        @include mediaQuery(laptop) {
+            max-width: 300px;
+        }
+
+        @include mediaQuery(netbook) {
+            max-width: initial;
+            margin-left: initial;
+            margin-top: $rem-size-4;
+            position: static;
+        }
+    }
+
+    section {
+        flex: 1;
+
+        li {
+            background-color: #fff;
+            border: 1px solid $grey;
+            box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.15);
+            padding: $rem-size-2;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                @include pseudo;
+
+                &:before {
+                    background-color: rgba($black, 0.75);
+                    @include eq-size(100%);
+                    @include transition;
+                    opacity: 0;
+                    z-index: 1;
+
+                    @include browserHack(ie) {
+                        left: 0;
+                        top: 0;
+                    }
+                }
+
+                svg {
+                    fill: #fff;
+                    position: absolute;
+                    @include eq-size(75px);
+                    z-index: 2;
+                    @include transition;
+                    opacity: 0;
+
+                    @include browserHack(ie) {
+                        left: 50%;
+                        top: 505;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+                }
+            }
+
+            &:hover {
+                button {
+                    &:before,
+                    svg {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            button:focus {
+                &:before,
+                svg {
+                    opacity: 1;
+                }
+            }
+
+            @include darkMode {
+                background-color: $dark-mode-tertiary;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: $rem-size-4;
+            }
+
+            img {
+                object-fit: contain;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &.project-loading {
+        section {
+            div {
+                width: 100%;
+                height: 750px;
+                background-color: #fff;
+                padding: $rem-size-4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $grey;
+                box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.15);
+
+                @include darkMode {
+                    background-color: $dark-mode-tertiary;
+                }
+
+                svg {
+                    @include eq-size(75px);
+                    display: block;
+                    fill: lighten($black, 60%);
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: $rem-size-4;
+                }
+            }
+        }
+
+        .project-details {
+            .content {
+                div {
+                    @include loading-shimmer;
+                    height: 25px;
+                    margin: 0 auto;
+                    width: 90%;
+
+                    &:not(:last-child) {
+                        margin-bottom: $rem-size-2;
+                    }
+
+                    &:first-child {
+                        margin: 0 auto $rem-size-4;
+                        width: 75%;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#vuejs-icon {
+    .green {
+        fill: #41b883;
+    }
+
+    .grey {
+        fill: #35495e;
+    }
+}
+
+#photoshop-icon {
+    .dark-blue {
+        fill: #001e36;
+    }
+
+    .light-blue {
+        fill: #31a8ff;
+    }
+}
+
+#illustrator-icon {
+    .dark-brown {
+        fill: #330000;
+    }
+
+    .orange {
+        fill: #ff9a00;
+    }
+}
+
+#xd-icon {
+    .dark-purple {
+        fill: #470137;
+    }
+
+    .light-purple {
+        fill: #ff61f6;
+    }
+}
+
+#sass-icon {
+    .pink {
+        fill: #cf649a;
+    }
+}
+
+#gulp-icon {
+    .red-container {
+        fill: #da4648;
+    }
+
+    .white-text {
+        fill: #ffffff;
+    }
+}

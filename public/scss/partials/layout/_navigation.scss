@@ -1,0 +1,31 @@
+@use "../global" as *;
+
+nav,
+footer {
+    &>div:not(.theme-selector):not(.cookie) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 50px;
+        background-color: $blue;
+
+        @include darkMode{
+            background-color: $dark-mode-primary;
+        }
+
+        &>a {
+            box-shadow: 0 3px 8px 1px rgba(0, 0, 0, .15);
+            @include eq-size(50px);
+
+            svg {
+                fill: #fff;
+                display: block;
+                @include eq-size(100%);
+            }
+        }
+
+        @include mediaQuery(tablet) {
+            padding: 12.5px 25px;
+        }
+    }
+}

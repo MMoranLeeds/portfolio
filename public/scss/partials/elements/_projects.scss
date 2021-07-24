@@ -1,0 +1,119 @@
+@use "../global" as *;
+
+.projects {
+    @include grid(repeat(auto-fill, minmax(350px, 1fr)), 25);
+    width: 75%;
+    margin-left: 25%;
+    padding-right: 50px;
+
+    @include mediaQuery(large-laptop) {
+        @include grid(repeat(auto-fill, minmax(300px, 1fr)), 25);
+    }
+
+    @include mediaQuery(laptop) {
+        @include grid(repeat(auto-fill, minmax(250px, 1fr)), 25);
+    }
+
+    @include browserHack(ie) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -25px -25px -25px 25%;
+
+        .project {
+            flex: 1 1 350px;
+            margin: 25px;
+
+            @include mediaQuery(large-laptop) {
+                flex: 1 1 300px;
+            }
+
+            @include mediaQuery(laptop) {
+                flex: 1 1 250px;
+            }
+        }
+    }
+
+    @include mediaQuery(tablet) {
+        width: 100%;
+        margin: 0;
+        padding: 0 25px;
+    }
+
+    .project {
+        background-color: #fff;
+        box-shadow: 0 3px 8px -2px rgba(0, 0, 0, .15);
+        @include transition;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+
+        @include browserHack(ie) {
+            display: block;
+        }
+
+        @include darkMode {
+            background-color: $dark-mode-tertiary;
+            color: $off-white;
+        }
+
+        .content {
+            padding: $rem-size-8 $rem-size-4;
+            color: $black;
+            flex: 1;
+
+            @include darkMode {
+                color: $off-white;
+            }
+
+            span {
+                text-transform: uppercase;
+                font-weight: 700;
+                color: lighten($black, 70%);
+            }
+
+            h4 {
+                font-weight: 600;
+            }
+        }
+
+        .image {
+            height: auto;
+            max-height: 250px;
+
+            a {
+                display: block;
+                height: 100%;
+                @include pseudo;
+
+                &:before {
+                    background-color: rgba($black, 0.25);
+                    @include eq-size(100%);
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-position: 50%;
+                    object-fit: cover;
+
+                    &[src$=".webp"] {
+                        height: 250px;
+
+                        @include mediaQuery(large-laptop) {
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover,
+        &:focus-within {
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .24), 0 0 4px rgba(0, 0, 0, .12), 0 6px 18px rgba(0, 0, 0, .12);
+            transform: translate3d(0, -2px, 0);
+        }
+    }
+
+
+}
