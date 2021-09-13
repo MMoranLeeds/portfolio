@@ -7,7 +7,7 @@ export const projectsStore: Module<any, any> = {
             {
                 reference: "hw-interiors-ltd",
                 title: "HW Interiors Ltd",
-                introduction: "A redesign of a local kitchen fitters website, HW Interiors Ltd.",
+                introduction: "A proposed redesign of a local kitchen fitters website, HW Interiors Ltd.</br></br> With a greater focus on responsive design and acccessibility the proposed design resulted in a revamp of a current template based wordpress site.</br></br> Imagery is used as a focal stand point whilst implementing subtle animations to ensure users are presented with a website that echoes the high standard of the kitchen fittings.",
                 images: [
                     {
                         url: "hw-interiors-ltd/home",
@@ -18,7 +18,7 @@ export const projectsStore: Module<any, any> = {
                     }
                 ],
                 isFeaturedProject: false,
-                isHeaderProject: true,
+                isHeaderProject: false,
                 hasExternalLink: true,
                 externalLink: "https://hwinteriors.netlify.app/",
                 previewImage: {
@@ -163,10 +163,16 @@ export const projectsStore: Module<any, any> = {
                     }
                 ],
                 isFeaturedProject: false,
-                isHeaderProject: false,
+                isHeaderProject: true,
                 previewImage: {
                     url: "parcel-tracker",
                     altText: "Parcel Tracker system displaying results of parcels delivered and tracked."
+                },
+                headerProjectDetails: {
+                    image: "parcel-tracker",
+                    altText: "Two laptops displaying screens from the Parcel Tracker system.",
+                    backgroundColor: "#e6f0fe",
+                    reference: "parcel-tracker"
                 }
             },
             {
