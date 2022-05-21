@@ -5,32 +5,26 @@ export const projectsStore: Module<any, any> = {
     state: {
         projects: [
             {
-                reference: "hw-interiors-ltd",
-                title: "HW Interiors Ltd",
-                introduction: "A proposed redesign of a local kitchen fitters website, HW Interiors Ltd.</br></br> With a greater focus on responsive design and acccessibility the proposed design resulted in a revamp of a current template based wordpress site.</br></br> Imagery is used as a focal stand point whilst implementing subtle animations to ensure users are presented with a website that echoes the high standard of the kitchen fittings.",
+                reference: "cunningham-piano-services-ltd",
+                title: "Cunningham Piano Services Ltd",
+                introduction: "A full redesign of a local piano restoration specialist based in Yorkshire, Cunningham Piano Services Ltd.</br></br>With a greater focus on responsive design and acccessibility the proposed design resulted in a revamp of a current template based wordpress site.</br></br> Imagery is used as a focal stand point whilst implementing subtle animations to ensure users are presented with a website that echoes the high standard of the restoration.",
                 images: [
                     {
-                        url: "hw-interiors-ltd/home",
-                        altText: "",
-                        thumb: "/img/projects/hw-interiors-ltd/home.webp",
-                        src: "/img/projects/hw-interiors-ltd/home.webp",
-                        caption: "Job search landing page with branded featured clients call to action links"
+                        url: "cunningham-piano-services-ltd/home",
+                        altText: "Home page introduction for CPianos",
+                        thumb: "/img/projects/cunningham-piano-services-ltd/home.webp",
+                        src: "/img/projects/cunningham-piano-services-ltd/home.webp",
+                        caption: ""
                     }
                 ],
                 isFeaturedProject: false,
                 isHeaderProject: false,
                 hasExternalLink: true,
-                externalLink: "https://hwinteriors.netlify.app/",
+                externalLink: "https://cpianos.netlify.app/",
                 previewImage: {
-                    url: "hw-interiors-ltd",
-                    altText: "Laptop showing a system using a shared layout called In Ui."
+                    url: "cunningham-piano-services-ltd",
+                    altText: ""
                 },
-                headerProjectDetails: {
-                    image: "hw-interiors-ltd",
-                    altText: "Two laptops displaying screens from the HW Interiors Ltd website.",
-                    backgroundColor: "#e6f0fe",
-                    reference: "hw-interiors-ltd"
-                }
             },
             {
                 reference: "in-ui-brand",
