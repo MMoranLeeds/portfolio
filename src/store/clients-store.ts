@@ -11,6 +11,9 @@ export const clientsStore: Module<any, any> = {
                 name: "Evans Cycles",
             },
             {
+                name: "Fruugo",
+            },
+            {
                 name: "Government Digital Service",
             },
             {
@@ -27,9 +30,6 @@ export const clientsStore: Module<any, any> = {
             },
             {
                 name: "Stonegate Pub Company",
-            },
-            {
-                name: "Stovax Gazco",
             },
             {
                 name: "United Learning",
