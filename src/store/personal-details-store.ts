@@ -5,7 +5,7 @@ export const personalDetailsStore: Module<any, any> = {
     state: {
         name: "Matthew Moran",
         title: "Lead UI UX Designer and Front-end Developer",
-        introduction: "A competent and experienced Lead UI UX Designer and Front-end Developer with over seven years extensive experience.</br> </br> Working to create immersive User Interfaces I am well versed in using industry standard design software alongside up and coming Front-end technologies. </br></br> With a focus on developing responsive accessible sites I enjoy a hands on approach; from initial concepts and prototyping through to the development stage.",
+        introduction: "A competent and experienced Lead UI UX Designer and Front-end Developer with over nine years extensive experience.</br> </br> Working to create immersive User Interfaces I am well versed in using industry standard design software alongside up and coming Front-end technologies. </br></br> With a focus on developing responsive accessible sites I enjoy a hands on approach; from initial concepts and prototyping through to the development stage.",
         contactNumber: "07759 952035",
         contactEmail: "matthewdm@live.co.uk",
         contactAddress: "East Morton",
