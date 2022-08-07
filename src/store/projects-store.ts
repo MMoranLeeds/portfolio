@@ -20,7 +20,7 @@ export const projectsStore: Module<any, any> = {
                 isFeaturedProject: false,
                 isHeaderProject: false,
                 hasExternalLink: true,
-                externalLink: "https://cpianos.netlify.app/",
+                externalLink: "https://cpianos.co.uk",
                 previewImage: {
                     url: "cunningham-piano-services-ltd",
                     altText: ""
