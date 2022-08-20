@@ -1,5 +1,5 @@
 <template>
-  <section data-section-featured>
+  <section data-section-featured aria-label="Featured project">
     <article v-for="(featured, i) in filterProjects" v-bind:key="i">
       <router-link
         v-bind:to="{

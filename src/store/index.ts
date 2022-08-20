@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import { clientsStore } from "@/store/clients-store";
+import { companiesStore } from "@/store/companies-store";
 import { navigationStore } from "@/store/navigation-store";
 import { personalDetailsStore } from "@/store/personal-details-store";
 import { projectsStore } from "@/store/projects-store";
@@ -11,7 +11,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
-    clients: clientsStore,
+    companies: companiesStore,
     navigation: navigationStore,
     personalDetails: personalDetailsStore,
     projects: projectsStore,

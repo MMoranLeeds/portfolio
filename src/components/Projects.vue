@@ -1,5 +1,5 @@
 <template>
-  <section data-section-projects>
+  <section data-section-projects aria-label="A number of projects I've worked on over the years">
     <ul class="projects">
       <li class="project" v-for="(project, i) in filterProjects" v-bind:key="i">
         <article>

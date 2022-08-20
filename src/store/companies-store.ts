@@ -1,9 +1,9 @@
 import { Module } from "vuex";
 
-export const clientsStore: Module<any, any> = {
+export const companiesStore: Module<any, any> = {
     namespaced: true,
     state: {
-        clients: [
+        companies: [
             {
                 name: "Argos",
             },
@@ -43,8 +43,8 @@ export const clientsStore: Module<any, any> = {
 
     },
     getters: {
-        clients(state: any) {
-            return state.clients;
+        companies(state: any) {
+            return state.companies;
         },
     }
 }

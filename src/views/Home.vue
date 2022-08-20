@@ -11,7 +11,7 @@
 
     <Testimonials />
 
-    <Clients />
+    <Companies />
   </main>
 </template>
 
@@ -21,7 +21,7 @@ import PersonalDetails from "@/components/PersonalDetails.vue";
 import HeaderProjects from "@/components/HeaderProjects.vue";
 import FeaturedProject from "@/components/FeaturedProject.vue";
 import Projects from "@/components/Projects.vue";
-import Clients from "@/components/Clients.vue";
+import Companies from "@/components/Companies.vue";
 import Testimonials from "@/components/Testimonials.vue";
 
 @Component({
@@ -31,7 +31,7 @@ import Testimonials from "@/components/Testimonials.vue";
     FeaturedProject,
     Projects,
     Testimonials,
-    Clients,
+    Companies,
   },
 })
 export default class Home extends Vue {}

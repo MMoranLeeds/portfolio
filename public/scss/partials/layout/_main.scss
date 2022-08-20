@@ -4,7 +4,7 @@
 @use "segments/featured";
 @use "segments/projects";
 @use "segments/testimonials";
-@use "segments/clients";
+@use "segments/companies";
 
 main {
     min-height: calc(100vh- 205px);
@@ -215,7 +215,7 @@ main {
                 &[data-section-featured],
                 &[data-section-projects],
                 &[data-section-testimonials],
-                &[data-section-clients] {
+                &[data-section-companies] {
                     padding: 100px 0 50px;
                 }
             }

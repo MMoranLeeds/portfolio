@@ -25,7 +25,6 @@ import CookieConsent from "@/shared/CookieConsent.vue";
 import Navigation from "@/shared/Navigation.vue";
 import DarkModeToggle from "@/shared/DarkModeToggle.vue";
 
-const clientsModule = namespace("clients");
 const uiModule = namespace("ui");
 
 @Component({
@@ -37,8 +36,6 @@ const uiModule = namespace("ui");
   },
 })
 export default class Home extends Vue {
-  @clientsModule.Getter clients!: Array<string>;
-
   @uiModule.Action checkIsIe11!: () => void;
 
   mounted(): void {
