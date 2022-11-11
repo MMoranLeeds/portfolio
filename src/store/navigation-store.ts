@@ -8,13 +8,13 @@ export const navigationStore: Module<any, any> = {
                 name: "GitHub",
                 icon: "github",
                 url: "https://github.com/MMoranLeeds/portfolio",
-                ariaLabel: "View the source code for this project on GitHub"
+                ariaLabel: "View the source code for this site on GitHub"
             },
             {
                 name: "CV Download",
                 icon: "download",
                 url: "https://drive.google.com/file/d/1tIYpMAuxt_2-Ur_WroUtyn7UYQduYSXX/view?usp=sharing",
-                ariaLabel: "Download a copy of my CV"
+                ariaLabel: "Download my CV"
             },
             {
                 name: "Email",
@@ -26,7 +26,7 @@ export const navigationStore: Module<any, any> = {
                 name: "LinkedIn",
                 icon: "linkedin",
                 url: "https://www.linkedin.com/in/matthewmoran5/",
-                ariaLabel: "View my LinkedIn account"
+                ariaLabel: "View my LinkedIn profile"
             }
         ]
     },
