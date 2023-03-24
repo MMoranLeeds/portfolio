@@ -4,7 +4,7 @@
       <slide v-for="(testimonial, i) in testimonials" v-bind:key="i">
         <blockquote>
           <p v-html="testimonial.bodyContent"></p>
-          <h4>{{testimonial.title}} - {{testimonial.jobTitle}} {{testimonial.year}}</h4>
+          <h4>{{testimonial.title}}</h4>
         </blockquote>
       </slide>
     </carousel>
