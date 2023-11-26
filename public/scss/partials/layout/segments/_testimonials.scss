@@ -1,12 +1,12 @@
 @use "../../global/" as *;
 
-main.home{
-    section{
+main.home {
+    section {
         &[data-section-testimonials] {
             padding: 175px 0 0;
 
             &:before {
-                content: 'testimonials';
+                content: "testimonials";
             }
 
             .VueCarousel-slide {
@@ -20,9 +20,8 @@ main.home{
                     display: flex;
                     justify-content: center;
 
-
                     button {
-                        border: 1px solid $blue;
+                        border: 2px solid $blue;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -46,22 +45,30 @@ main.home{
                         &.VueCarousel-dot--active {
                             &:before {
                                 background-color: $blue;
+
+                                @include darkMode {
+                                    background-color: $off-white;
+                                }
                             }
                         }
 
-                        @include browserHack(ie){
-                            &:before{
-                                left:50%;
-                                top:50%;
+                        @include browserHack(ie) {
+                            &:before {
+                                left: 50%;
+                                top: 50%;
                                 transform: translateX(-50%) translateY(-50%);
                             }
+                        }
+
+                        @include darkMode {
+                            border-color: $off-white!important;
+                            background-color: $dark-mode-tertiary!important;
                         }
                     }
                 }
             }
 
             .VueCarousel-navigation {
-
                 .VueCarousel-navigation-prev {
                     left: 100px;
 
@@ -91,25 +98,37 @@ main.home{
                 }
 
                 button {
-                    @include eq-size(50px);
                     border-radius: 100%;
-                    border: 1px solid $blue;
+                    border: 2px solid $blue;
                     background-color: #fff;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 3px 8px -2px rgba(0, 0, 0, .25);
+                    box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.25);
+                    @include eq-size(50px);
                     @include transition;
 
+                    @include darkMode {
+                        border-color: $off-white!important;
+                        background-color: $dark-mode-tertiary!important;
+                    }
+
                     svg {
-                        @include eq-size(100%);
                         display: block;
                         fill: $black;
+                        @include eq-size(100%);
+
+                        @include darkMode {
+                            fill: $off-white!important;
+                        }
                     }
 
                     &:not(.VueCarousel-navigation--disabled) {
                         &:hover {
-                            box-shadow: 0 4px 4px rgba(0, 0, 0, .24), 0 0 4px rgba(0, 0, 0, .12), 0 6px 18px rgba(0, 0, 0, .12);
+                            box-shadow:
+                                0 4px 4px rgba(0, 0, 0, 0.24),
+                                0 0 4px rgba(0, 0, 0, 0.12),
+                                0 6px 18px rgba(0, 0, 0, 0.12);
                         }
                     }
                 }
@@ -138,16 +157,16 @@ main.home{
                     border-left-color: $dark-mode-quaternary;
                     color: $off-white;
 
-                    &:before{
+                    &:before {
                         color: $off-white;
                     }
                 }
 
-                @include browserHack(ie){
+                @include browserHack(ie) {
                     display: block;
                 }
 
-                @include mediaQuery(netbook){
+                @include mediaQuery(netbook) {
                     max-height: 300px;
                     overflow: auto;
                 }

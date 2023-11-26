@@ -230,15 +230,8 @@ button {
 }
 
 :focus {
-    outline-color: $blue;
+    outline-color: yellow!important;
     transition: none !important;
-}
-
-nav,
-main.home>header {
-    :focus {
-        outline-color: #fff;
-    }
 }
 
 fieldset {
@@ -441,7 +434,6 @@ symbol {
         width: auto;
         height: auto;
         overflow: visible;
-        outline-color: yellow;
     }
 }
 
