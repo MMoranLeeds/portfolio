@@ -22,7 +22,6 @@
           <img
             v-bind:src="'/img/header-projects/' + project.headerProjectDetails.image + '.webp'"
             v-bind:alt="project.headerProjectDetails.altText"
-            loading="lazy"
           />
         </template>
 
@@ -30,7 +29,6 @@
           <img
             v-bind:src="'/img/header-projects/' + project.headerProjectDetails.image + '.png'"
             v-bind:alt="project.headerProjectDetails.altText"
-            loading="lazy"
           />
         </template>
       </router-link>
