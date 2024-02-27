@@ -1,54 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Matthew Moran - UI UX Designer / Front End Developer based in East Morton Yorkshire"
+    />
+    <meta
+      name="keywords"
+      content="UI, UX, Design, Front-End, Front End, Developer, Yorkshire, Leeds, Bradford"
+    />
+    <meta name="author" content="Matthew Moran" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#165782" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description"
-    content="Matthew Moran - UI UX Designer / Front End Developer based in East Morton Yorkshire">
-  <meta name="keywords" content="UI, UX, Design, Front-End, Front End, Developer, Yorkshire, Leeds, Bradford">
-  <meta name="author" content="Matthew Moran">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="theme-color" content="#165782">
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P3NXF3D22H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P3NXF3D22H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag("config", "G-P3NXF3D22H");
+    </script>
 
-    gtag('config', 'G-P3NXF3D22H');
-  </script>
+    <meta property="og:title" content="Matthew Moran portfolio" />
+    <meta
+      property="og:description"
+      content="Front-end developer located in East Morton."
+    />
+    <meta
+      property="og:image"
+      content="https://mdmoran.netlify.app/img/projects/previews/pattern-library.png"
+    />
+    <meta property="og:url" content="https://mdmoran.netlify.app/" />
+    <meta name="twitter:title" content="Matthew Moran portfolio" />
+    <meta
+      name="twitter:description"
+      content=" Front-end developer located in East Morton."
+    />
+    <meta
+      name="twitter:image"
+      content=" https://mdmoran.netlify.app/img/projects/previews/pattern-library.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <meta property="og:title" content="Matthew Moran portfolio">
-  <meta property="og:description" content="Front-end developer located in East Morton.">
-  <meta property="og:image" content="https://mdmoran.netlify.app/img/projects/previews/pattern-library.png">
-  <meta property="og:url" content="https://mdmoran.netlify.app/">
-  <meta name="twitter:title" content="Matthew Moran portfolio">
-  <meta name="twitter:description" content=" Front-end developer located in East Morton.">
-  <meta name="twitter:image" content=" https://mdmoran.netlify.app/img/projects/previews/pattern-library.png">
-  <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="<%= BASE_URL %>favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="<%= BASE_URL %>dist/css/styles.css" />
+    <title>
+      <%= VUE_APP_TITLE %>
+    </title>
+  </head>
 
-  <link rel="icon" href="<%= BASE_URL %>favicon.svg">
-  <link rel="stylesheet" href="<%= BASE_URL %>dist/css/styles.css">
-  <title>
-    <%= VUE_APP_TITLE %>
-  </title>
-</head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
 
-<body>
-  <noscript>
-    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
-        Please enable it to continue.</strong>
-  </noscript>
-  <div id="app"></div>
-
-  <svg class="d-none">
-    <symbol id="arrow-icon" x="0px" y="0px" viewBox="0 0 75.9 141.8">
-      <path d="M1.5,1.4c-2,2-2,5.1,0,7.1l62.4,62.3L1.5,133.2c-2,2-2,5.1,0,7.1c1.9,2,5.1,2,7.1,0l65.8-65.8c1-1,1.5-2.2,1.5-3.5
-      c0-1.2-0.5-2.6-1.5-3.5L8.6,1.7C6.6-0.5,3.4-0.5,1.5,1.4L1.5,1.4z"></path>
-    </symbol>
-  </svg>
-</body>
-
+    <svg class="d-none">
+      <symbol id="arrow-icon" x="0px" y="0px" viewBox="0 0 75.9 141.8">
+        <path
+          d="M1.5,1.4c-2,2-2,5.1,0,7.1l62.4,62.3L1.5,133.2c-2,2-2,5.1,0,7.1c1.9,2,5.1,2,7.1,0l65.8-65.8c1-1,1.5-2.2,1.5-3.5
+      c0-1.2-0.5-2.6-1.5-3.5L8.6,1.7C6.6-0.5,3.4-0.5,1.5,1.4L1.5,1.4z"
+        ></path>
+      </symbol>
+    </svg>
+  </body>
 </html>
