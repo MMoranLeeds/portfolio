@@ -3,7 +3,7 @@
     <button
       type="button"
       v-on:click="toggleDarkMode()"
-      v-tooltip="prefersDarkMode ? 'Light theme.' : 'Dark theme.'"
+      v-tooltip="prefersDarkMode ? 'Light theme' : 'Dark theme'"
     >
       <Icon v-if="prefersDarkMode" name="sun" />
 
