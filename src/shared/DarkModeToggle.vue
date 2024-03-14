@@ -10,7 +10,7 @@
       <Icon v-else name="moon" />
 
       <span class="off-screen">
-        {{ prefersDarkMode ? "Light" : "Dark" }} theme.</span
+        {{ prefersDarkMode ? "Light" : "Dark" }} theme</span
       >
     </button>
   </div>
