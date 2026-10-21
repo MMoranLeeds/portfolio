@@ -1,0 +1,166 @@
+/* All native portfolio dialogs share this shell, backdrop, close control and motion. */
+dialog.portfolio-dialog {
+  --dialog-enter-duration: 220ms;
+  --dialog-exit-duration: 160ms;
+  --dialog-travel: 12px;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: calc(4.5rem + env(safe-area-inset-top)) 1rem
+    calc(1rem + env(safe-area-inset-bottom));
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+dialog.portfolio-dialog[open] {
+  display: grid;
+  place-items: center;
+}
+dialog.portfolio-dialog:not([open]) {
+  display: none;
+}
+dialog.portfolio-dialog::backdrop {
+  background: rgb(8 13 34 / 72%);
+  -webkit-backdrop-filter: blur(0.4rem);
+  backdrop-filter: blur(0.4rem);
+}
+.portfolio-dialog .dialog-surface {
+  min-width: 0;
+}
+.portfolio-dialog .dialog-panel {
+  max-height: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 16px 64px rgb(0 0 0 / 24%);
+}
+.portfolio-dialog[data-dialog-phase="opening"] .dialog-surface {
+  animation: portfolio-dialog-enter var(--dialog-enter-duration)
+    cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.portfolio-dialog[data-dialog-phase="closing"] .dialog-surface {
+  animation: portfolio-dialog-exit var(--dialog-exit-duration) ease-in both;
+}
+.portfolio-dialog[data-dialog-phase="opening"]::backdrop {
+  animation: portfolio-dialog-backdrop-enter var(--dialog-enter-duration)
+    ease-out both;
+}
+.portfolio-dialog[data-dialog-phase="closing"]::backdrop {
+  animation: portfolio-dialog-backdrop-exit var(--dialog-exit-duration) ease-in
+    both;
+}
+@keyframes portfolio-dialog-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--dialog-travel));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes portfolio-dialog-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(var(--dialog-travel));
+  }
+}
+@keyframes portfolio-dialog-backdrop-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes portfolio-dialog-backdrop-exit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.portfolio-dialog .dialog-close {
+  position: fixed;
+  top: max(1rem, env(safe-area-inset-top));
+  right: max(1.5rem, env(safe-area-inset-right));
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+.portfolio-dialog .dialog-close:hover {
+  background: var(--hover-surface);
+}
+.portfolio-dialog .dialog-close:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+.portfolio-dialog .dialog-close span:last-child {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+:root[data-motion="reduce"] .portfolio-dialog {
+  --dialog-enter-duration: 0ms;
+  --dialog-exit-duration: 0ms;
+}
+:root[data-motion="reduce"] .portfolio-dialog .dialog-surface,
+:root[data-motion="reduce"] .portfolio-dialog::backdrop {
+  animation: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion="full"]) .portfolio-dialog .dialog-surface,
+  :root:not([data-motion="full"]) .portfolio-dialog::backdrop {
+    animation: none !important;
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  dialog.portfolio-dialog::backdrop {
+    background: var(--surface);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+@media (forced-colors: active) {
+  dialog.portfolio-dialog::backdrop {
+    background: Canvas;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .portfolio-dialog .dialog-panel {
+    border: 2px solid CanvasText;
+  }
+  .portfolio-dialog .dialog-close:focus-visible {
+    outline-color: Highlight;
+  }
+}
+@media print {
+  dialog.portfolio-dialog {
+    display: none !important;
+  }
+}

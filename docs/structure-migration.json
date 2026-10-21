@@ -1,0 +1,107 @@
+{
+  "description": "Obsolete files replaced by the portfolio structure update. SHA-256 values refer to portfolio(7).zip.",
+  "files": [
+    {
+      "path": "PROJECT_HANDOVER.md",
+      "sha256": "5cdeb48ff4bdd87bc8cd6e3582097aa1f761730eca4b1320e4bb0fd3cb8d1cff",
+      "replacements": ["docs/archive/PROJECT_HANDOVER.md"]
+    },
+    {
+      "path": "UPDATE_NOTES.md",
+      "sha256": "74caf29bfcda6853c3a463aaecc0561f8f49e8d37f56eace734c556f2bc980ef",
+      "replacements": ["docs/archive/UPDATE_NOTES.md"]
+    },
+    {
+      "path": "PATCH_MANIFEST.txt",
+      "sha256": "705c8f7df118e2d9e6bdf9c23164fb59d674a2cbe4552a5aff518a93e2554198",
+      "replacements": ["docs/archive/PATCH_MANIFEST.md"]
+    },
+    {
+      "path": "src/data/projects.ts",
+      "sha256": "b0af127eea2145bce8b9feb15c4f51fa212fa0eaa1c94b6b67eed3b89179653c",
+      "replacements": [
+        "src/data/projects/index.ts",
+        "src/data/projects/accessible-trades/index.ts"
+      ]
+    },
+    {
+      "path": "src/data/localisationProject.ts",
+      "sha256": "a0972f0d5945e3282d4c840d231599cfa1d5484298b96994f4d9babffdd76091",
+      "replacements": ["src/data/projects/fruugo-localisation/index.ts"]
+    },
+    {
+      "path": "src/data/onboardingProject.ts",
+      "sha256": "67d872cca383b675c45e0c46b6ec9e718ce35db78f73e486f7a8df471ad6b05c",
+      "replacements": ["src/data/projects/fruugo-merchant-onboarding/index.ts"]
+    },
+    {
+      "path": "src/data/huugoProject.ts",
+      "sha256": "f7ca8190af14ca2aafb7c6cf0084c59dc8bd073c58290763e86af76810ee1905",
+      "replacements": ["src/data/projects/huugo-from-fruugo/index.ts"]
+    },
+    {
+      "path": "src/data/localisationImages.ts",
+      "sha256": "3dcf2a2d00ddaa170cd5a738d26adb0106c521d67c604c55bfa1c70c4514dd81",
+      "replacements": ["src/data/projects/fruugo-localisation/images.ts"]
+    },
+    {
+      "path": "src/data/onboardingImages.ts",
+      "sha256": "941bfd38d8f5bc735340bca4df070532c064729308a93156fda8b99888058d47",
+      "replacements": ["src/data/projects/fruugo-merchant-onboarding/images.ts"]
+    },
+    {
+      "path": "src/data/huugoImages.ts",
+      "sha256": "c93752d4d98e1fa16fdf2fd13b8684b6b9cec264ed060b19291b8cada6dc1b9d",
+      "replacements": ["src/data/projects/huugo-from-fruugo/images.ts"]
+    },
+    {
+      "path": "src/data/accessibleTradesImages.ts",
+      "sha256": "685d22c19f520f0e429e49bfc68963120dbe522adfc303bbc028e57bbee40894",
+      "replacements": ["src/data/projects/accessible-trades/images.ts"]
+    },
+    {
+      "path": "src/data/projectCardImages.ts",
+      "sha256": "ec5249feb5e82128923653148cc32d94462714a9c1a004ebf1f4ade34bf48a43",
+      "replacements": ["src/data/projects/shared/cardImages.ts"]
+    },
+    {
+      "path": "src/data/projectCovers.ts",
+      "sha256": "1190bcc77cd4c3d781c30fffdc381f8d662922bc3edff0505fee7f8b3f991553",
+      "replacements": ["src/data/projects/shared/coverImages.ts"]
+    },
+    {
+      "path": "src/data/projectMobilePreviews.ts",
+      "sha256": "975c1150bf57d6b8aa4e5834504d47a07f6557324b9934b932798eb30fe0f7bb",
+      "replacements": [
+        "src/data/projects/shared/mobilePreview.ts",
+        "src/data/projects/fruugo-localisation/index.ts",
+        "src/data/projects/fruugo-merchant-onboarding/index.ts",
+        "src/data/projects/huugo-from-fruugo/index.ts",
+        "src/data/projects/accessible-trades/index.ts"
+      ]
+    },
+    {
+      "path": "src/data/caseStudyOverviews.ts",
+      "sha256": "9acef9dd9e35691d3ee1b01c4a961e536eb695b13885eaca4c2eba37d9f0a314",
+      "replacements": [
+        "src/data/projects/fruugo-localisation/index.ts",
+        "src/data/projects/fruugo-merchant-onboarding/index.ts",
+        "src/data/projects/huugo-from-fruugo/index.ts",
+        "src/data/projects/accessible-trades/index.ts"
+      ]
+    },
+    {
+      "path": "src/data/projectVideos.ts",
+      "sha256": "950457540b8af59b7e8e373d8e331755ebc83fb2c52db48e6c21493f10542dbe",
+      "replacements": [
+        "src/data/projects/huugo-from-fruugo/index.ts",
+        "src/data/projects/accessible-trades/index.ts"
+      ]
+    },
+    {
+      "path": "src/data/projectVideoTranscripts.ts",
+      "sha256": "23abe06075dd2a4f7253b34108215627e1aa3300faa28d472b5256e523444583",
+      "replacements": ["src/data/projects/generated/videoTranscripts.ts"]
+    }
+  ]
+}

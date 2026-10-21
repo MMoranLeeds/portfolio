@@ -1,0 +1,72 @@
+:root {
+  color-scheme: light;
+  --surface: #fafaf7;
+  --sidebar: #f4f5f1;
+  --panel: #fff;
+  --soft-surface: #edf2ec;
+  --hover-surface: #e8ede6;
+  --portrait-surface: #e5ece5;
+  --ink: #172d30;
+  --text: #49565b;
+  --accent: #21483c;
+  --muted: #586d68;
+  --line: #d6ddd7;
+  --focus: #915000;
+  --selection: #dce9df;
+  --action-bg: #21483c;
+  --action-text: #fff;
+  --action-hover: #16372d;
+  --secondary-hover: #eaf0e9;
+  --tooltip-bg: #172d30;
+  --tooltip-text: #fff;
+  --font: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+  --sidebar-width: 280px;
+  --reading-width: 740px;
+}
+/* The media-query fallback also respects the device theme without JavaScript. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --surface: #141d1b;
+    --sidebar: #192421;
+    --panel: #202e29;
+    --soft-surface: #25362e;
+    --hover-surface: #30463b;
+    --portrait-surface: #25362e;
+    --ink: #eef5ef;
+    --text: #c3d0c7;
+    --accent: #b5dbc4;
+    --muted: #aabfb2;
+    --line: #4e6658;
+    --focus: #f5c66c;
+    --selection: #355a43;
+    --action-bg: #b5dbc4;
+    --action-text: #10221b;
+    --action-hover: #ceeada;
+    --secondary-hover: #30463b;
+    --tooltip-bg: #eef5ef;
+    --tooltip-text: #14251b;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface: #141d1b;
+  --sidebar: #192421;
+  --panel: #202e29;
+  --soft-surface: #25362e;
+  --hover-surface: #30463b;
+  --portrait-surface: #25362e;
+  --ink: #eef5ef;
+  --text: #c3d0c7;
+  --accent: #b5dbc4;
+  --muted: #aabfb2;
+  --line: #4e6658;
+  --focus: #f5c66c;
+  --selection: #355a43;
+  --action-bg: #b5dbc4;
+  --action-text: #10221b;
+  --action-hover: #ceeada;
+  --secondary-hover: #30463b;
+  --tooltip-bg: #eef5ef;
+  --tooltip-text: #14251b;
+}

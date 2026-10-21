@@ -1,0 +1,76 @@
+.preferences-panel {
+  width: min(36rem, 100%);
+}
+.preferences-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.preferences-header h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+.preferences-dialog p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+.preferences-options {
+  padding: 0 1.5rem;
+}
+.preference-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 12rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+.preference-row + .preference-row {
+  border-top: 1px solid var(--line);
+}
+.preference-row label {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.preference-row select {
+  width: 100%;
+  min-height: 44px;
+  min-width: 0;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  background: var(--panel);
+  font: inherit;
+  font-size: 0.9375rem;
+}
+.preferences-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.preferences-done {
+  min-height: 44px;
+  padding: 0.65rem 1.25rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--action-text);
+  background: var(--action-bg);
+  border: 1px solid var(--action-bg);
+  border-radius: 6px;
+}
+.preferences-done:hover {
+  background: var(--action-hover);
+}
+@media (max-width: 539px) {
+  .preference-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+}

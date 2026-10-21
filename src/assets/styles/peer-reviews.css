@@ -1,0 +1,130 @@
+.peer-reviews {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.peer-reviews-heading :is(h2, h3) {
+  margin-bottom: 0.65rem;
+}
+.peer-reviews-intro {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 38rem;
+}
+.peer-review-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 1.75rem;
+}
+.peer-review {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 11rem;
+  align-items: start;
+  gap: 1rem 2rem;
+  margin: 0;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.peer-review:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.peer-review:not(.peer-review--lead) .review-quote-mark {
+  font-size: 3.75rem;
+  margin: 0;
+}
+.peer-review--lead {
+  grid-template-columns: 1fr;
+  padding: 2rem;
+  margin-bottom: 0.5rem;
+  border: 0;
+  border-radius: 10px;
+  background: var(--soft-surface);
+}
+.peer-review--lead:last-child {
+  padding-bottom: 2rem;
+}
+.review-content {
+  min-width: 0;
+  position: relative;
+}
+.review-theme {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
+}
+.review-quote-mark {
+  display: block;
+  height: 2.5rem;
+  color: var(--accent);
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  line-height: 1;
+  margin-top: -0.2rem;
+  margin-bottom: 0.75rem;
+}
+.peer-review blockquote {
+  margin: 0;
+}
+.peer-review blockquote p {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+.peer-review--lead > .review-content blockquote p {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  line-height: 1.55;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+.peer-review figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.peer-review:not(.peer-review--lead):has(.review-theme) figcaption {
+  padding-top: 2.35rem;
+}
+.reviewer-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--ink);
+}
+.review-context {
+  margin-top: 0.3rem;
+}
+.review-continuation {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  padding-top: 1.25rem;
+}
+.review-continuation blockquote p {
+  font-size: 1rem;
+}
+.review-continuation .review-context {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin-top: 0.75rem;
+}
+@media (max-width: 639px) {
+  .peer-review {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .peer-review--lead {
+    padding: 1.5rem;
+  }
+  .peer-review--lead:last-child {
+    padding-bottom: 1.5rem;
+  }
+  .peer-review:not(.peer-review--lead):has(.review-theme) figcaption {
+    padding-top: 0;
+  }
+}

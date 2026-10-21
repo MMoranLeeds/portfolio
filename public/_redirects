@@ -1,0 +1,2 @@
+# Netlify honours existing static files before this fallback.
+/* /404.html 404

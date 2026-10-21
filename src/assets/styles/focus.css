@@ -1,0 +1,17 @@
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 5px;
+}
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  padding: 0.8rem 1rem;
+  color: var(--action-text);
+  background: var(--action-bg);
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}

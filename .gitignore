@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.ssr/
+.env
+.env.*
+!.env.example
+.venv-transcripts/
+.transcripts/
+playwright-report/
+test-results/
+.DS_Store

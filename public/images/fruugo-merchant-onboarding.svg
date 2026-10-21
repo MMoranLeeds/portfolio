@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" role="img" aria-labelledby="title description">
+  <title id="title">A shorter route through merchant onboarding</title>
+  <desc id="description">Collect essential application details, support review and verification, then ask integration questions at the relevant stage.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0876bd"/>
+      <stop offset="1" stop-color="#24a9fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="400" rx="20" fill="url(#background)"/>
+  <circle cx="925" cy="18" r="180" fill="#fff" opacity=".09"/>
+  <circle cx="55" cy="420" r="160" fill="#fff" opacity=".07"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="48" y="56" fill="#fff" font-size="15" font-weight="700" letter-spacing="2">FRUUGO · MERCHANT EXPERIENCE</text>
+    <text x="48" y="110" fill="#fff" font-size="36" font-weight="700">A shorter route to selling.</text>
+    <text x="48" y="145" fill="#fff" font-size="19">The right questions, at the right stage.</text>
+    <g fill="#fff">
+      <rect x="48" y="195" width="252" height="140" rx="14"/>
+      <rect x="354" y="195" width="252" height="140" rx="14"/>
+      <rect x="660" y="195" width="252" height="140" rx="14"/>
+    </g>
+    <g fill="#074777">
+      <text x="72" y="229" font-size="13" font-weight="700" letter-spacing="1">01 · APPLY</text>
+      <text x="72" y="267" font-size="23" font-weight="700">Essential details</text>
+      <text x="72" y="302" font-size="16">A focused initial application</text>
+      <text x="378" y="229" font-size="13" font-weight="700" letter-spacing="1">02 · REVIEW</text>
+      <text x="378" y="267" font-size="23" font-weight="700">Review &amp; verify</text>
+      <text x="378" y="302" font-size="16">Connected application data</text>
+      <text x="684" y="229" font-size="13" font-weight="700" letter-spacing="1">03 · INTEGRATE</text>
+      <text x="684" y="267" font-size="23" font-weight="700">Integration</text>
+      <text x="684" y="302" font-size="16">Collect the later-stage detail</text>
+    </g>
+  </g>
+  <g stroke="#fff" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M315 265h24m-8-8 8 8-8 8"/>
+    <path d="M621 265h24m-8-8 8 8-8 8"/>
+  </g>
+</svg>

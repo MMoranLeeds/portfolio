@@ -1,0 +1,45 @@
+h1,
+h2 {
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+h1 {
+  font-size: clamp(2.25rem, 4.5vw, 3.65rem);
+  line-height: 1.14;
+  margin-bottom: 1.4rem;
+}
+h2 {
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  line-height: 1.28;
+  margin-bottom: 1rem;
+}
+p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+p + p {
+  margin-top: 1rem;
+}
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 0.65rem;
+}
+.chapter-number {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 1.25rem;
+}
+.chapter-number span {
+  width: 2.5rem;
+  height: 1px;
+  background: var(--muted);
+}
