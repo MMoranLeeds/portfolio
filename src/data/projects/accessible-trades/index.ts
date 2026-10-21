@@ -9,7 +9,7 @@ export const accessibleTradesProject: Project = {
   slug: "accessible-trades",
   overview: {
     outcome:
-      "Created and launched an independent service with 240 evidence-supported company listings and council coverage across England. The MND Association has begun using and sharing the service internally.",
+      "Designed, built and launched an independent service spanning the public website, backend API and administration tools, with 240 evidence-supported listings and council coverage across England. The MND Association has begun using and sharing the service internally.",
     period: "Personal project · Q2 2026 development · Ongoing development",
     launchDate: "2026-07-19",
     launchLabel: "19 July 2026",
@@ -51,10 +51,10 @@ export const accessibleTradesProject: Project = {
     "Creating and running a home-adaptation service across England, now used and shared internally by the MND Association.",
   role: "End-to-end product ownership, research, UX design, full-stack implementation and ongoing operation",
   status: "Live proof of concept, with ongoing development and feedback",
-  tags: ["Product discovery", "Accessible design", "Front-end development"],
+  tags: ["Product discovery", "Accessible design", "Full-stack delivery"],
   url: profile.projectUrl,
   seoDescription:
-    "How Matthew Moran created Accessible Trades, using public-data research, accessible UX design and technical delivery to help people across England find home-adaptation specialists and plan their next steps.",
+    "How Matthew Moran created Accessible Trades, connecting accessible UX, a Vue frontend, a Node.js API and company data to help people across England find home-adaptation specialists.",
   cover: {
     cardBackground,
     ...accessibleTradesImage(
@@ -78,7 +78,7 @@ export const accessibleTradesProject: Project = {
       id: "contribution",
       title: "My role and collaboration",
       paragraphs: [
-        "I created and continue to run Accessible Trades, owning the product from the initial idea through to launch and ongoing development. My responsibilities span research, product direction, UX design, front-end development, backend API configuration, data management, hosting and SEO. I also built the company-management interface and maintain the service and its information.",
+        "I created and continue to run Accessible Trades, owning the product from the initial idea through to launch and ongoing development. My responsibilities span research, product direction, UX design, frontend and backend development, data management, hosting and SEO. I built both the public experience and the administration tools used to maintain its information.",
         "I work directly with the MND Association’s partnerships team and nationwide support team. They have started using and sharing the service internally, and their feedback helps shape its direction and priorities.",
       ],
     },
@@ -153,11 +153,44 @@ export const accessibleTradesProject: Project = {
       ],
     },
     {
+      id: "implementation",
+      title: "Building and maintaining the service",
+      paragraphs: [
+        "I built the public website and a separate administration interface with Vue 3 and TypeScript, connected to a Node.js and Express API. SQLite databases hold company records, location data and supporting evidence. This lets the interface bring information from several sources into one search and company profile.",
+      ],
+      blocks: [
+        {
+          id: "search-implementation",
+          title: "Connect search behaviour to the evidence",
+          paragraphs: [
+            "A business activity code alone does not establish whether a company is relevant to someone's adaptation needs. I combined location and trade matching with supporting evidence, distinguishing current, historic and undated records in the ranking. Inactive and suppressed companies are excluded from search results.",
+            "The API validates search filters and queries imported company data, returning consistently ordered, paginated results. In the frontend, I prevent older responses from replacing newer searches when people change their filters. Separate loading, error and retry states keep failures recoverable without losing the search context.",
+          ],
+        },
+        {
+          id: "administration-workflow",
+          title: "Make information manageable after launch",
+          paragraphs: [
+            "I built an administration workflow for reviewing company details, claimed-profile status and supporting evidence. Changes can be prepared locally and sent to production through authenticated API routes, with server-side validation and a recorded reason for publishing.",
+            "Data-file backups and an audit history support review and recovery. This gives me a practical way to maintain listing information without changing frontend code, while keeping administrative editing separate from the public website.",
+          ],
+        },
+        {
+          id: "reference-data-refresh",
+          title: "Check replacement data before activating it",
+          paragraphs: [
+            "Company information changes over time, so maintaining the underlying data is part of maintaining the experience. I built a refresh process that imports and validates a candidate Companies House database before it can replace the active one. A refresh lock prevents overlapping runs, and activation retains the previous database with recovery handling if the file swap fails.",
+          ],
+        },
+      ],
+    },
+    {
       id: "validation",
       title: "Validation and iteration",
       paragraphs: [
         "I launched the service as a proof of concept and used a business social-media profile to explain its benefits and invite feedback. I also established direct feedback channels with the MND Association’s partnerships and nationwide support teams.",
         "I am gathering feedback and reviewing usage data from visitors who consent to analytics, to identify where the experience needs to improve.",
+        "Server-side regression tests cover search-radius boundaries, evidence ranking, pagination, company-status filtering and profile expiry. These turn product rules into repeatable checks, including keeping evidence-backed ordering consistent across pages and excluding dissolved companies.",
       ],
     },
     {
@@ -165,8 +198,8 @@ export const accessibleTradesProject: Project = {
       title: "Delivery and outcomes",
       paragraphs: [
         "As of October 2026, the service has 240 evidence-supported company listings and its council coverage spans England. The MND Association has started using the service and sharing it internally. Its partnerships team has agreed a planned Helpful Links listing, which remains pending the next full review in February 2027.",
-        "I built a management interface for maintaining company records without changing application code. It also brings together analytics on company views and contact interactions where visitors have accepted the relevant analytics, helping me maintain the service and investigate usage.",
-        "I built the Vue 3 frontend and configured the API, using semantic markup and checks with Lighthouse and axe. The management interface lets me maintain listings without changing application code. Hosting costs remain below £10 per month at the current scale.",
+        "The administration interface also brings together company-view and contact-interaction analytics where visitors have consented. This helps me investigate how people use listings alongside the feedback I receive.",
+        "I deploy the public frontend through Netlify and run the API and persistent data on Render. I use semantic markup and checks with Lighthouse and axe when developing the interface. Hosting costs remain below £10 per month at the current scale.",
       ],
       evidence: [
         {
