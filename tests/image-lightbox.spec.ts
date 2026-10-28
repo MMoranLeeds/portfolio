@@ -9,6 +9,7 @@ test("all case-study covers open in one native modal and return keyboard focus",
     "accessible-trades",
     "huugo-from-fruugo",
     "fruugo-localisation",
+    "fruugo-cookie-consent",
     "fruugo-merchant-onboarding",
   ]) {
     await page.goto(`/work/${slug}`);
@@ -209,6 +210,7 @@ test("case-study phones stay inside a consistent desktop image canvas", async ({
     const dimensions: Array<{ desktop: number; phone: number }> = [];
     for (const slug of [
       "fruugo-localisation",
+      "fruugo-cookie-consent",
       "fruugo-merchant-onboarding",
       "huugo-from-fruugo",
       "accessible-trades",

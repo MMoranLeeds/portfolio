@@ -424,3 +424,29 @@ assert(
 console.log(
   "NextRamble page, metadata and circular next-study navigation passed.",
 );
+
+const consent = await readFile(
+  "dist/work/fruugo-cookie-consent/index.html",
+  "utf8",
+);
+assert(homepage.includes('href="/work/fruugo-cookie-consent"'));
+assert(sitemap.includes("/work/fruugo-cookie-consent"));
+assert(consent.includes("66.3%") && consent.includes("76.3%"));
+assert(consent.includes("76–79%"));
+assert(consent.includes("rather than user-level randomisation"));
+assert(!consent.includes("9% uplift"));
+assert(!consent.includes("fruugo.slack.com"));
+assert(!consent.includes("Desktop comparison · Images to add"));
+assert(!consent.includes("Mobile comparison · Images to add"));
+for (const image of [
+  "desktop-before",
+  "desktop-after",
+  "mobile-before",
+  "mobile-after",
+])
+  assert(consent.includes(image), `Consent screenshot missing: ${image}`);
+assert(consent.includes('href="/work/fruugo-merchant-onboarding"'));
+assert(localisation.includes('href="/work/fruugo-cookie-consent"'));
+console.log(
+  "Cookie-consent study, results context, placeholders and next-study order passed.",
+);

@@ -84,14 +84,17 @@ async function optimise() {
         const info = await pipeline
           .webp({
             quality:
-              /^(onboarding|cards|accessible-trades|localisation)\//.test(stem)
+              /^(onboarding|cards|accessible-trades|localisation|cookie-consent)\//.test(
+                stem,
+              )
                 ? 88
                 : 82,
-            effort: /^(onboarding|cards|accessible-trades|localisation)\//.test(
-              stem,
-            )
-              ? 6
-              : 5,
+            effort:
+              /^(onboarding|cards|accessible-trades|localisation|cookie-consent)\//.test(
+                stem,
+              )
+                ? 6
+                : 5,
           })
           .toFile(destination);
         imageMetadata[stem + suffix + ".webp"] = {
