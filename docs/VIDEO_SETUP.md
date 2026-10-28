@@ -31,7 +31,7 @@ dependency or package-lock change is required.
 
 You may instead copy an already optimised MP4 directly to
 `public/videos/huugo-promotion.mp4`. For a separately hosted file, change `src`
-in the relevant project’s `video` field in `src/data/projects/<slug>/index.ts` to its HTTPS URL.
+in the relevant project's `video` field in `src/data/projects/<slug>/index.ts` to its HTTPS URL.
 
 ## Compression choices
 

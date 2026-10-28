@@ -16,7 +16,7 @@ const emailSubject = "Portfolio enquiry";
 const emailBody = [
   "Hi Matt,",
   "",
-  "I’ve had a look at your portfolio and would like to discuss an opportunity with you.",
+  "I've had a look at your portfolio and would like to discuss an opportunity with you.",
   "",
   "Thanks,",
 ].join("\r\n");

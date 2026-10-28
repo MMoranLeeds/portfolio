@@ -14,7 +14,7 @@ AppHeader is a flex column. Desktop navigation grows to fill remaining height; t
 
 ## Feedback
 
-The reusable peer-review data list now includes four featured entries: Becky Lovell, Kieran Lynch, Ryan Duncan and Huw Evans. Becky remains the lead quotation, with a directly visible mentoring continuation and separate source attribution. Kieran and Ryan use alternative verbatim excerpts supplied by Matt. Huw’s excerpt is from the uploaded performance-review PDF; his name and manager relationship were explicitly supplied by Matt. No unspecified job titles, quantitative outcomes, personal leave details or reviewer links are added.
+The reusable peer-review data list now includes four featured entries: Becky Lovell, Kieran Lynch, Ryan Duncan and Huw Evans. Becky remains the lead quotation, with a directly visible mentoring continuation and separate source attribution. Kieran and Ryan use alternative verbatim excerpts supplied by Matt. Huw's excerpt is from the uploaded performance-review PDF; his name and manager relationship were explicitly supplied by Matt. No unspecified job titles, quantitative outcomes, personal leave details or reviewer links are added.
 
 General endorsements have no project associations. Empty project-review lists still render no section. The homepage limit is four.
 

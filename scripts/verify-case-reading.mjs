@@ -114,7 +114,7 @@ try {
   assert.equal(completion.reach(100, true), false);
   completion.reset();
   assert.equal(completion.reach(100, true), true);
-  assert.equal(countWords("User-centred design, ‘research’ and 99/100."), 6);
+  assert.equal(countWords("User-centred design, 'research' and 99/100."), 6);
   // Position can go back, is clamped, and reaches 100 at the article end.
   assert.equal(articleProgress(100, 2100, 0, 600), 0);
   assert.equal(articleProgress(100, 2100, 100, 600), 0);

@@ -6,11 +6,11 @@ The new page is `/work/fruugo-cookie-consent`, placed after Localisation and bef
 
 Edit the case study in `src/data/projects/fruugo-cookie-consent/index.ts`. Image handling is in the adjacent `images.ts`.
 
-The copy focuses on discovery, design decisions, Legal collaboration, the country-based A/B test and worldwide rollout. Frontend implementation, QA and Data Science responsibilities are attributed separately from Matt’s design ownership.
+The copy focuses on discovery, design decisions, Legal collaboration, the country-based A/B test and worldwide rollout. Frontend implementation, QA and Data Science responsibilities are attributed separately from Matt's design ownership.
 
 ## Screenshots now included
 
-The desktop and mobile before/after comparisons use Matthew’s supplied screenshots. The old images are cropped to website viewport pixels only; browser tabs, address bars, bookmarks, device-emulation controls and outer black margins are excluded. No consent controls or wording have been reconstructed.
+The desktop and mobile before/after comparisons use Matthew's supplied screenshots. The old images are cropped to website viewport pixels only; browser tabs, address bars, bookmarks, device-emulation controls and outer black margins are excluded. No consent controls or wording have been reconstructed.
 
 | Image       | Original file                                                  | Treatment                                                 |
 | ----------- | -------------------------------------------------------------- | --------------------------------------------------------- |
@@ -19,7 +19,7 @@ The desktop and mobile before/after comparisons use Matthew’s supplied screens
 | Old mobile  | `src/assets/images/original/cookie-consent/mobile-before.png`  | Phone viewport crop, 390 × 844 pixels.                    |
 | New mobile  | `src/assets/images/original/cookie-consent/mobile-after.png`   | Supplied current production viewport, 942 × 2048 pixels.  |
 
-The article comparisons preserve each viewport’s proportions and show the full consent panel. Mobile comparison figures share the existing portrait preview and maximum width. The image viewer retains the full optimised screenshot, so small labels can be enlarged. The historical mobile source limits its available resolution; it has not been artificially upscaled.
+The article comparisons preserve each viewport's proportions and show the full consent panel. Mobile comparison figures share the existing portrait preview and maximum width. The image viewer retains the full optimised screenshot, so small labels can be enlarged. The historical mobile source limits its available resolution; it has not been artificially upscaled.
 
 The after captions identify these as current production captures after the rollout, rather than screenshots taken during the initial experiment. The old and new screenshots also show different surrounding page contexts.
 
@@ -39,9 +39,9 @@ The existing 1200 × 630 results-led share image remains `public/images/social/f
 
 - The initial comparison is **66.3% versus 76.3%**, a **10-percentage-point difference**, on 18 March 2026.
 - The **69.7%** pre-release snapshot is labelled as a different all-traffic period, rather than used as the experiment control.
-- The **76–79%** range is the reported post-rollout reading in both production environments on 13 April 2026.
+- The **76-79%** range is the reported post-rollout reading in both production environments on 13 April 2026.
 - The split was by country and production environment, not individual random assignment. The text acknowledges concurrent changes and limits to attribution.
-- GTV is qualitative, following Data Science’s final assessment. The preliminary, restricted 9% reading and the AI-generated revenue estimate are omitted.
+- GTV is qualitative, following Data Science's final assessment. The preliminary, restricted 9% reading and the AI-generated revenue estimate are omitted.
 - The page makes no statistical-significance, guaranteed-compliance or demonstrated-understanding claim. Advanced cookie information remains follow-on work, rather than a claimed completed release.
 - Private Slack links, ticket links and employee messages are not included in the public page. The supplied MD brief remains the source material, rather than being copied into public assets.
 

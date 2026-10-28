@@ -161,18 +161,18 @@ onBeforeUnmount(() => {
           />
 
           <div class="meet-matt-copy">
-            <h2 id="meet-matt-heading">Hi, I’m Matt.</h2>
+            <h2 id="meet-matt-heading">Hi, I'm Matt.</h2>
 
             <p>
-              I’m a Lead Product Designer based in West Yorkshire. I enjoy
+              I'm a Lead Product Designer based in West Yorkshire. I enjoy
               understanding what makes something difficult to use, then working
               with people to make it clearer.
             </p>
 
             <p>
-              I’m an accessibility advocate. Inclusive design has shaped much of
+              I'm an accessibility advocate. Inclusive design has shaped much of
               my career, from the questions I ask in research to the interfaces
-              I help build. At Fruugo, I’ve owned the company-wide accessibility
+              I help build. At Fruugo, I've owned the company-wide accessibility
               audit across shopper and merchant products.
             </p>
 

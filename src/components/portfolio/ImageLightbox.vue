@@ -128,7 +128,7 @@ defineExpose({ open, close });
           "
         />
         <p v-else class="image-lightbox-error" role="alert">
-          This image couldn’t be loaded. Close the viewer and try again.
+          This image couldn't be loaded. Close the viewer and try again.
         </p>
         <p id="image-lightbox-caption" class="visually-hidden">
           {{ image.caption }}

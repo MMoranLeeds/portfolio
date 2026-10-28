@@ -1,5 +1,5 @@
 import type { Project, ProjectContentBlock } from "@/types/project";
-import cardBackground from "@/assets/images/dist/cards/golden-gate-bg-960.webp";
+import cardBackground from "@/assets/images/dist/cards/big-sur-bg-960.webp";
 import mobileFallback from "@/assets/images/mobile-placeholders/fruugo-cookie-consent.svg";
 import { consentImage, type ConsentImageName } from "./images";
 
@@ -47,12 +47,12 @@ export const cookieConsentProject: Project = {
   title: "Cookie consent at Fruugo",
   category: "Fruugo · Optimising cookie consent",
   summary:
-    "A/B testing a redesigned modal for a high-traffic consent touchpoint - securing a 10-percentage-point lift in acceptance that sustained through worldwide rollout.",
+    "A/B testing a redesigned modal for a high-traffic consent touchpoint — securing a 10-percentage-point lift in acceptance that sustained through worldwide rollout.",
   role: "UX discovery, interaction design, UI copy, design rationale and Legal liaison",
   status: "Live worldwide since 7 April 2026",
   tags: ["A/B testing", "Behavioural analysis", "Cross-team influence"],
   seoDescription:
-    "How Matthew Moran led Fruugo’s cookie consent redesign, using behavioural data, Legal collaboration and country-based A/B testing before worldwide rollout.",
+    "How Matthew Moran led Fruugo's cookie consent redesign, using behavioural data, Legal collaboration and country-based A/B testing before worldwide rollout.",
   overview: {
     outcome:
       "The first comparison recorded 66.3% acceptance with the old modal and 76.3% with the redesign. The improvement held as more markets joined, with both production environments reaching 76–79% after global rollout.",
@@ -89,7 +89,7 @@ export const cookieConsentProject: Project = {
       id: "problem",
       title: "The problem and goal",
       paragraphs: [
-        "Fruugo’s consent modal was a frequent first interaction with the marketplace, but its presentation felt disconnected from the shopping experience. Dense, company-first copy sat above three equally prominent filled buttons. The orange Decline all action competed with Accept all, while its wording implied that even necessary cookies could be disabled.",
+        "Fruugo's consent modal was a frequent first interaction with the marketplace, but its presentation felt disconnected from the shopping experience. Dense, company-first copy sat above three equally prominent filled buttons. The orange Decline all action competed with Accept all, while its wording implied that even necessary cookies could be disabled.",
         "The business wanted more shoppers to opt into optional cookies, supporting measurement, advertising and experimentation. I approached this as a design problem with a clear constraint: improve the explanation and hierarchy while keeping rejection visible and straightforward. Acceptance alone would not establish the commercial outcome, so downstream effects also needed Data Science review.",
       ],
     },
@@ -121,7 +121,7 @@ export const cookieConsentProject: Project = {
           title: "Give the main decision a clearer hierarchy",
           paragraphs: [
             "I replaced the three competing filled buttons with one filled Fruugo-blue Accept all cookies action and outlined alternatives. On desktop, the primary action aligned with the controls on the right. Reject optional cookies remained visible alongside the other actions, with the same button height and a one-click choice, rather than being hidden behind a preferences screen.",
-            "This intentionally gave acceptance more visual emphasis. I brought that choice into Legal’s review alongside the wording and available alternatives, making the balance between persuasion and user choice part of the design discussion.",
+            "This intentionally gave acceptance more visual emphasis. I brought that choice into Legal's review alongside the wording and available alternatives, making the balance between persuasion and user choice part of the design discussion.",
           ],
           ...evidenceImages(
             ["desktop-before", "desktop-after"],
@@ -134,7 +134,7 @@ export const cookieConsentProject: Project = {
           title: "Explain the choice accurately",
           paragraphs: [
             "I changed Decline all to Reject optional cookies and separated necessary cookies from optional uses in the copy. The revised content introduced the shopping context, explained how long the preference would be saved and retained access to the Cookie Policy. Customise preferences remained available for people wanting more control.",
-            "I worked through Legal’s review of button display and language, updating the designs in response. More detailed cookie information was scoped separately, so this release did not depend on presenting the entire cookie inventory in the first interaction.",
+            "I worked through Legal's review of button display and language, updating the designs in response. More detailed cookie information was scoped separately, so this release did not depend on presenting the entire cookie inventory in the first interaction.",
           ],
           ...evidenceImages(
             ["mobile-before", "mobile-after"],
@@ -181,7 +181,7 @@ export const cookieConsentProject: Project = {
       title: "Delivery and outcomes",
       paragraphs: [
         "The redesigned modal recorded a 10-percentage-point higher acceptance rate in the initial comparison, rising from 66.3% to 76.3%. Following worldwide rollout on 7 April 2026, acceptance reached 76–79% across both production environments by 13 April, supporting a sustained improvement beyond the original test markets. These rates measure the share of recorded consent submissions selecting Accept all.",
-        "Data Science’s final assessment was positive for advertising clicks, impressions and gross transaction value, without assigning a dependable percentage to the GTV change. I kept that distinction between the observed consent result and the more complex commercial effect. The modal’s button treatment also informed the wider Marketplace button styles, which another designer developed into the shared pattern.",
+        "Data Science's final assessment was positive for advertising clicks, impressions and gross transaction value, without assigning a dependable percentage to the GTV change. I kept that distinction between the observed consent result and the more complex commercial effect. The modal's button treatment also informed the wider Marketplace button styles, which another designer developed into the shared pattern.",
       ],
       evidence: [
         {
@@ -200,7 +200,7 @@ export const cookieConsentProject: Project = {
           value: "Worldwide",
           label: "Production rollout",
           detail:
-            "Released across Fruugo’s marketplace on 7 April 2026 following the staged experiment.",
+            "Released across Fruugo's marketplace on 7 April 2026 following the staged experiment.",
         },
       ],
     },

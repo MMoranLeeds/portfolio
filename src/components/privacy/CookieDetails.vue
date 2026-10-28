@@ -3,7 +3,7 @@
     <summary>About cookies and analytics</summary>
     <p>
       Essential browser storage remembers your theme, motion preference and
-      cookie choice. Your cookie choice is kept for 180 days, then you’ll be
+      cookie choice. Your cookie choice is kept for 180 days, then you'll be
       asked again.
     </p>
     <p>
@@ -13,7 +13,7 @@
       are disabled.
     </p>
     <p>
-      Google’s <code>_ga</code> and <code>_ga_…</code> cookies distinguish
+      Google's <code>_ga</code> and <code>_ga_…</code> cookies distinguish
       visits. They are set for up to 180 days and can be renewed when you visit.
       URL query strings are excluded from the page views this portfolio sends.
     </p>
@@ -27,7 +27,7 @@
       href="https://policies.google.com/privacy"
       target="_blank"
       rel="noopener noreferrer"
-      >Google’s privacy policy<span class="visually-hidden">
+      >Google's privacy policy<span class="visually-hidden">
         (opens in a new tab)</span
       ></a
     >

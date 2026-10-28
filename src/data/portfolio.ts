@@ -54,8 +54,8 @@ export const approachSections: readonly PortfolioSection[] = [
       'Google Material Symbols',
     ],
     paragraphs: [
-      `I owned Fruugo’s company-wide accessibility audit and coordinated improvements across shopper and merchant products for a marketplace reporting ${audience.visits.headline} website visits in ${audience.visitYear}, across ${audience.countries} countries. As the primary contact, I brought Design, Engineering and Legal together to prioritise barriers against WCAG Level AA and saw the agreed work through to completion, supporting European Accessibility Act readiness. My frontend experience helped me turn findings into practical implementation guidance, connecting technical changes with their impact on users.`,
-      'I own Fruugo’s Figma library, which I created with reusable components, interaction patterns, documentation and multilingual prototypes. I work with frontend developers to align it with React components in Storybook, and review implementations with the other designers.',
+      `I owned Fruugo's company-wide accessibility audit and coordinated improvements across shopper and merchant products for a marketplace reporting ${audience.visits.headline} website visits in ${audience.visitYear}, across ${audience.countries} countries. As the primary contact, I brought Design, Engineering and Legal together to prioritise barriers against WCAG Level AA and saw the agreed work through to completion, supporting European Accessibility Act readiness. My frontend experience helped me turn findings into practical implementation guidance, connecting technical changes with their impact on users.`,
+      `I own Fruugo's Figma library, which I created with reusable components, interaction patterns, documentation and multilingual prototypes. I work with frontend developers to align it with React components in Storybook, and review implementations with the other designers.`,
       'Internal and external designers use the library to build realistic prototypes without recreating established patterns for each project. I maintain it as requirements change, including flexible slots where components need to accommodate different content.',
       'I also standardised iconography using Google Material Symbols, replacing several separate libraries with a shared set across Marketplace and merchant tools. Clear labels, keyboard interaction, visible focus and feedback remain part of how we use those components.',
     ],
@@ -74,12 +74,12 @@ export const approachSections: readonly PortfolioSection[] = [
       'atomic design',
     ],
     paragraphs: [
-      'I lead design across Fruugo’s shopper and merchant products, setting design direction and acting as the main contact for UX across the business. I work with colleagues and external partners to keep our products aligned with a shared design language.',
-      'I worked with Product to introduce embedded designers into the Shop, Retailer and Onboarding teams. This gave each product team a named design contact involved in its day-to-day work. We meet weekly to share findings, support one another and maintain consistency across products.',
-      'I owned end-to-end recruitment for two roles, including maternity cover and a permanent position. I defined the roles, worked with HR and recruitment on shortlisting, and interviewed candidates alongside my own delivery work. I then handled onboarding, including software access, product context and a clear route to support.',
-      'I also helped reshape a colleague’s role to support their progression into a lead position, reflecting the responsibility they had taken on and the expectations of the business.',
-      'Mentoring is part of how I work day to day. During our move from Adobe XD to Figma, I shared what I had learned about the tools and frontend implementation. I also helped designers apply atomic design so they could work confidently with reusable components.',
-      'For a recent CTA update across Marketplace and the Merchant Portal, another designer and I agreed the shared approach. She then owned the Marketplace research and design changes across the affected pages. This let us improve consistency across products while giving her ownership of a substantial piece of work.',
+      `I lead design across Fruugo's shopper and merchant products, setting design direction and acting as the main contact for UX across the business. I work with colleagues and external partners to keep our products aligned with a shared design language.`,
+      `I worked with Product to introduce embedded designers into the Shop, Retailer and Onboarding teams. This gave each product team a named design contact involved in its day-to-day work. We meet weekly to share findings, support one another and maintain consistency across products.`,
+      `I owned end-to-end recruitment for two roles, including maternity cover and a permanent position. I defined the roles, worked with HR and recruitment on shortlisting, and interviewed candidates alongside my own delivery work. I then handled onboarding, including software access, product context and a clear route to support.`,
+      `I also helped reshape a colleague's role to support their progression into a lead position, reflecting the responsibility they had taken on and the expectations of the business.`,
+      `Mentoring is part of how I work day to day. During our move from Adobe XD to Figma, I shared what I had learned about the tools and frontend implementation. I also helped designers apply atomic design so they could work confidently with reusable components.`,
+      `For a recent CTA update across Marketplace and the Merchant Portal, another designer and I agreed the shared approach. She then owned the Marketplace research and design changes across the affected pages. This let us improve consistency across products while giving her ownership of a substantial piece of work`,
     ],
   },
   {
@@ -95,9 +95,9 @@ export const approachSections: readonly PortfolioSection[] = [
       'review the output against the user need',
     ],
     paragraphs: [
-      'I use AI to explore ideas, prototype interfaces and reduce repetitive work. For Huugo, Fruugo’s AI shopping assistant, this helped me move from initial design into frontend implementation and create a reusable workflow for character variants and campaign assets.',
-      'I developed a repeatable workflow for SaaS-style product videos, combining AI-assisted production with screen recordings made in Recordly. This lets me produce videos independently with a short turnaround, bringing together work that would typically involve several contributors. I applied the workflow to create a product video for Accessible Trades.',
-      'I give these workflows clear constraints and review the output against the user need. The aim is to make useful approaches repeatable for the wider team, while keeping design decisions and implementation quality under our control.',
+      `I use AI to explore ideas, prototype interfaces and reduce repetitive work. For Huugo, Fruugo's AI shopping assistant, this helped me move from initial design into frontend implementation and create a reusable workflow for character variants and campaign assets.`,
+      `I developed a repeatable workflow for SaaS-style product videos, combining AI-assisted production with screen recordings made in Recordly. This lets me produce videos independently with a short turnaround, bringing together work that would typically involve several contributors. I applied the workflow to create a product video for Accessible Trades.`,
+      `I give these workflows clear constraints and review the output against the user need. The aim is to make useful approaches repeatable for the wider team, while keeping design decisions and implementation quality under our control.`,
     ],
     skillsIntro:
       'My work combines design and research tools with hands-on development. I use these across discovery, prototyping, implementation and ongoing product improvements.',

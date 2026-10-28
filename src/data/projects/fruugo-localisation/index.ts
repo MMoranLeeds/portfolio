@@ -12,7 +12,7 @@ export const localisationProject: Project = {
   slug: "fruugo-localisation",
   overview: {
     outcome:
-      "Turned multilingual research into typography and language-control improvements across Fruugo’s shopper and merchant products. The Marketplace language picker and Merchant Portal font update are now live, with further changes awaiting deployment.",
+      "Turned multilingual research into typography and language-control improvements across Fruugo's shopper and merchant products. The Marketplace language picker and Merchant Portal font update are now live, with further changes awaiting deployment.",
     period: "Q3 2026 · Ongoing rollout",
   },
   mobile: {
@@ -42,9 +42,9 @@ export const localisationProject: Project = {
   url: "https://www.fruugo.co.uk/",
   externalLinkLabel: "Visit Fruugo marketplace",
   seoDescription:
-    "How Matthew Moran used shopper research and a Puppeteer and AI-assisted multilingual audit to drive Fruugo’s typography, language-selection and merchant-localisation programme.",
+    "How Matthew Moran used shopper research and a Puppeteer and AI-assisted multilingual audit to drive Fruugo's typography, language-selection and merchant-localisation programme.",
   sourcesIntro:
-    "Interviews, behavioural data and a contextual interface audit informed the work. Platform scale is drawn from Fruugo’s published corporate figures. The figures show marketplace reach and audit coverage. The Marketplace language picker and Merchant Portal font change are live in production. Marketplace typography and checkout wording changes, and the Merchant Portal language picker shown in test, are awaiting deployment.",
+    "Interviews, behavioural data and a contextual interface audit informed the work. Platform scale is drawn from Fruugo's published corporate figures. The figures show marketplace reach and audit coverage. The Marketplace language picker and Merchant Portal font change are live in production. Marketplace typography and checkout wording changes, and the Merchant Portal language picker shown in test, are awaiting deployment.",
   cover: {
     cardBackground,
     ...projectCover("fruugo-localisation-overview"),
@@ -94,14 +94,14 @@ export const localisationProject: Project = {
       paragraphs: [
         "Reviewing translations in a CSV removed the context needed to judge their meaning. I used Puppeteer to capture the configured Marketplace across discovery, product pages, accounts, help, policies and checkout in each supported language.",
         "AI analysis identified candidate problems and suggested corrections. I prioritised misleading labels and trust barriers, then asked colleagues who speak the relevant languages to review them in context. Coverage varied between languages.",
-        "Merchant registration data and observed translation behaviour helped prioritise Simplified Chinese. I kept personal language choice separate from a merchant’s registered country, allowing each user to choose the language they prefer.",
+        "Merchant registration data and observed translation behaviour helped prioritise Simplified Chinese. I kept personal language choice separate from a merchant's registered country, allowing each user to choose the language they prefer.",
       ],
       evidence: [
         {
           value: audience.countries,
           label: "Countries served",
           detail:
-            "Fruugo’s published international footprint gives context to the different regional expectations considered in the work.",
+            "Fruugo's published international footprint gives context to the different regional expectations considered in the work.",
           sourceId: audience.source.id,
         },
         {
@@ -145,7 +145,7 @@ export const localisationProject: Project = {
           id: "checkout-evidence",
           title: "German checkout: a small label with a large consequence",
           paragraphs: [
-            "Beside the shopper’s completed email details, ‘E-Mail sicheres Abmelden’ used wording associated with logging out. At checkout, that could make the user uncertain about their account state or whether their details had been retained. The updated screen uses ‘Angemeldet als’, meaning ‘Signed in as’.",
+            "Beside the shopper's completed email details, ‘E-Mail sicheres Abmelden' used wording associated with logging out. At checkout, that could make the user uncertain about their account state or whether their details had been retained. The updated screen uses ‘Angemeldet als', meaning ‘Signed in as'.",
             "The revised wording makes the account state clearer at checkout. Its effect on shopper confidence and completion will be reviewed after release.",
           ],
           images: [
@@ -169,7 +169,7 @@ export const localisationProject: Project = {
       id: "design",
       title: "Design approach and decisions",
       paragraphs: [
-        "The audit connected individual defects to shared design decisions. I focused on readable typography, language choice independent of store country, and clear separation between a merchant’s personal interface preference and their company’s reply language.",
+        "The audit connected individual defects to shared design decisions. I focused on readable typography, language choice independent of store country, and clear separation between a merchant's personal interface preference and their company's reply language.",
       ],
       blocks: [
         {
@@ -177,7 +177,7 @@ export const localisationProject: Project = {
           title: "Typography: consistent characters across languages",
           paragraphs: [
             "Neuzeit Grotesk lacked some characters needed by supported languages, so labels fell back to a different font. We selected Noto Sans for broader script coverage and more consistent typography. It also removed the Adobe Typekit dependency and let us use the same typeface in Google Workspace documents.",
-            "The same Polish category labels are enlarged below. Look at the accented ‘ó’ in ‘ogród’ and ‘Wystrój’, and how it sits with the surrounding letters. Polish-speaking participants noticed the inconsistency even when it was easy for other readers to miss. Text also wraps differently after the font change, reinforcing the need to check layouts using real translations.",
+            "The same Polish category labels are enlarged below. Look at the accented ‘ó' in ‘ogród' and ‘Wystrój', and how it sits with the surrounding letters. Polish-speaking participants noticed the inconsistency even when it was easy for other readers to miss. Text also wraps differently after the font change, reinforcing the need to check layouts using real translations.",
             "Noto Sans is now live in the Merchant Portal. The Marketplace font change is implemented but awaiting production deployment, as shown in the Polish examples below. Noto Sans requires appropriate fonts for the scripts being displayed. I recommended font-display: swap to keep text visible during loading, and the frontend team implemented the loading changes.",
           ],
           images: [
@@ -234,9 +234,9 @@ export const localisationProject: Project = {
           id: "merchant-tools",
           title: "Merchant Portal: personal interface language",
           paragraphs: [
-            "I designed a personal language picker in the Merchant Portal header, implemented in the test environment for English and Simplified Chinese and awaiting production deployment. Merchants can choose the language they prefer for their own work without changing their company’s customer-reply language. Their interface preference persists across views.",
+            "I designed a personal language picker in the Merchant Portal header, implemented in the test environment for English and Simplified Chinese and awaiting production deployment. Merchants can choose the language they prefer for their own work without changing their company's customer-reply language. Their interface preference persists across views.",
             "The change reaches beyond the picker: navigation, dashboard headings, task instructions and actions adapt to Simplified Chinese. The examples below show the same order, enquiry and dispute tasks in both languages. This gives merchants a supported alternative to browser translation, helping them work in familiar language while retaining consistent product terminology.",
-            "The aim is to reduce language barriers to selling, supporting Fruugo’s ambition to let anyone, anywhere sell. Easier comprehension and more efficient task completion are the intended benefits; their impact will be assessed after release.",
+            "The aim is to reduce language barriers to selling, supporting Fruugo's ambition to let anyone, anywhere sell. Easier comprehension and more efficient task completion are the intended benefits; their impact will be assessed after release.",
             "Changing interface language refreshes the current page. The interaction design includes a warning about unsaved edits and offers a way to keep editing before the refresh discards input. A translation-feedback route helps merchants report terminology that does not make sense in context.",
           ],
           images: [

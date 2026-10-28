@@ -432,7 +432,7 @@ const consent = await readFile(
 assert(homepage.includes('href="/work/fruugo-cookie-consent"'));
 assert(sitemap.includes("/work/fruugo-cookie-consent"));
 assert(consent.includes("66.3%") && consent.includes("76.3%"));
-assert(consent.includes("76–79%"));
+assert(consent.includes("76-79%"));
 assert(consent.includes("rather than user-level randomisation"));
 assert(!consent.includes("9% uplift"));
 assert(!consent.includes("fruugo.slack.com"));

@@ -5,7 +5,7 @@ const beckyRecommendation = featuredPeerReviews().find(
   (review) => review.id === "becky-lovell-2026",
 );
 if (!beckyRecommendation?.fullQuote?.length)
-  throw new Error("CV requires Becky’s full LinkedIn recommendation");
+  throw new Error("CV requires Becky's full LinkedIn recommendation");
 // Shared copy is referenced, rather than maintained as a second version.
 // Employment dates, education and shorter role descriptions belong here.
 export const cv = {
@@ -31,7 +31,7 @@ export const cv = {
       dates: "January 2022 to present",
       role: "Lead UI UX Designer",
       paragraphs: [
-        "Lead UI and UX design across Fruugo’s global shopper marketplace and merchant products, combining research, design direction and hands-on delivery.",
+        "Lead UI and UX design across Fruugo's global shopper marketplace and merchant products, combining research, design direction and hands-on delivery.",
       ],
       achievements: [
         `Owned a company-wide accessibility audit and coordinated improvements across shopper and merchant products for a marketplace reporting ${audience.visits.headline} website visits in ${audience.visitYear} (Fruugo Corporate). Used WCAG Level AA to identify barriers and worked with Engineering and Legal to prioritise changes supporting European Accessibility Act readiness.`,
@@ -39,7 +39,7 @@ export const cv = {
         "Brought colleagues into discovery using Opportunity Solution Trees, connecting research findings with opportunities and comparing possible solutions before committing to a direction.",
         "Led a contextual multilingual audit to turn shopper trust concerns and merchant translation problems into priorities for typography and language controls across Marketplace, Checkout and merchant tools.",
         "Used Hotjar recordings, GA4 journey data and completion-time evidence to simplify merchant onboarding. Agreed with Sales and Technical Integration which questions could move to integration, reducing the information merchants needed to provide upfront.",
-        "Developed an AI shopping assistant from the CTO’s proof of concept, leading UX, frontend implementation and product character identity.",
+        "Developed an AI shopping assistant from the CTO's proof of concept, leading UX, frontend implementation and product character identity.",
         "Created and maintained the shared Figma component library, aligning with engineers on React components in Storybook. Enabled designers to build realistic, multilingual prototypes without recreating established patterns for each project.",
       ],
     },

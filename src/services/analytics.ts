@@ -64,7 +64,7 @@ export function createAnalyticsController(
     if (loading) return loading;
     win.dataLayer ||= [];
     win.gtag ||= function () {
-      // Google’s queue expects the arguments object used by its standard snippet.
+      // Google's queue expects the arguments object used by its standard snippet.
       // eslint-disable-next-line prefer-rest-params
       win.dataLayer?.push(arguments);
     };

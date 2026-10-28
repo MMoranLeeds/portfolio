@@ -4,9 +4,9 @@ import { companyGroups } from "@/data/companies";
 
 <template>
   <section class="companies-section" aria-labelledby="companies-heading">
-    <h3 id="companies-heading">Organisations I’ve designed for</h3>
+    <h3 id="companies-heading">Organisations I've designed for</h3>
     <p>
-      A selection of organisations I’ve worked with through in-house roles and
+      A selection of organisations I've worked with through in-house roles and
       client projects at networx.
     </p>
     <div

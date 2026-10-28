@@ -10,7 +10,7 @@ const args = process.argv.slice(2);
 const crf = Number(args[0] || 25);
 if (args.length > 1 || !Number.isInteger(crf) || crf < 18 || crf > 32) {
   console.error(
-    "Usage: node scripts/optimise-videos.mjs [CRF 18–32, default 25]",
+    "Usage: node scripts/optimise-videos.mjs [CRF 18-32, default 25]",
   );
   process.exit(1);
 }

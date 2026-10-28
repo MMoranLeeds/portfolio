@@ -18,8 +18,8 @@ const route = useRoute();
     </div>
     <h2 id="contact-heading">Contact</h2>
     <p>
-      If you’d like to discuss an opportunity or hear more about how I approach
-      research, design and delivery, I’d be happy to talk.
+      If you'd like to discuss an opportunity or hear more about how I approach
+      research, design and delivery, I'd be happy to talk.
     </p>
     <div class="contact-actions">
       <ActionLink :href="emailHref" class="contact-email" external>

@@ -113,7 +113,7 @@ A VTT file is plain text with a header and timed cues:
 WEBVTT
 
 00:00:01.000 --> 00:00:04.000
-Meet Huugo, Fruugo’s AI shopping assistant.
+Meet Huugo, Fruugo's AI shopping assistant.
 ```
 
 This example explains the format; replace it with the actual narration and timing. Do not insert this sample into a real caption file unless it matches the film.
@@ -160,7 +160,7 @@ Publishing is an explicit confirmation that you have reviewed the files. It chec
 - Makes the transcript available as readable HTML and a downloadable TXT file.
 - Includes the published transcript in the case-study reading-time calculation.
 
-No placeholder or empty caption track is added before publishing. Existing manually configured `captionsSrc` and non-empty `transcript` values in a project’s `video` configuration take precedence; remove those overrides if you want the generated files to supply the content instead.
+No placeholder or empty caption track is added before publishing. Existing manually configured `captionsSrc` and non-empty `transcript` values in a project's `video` configuration take precedence; remove those overrides if you want the generated files to supply the content instead.
 
 The registry is generated TypeScript with a marked, JSON-compatible data block. Its export has `prettier-ignore` to preserve machine readability. Change the reviewed draft files and rerun publish rather than hand-editing the generated registry. Keep `ProjectVideoTranscript`'s interface outside the marked data block.
 

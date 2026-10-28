@@ -79,7 +79,7 @@ export const accessibleTradesProject: Project = {
       title: "My role and collaboration",
       paragraphs: [
         "I created and continue to run Accessible Trades, owning the product from the initial idea through to launch and ongoing development. My responsibilities span research, product direction, UX design, frontend and backend development, data management, hosting and SEO. I built both the public experience and the administration tools used to maintain its information.",
-        "I work directly with the MND Association’s partnerships team and nationwide support team. They have started using and sharing the service internally, and their feedback helps shape its direction and priorities.",
+        "I work directly with the MND Association's partnerships team and nationwide support team. They have started using and sharing the service internally, and their feedback helps shape its direction and priorities.",
       ],
     },
     {
@@ -118,8 +118,8 @@ export const accessibleTradesProject: Project = {
           id: "supporting-evidence",
           title: "Show what supports a company listing",
           paragraphs: [
-            "I connected company records with relevant procurement evidence and reviewed public websites, adaptation services, previous-work examples and reviews where available. For submitted requests, I also checked the applicant’s details against the public company information. These checks help assess a listing; they do not guarantee workmanship or suitability for an individual project.",
-            "The company profile distinguishes company-supplied information from supporting evidence reviewed by Accessible Trades. For example, Bradford Council’s April 2024 award notice names Lonsdale Contracts Ltd on a framework for disabled facilities adaptation work. Linking that evidence gives people context they can inspect before making their own enquiries.",
+            "I connected company records with relevant procurement evidence and reviewed public websites, adaptation services, previous-work examples and reviews where available. For submitted requests, I also checked the applicant's details against the public company information. These checks help assess a listing; they do not guarantee workmanship or suitability for an individual project.",
+            "The company profile distinguishes company-supplied information from supporting evidence reviewed by Accessible Trades. For example, Bradford Council's April 2024 award notice names Lonsdale Contracts Ltd on a framework for disabled facilities adaptation work. Linking that evidence gives people context they can inspect before making their own enquiries.",
           ],
           images: [
             accessibleTradesImage(
@@ -144,7 +144,7 @@ export const accessibleTradesProject: Project = {
               "funding-guidance",
               "Live service · Funding guidance",
               "The DFG eligibility checker explains that it is an initial guide and asks which UK nation the home needing adaptation is in.",
-              "The checker starts with the home’s location and makes clear that the relevant authority must confirm eligibility and any award.",
+              "The checker starts with the home's location and makes clear that the relevant authority must confirm eligibility and any award.",
               "4 / 3",
               "center 25%",
             ),
@@ -188,7 +188,7 @@ export const accessibleTradesProject: Project = {
       id: "validation",
       title: "Validation and iteration",
       paragraphs: [
-        "I launched the service as a proof of concept and used a business social-media profile to explain its benefits and invite feedback. I also established direct feedback channels with the MND Association’s partnerships and nationwide support teams.",
+        "I launched the service as a proof of concept and used a business social-media profile to explain its benefits and invite feedback. I also established direct feedback channels with the MND Association's partnerships and nationwide support teams.",
         "I am gathering feedback and reviewing usage data from visitors who consent to analytics, to identify where the experience needs to improve.",
         "Server-side regression tests cover search-radius boundaries, evidence ranking, pagination, company-status filtering and profile expiry. These turn product rules into repeatable checks, including keeping evidence-backed ordering consistent across pages and excluding dissolved companies.",
       ],

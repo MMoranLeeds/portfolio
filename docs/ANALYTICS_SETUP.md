@@ -1,6 +1,6 @@
 # Portfolio analytics and cookie consent
 
-This adapts Accessible Trades’ optional-analytics pattern to the portfolio. It
+This adapts Accessible Trades' optional-analytics pattern to the portfolio. It
 uses Vue and native browser APIs, with no consent-platform subscription or new
 package dependency. Analytics stays off until visitors explicitly allow it.
 
@@ -8,15 +8,15 @@ package dependency. Analytics stays off until visitors explicitly allow it.
 
 1. Create or select a GA4 web data stream for your portfolio in Google Analytics
    **Admin → Data streams**. Copy its measurement ID, starting with `G-`.
-2. In Netlify’s production build environment, set
+2. In Netlify's production build environment, set
    `VITE_GA_MEASUREMENT_ID` to that ID and `VITE_SITE_URL` to
    `https://mdmoran.netlify.app`. Rebuild and redeploy.
 3. **Turn Enhanced measurement off for this web stream.** The application sends
    its own sanitised page views on Vue route changes, including recognised
-   homepage section hashes. Google’s automatic browser-history page views can
+   homepage section hashes. Google's automatic browser-history page views can
    otherwise duplicate these events or include URL parameters. Do not install
    an additional GA snippet or GTM tag alongside this implementation.
-4. Keep Google Signals and advertising integrations off. In GA’s data-retention
+4. Keep Google Signals and advertising integrations off. In GA's data-retention
    settings, choose the retention period appropriate for your needs. The cookie
    lifespan configured by the application is distinct from server-side data
    retention.
@@ -40,7 +40,7 @@ to `.env.local` and restart Vite; the UI works but tracking remains disabled.
 - A versioned choice in `moran-portfolio-cookie-consent` local storage expires
   after 180 days. Blocked storage keeps the explicit choice for the current tab;
   a later visit can ask again. Changes in another tab update the current tab.
-- Withdrawal sets Google’s documented analytics-disable flag, cancels pending
+- Withdrawal sets Google's documented analytics-disable flag, cancels pending
   tag loading, stops application page views and removes accessible `_ga` cookies
   at the root path. An already issued request cannot be recalled, and data already
   received by Google is not erased by withdrawal.
@@ -55,7 +55,7 @@ to `.env.local` and restart Vite; the UI works but tracking remains disabled.
 
 In a fresh browser session, use Network and browser storage tools:
 
-1. Before choosing, confirm no request to Google’s tag/analytics endpoints and no
+1. Before choosing, confirm no request to Google's tag/analytics endpoints and no
    new `_ga` cookies. Decline and navigate: these should remain absent.
 2. Allow analytics: confirm a tag request and the current page in GA Realtime.
    Navigate to a case study and a homepage section; expect one page view per

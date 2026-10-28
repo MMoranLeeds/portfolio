@@ -156,7 +156,7 @@ test("failed enlarged images announce recovery and remain dismissible", async ({
   await trigger.click();
   const viewer = page.getByRole("dialog", { name: "Image viewer" });
   await expect(viewer.getByRole("alert")).toContainText(
-    "This image couldn’t be loaded",
+    "This image couldn't be loaded",
   );
   await expect(
     viewer.getByRole("button", { name: "Close image" }),

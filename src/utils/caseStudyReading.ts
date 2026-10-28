@@ -9,7 +9,7 @@ import { projectVideoTranscripts } from "@/data/projects/generated/videoTranscri
 export const readingWordsPerMinute = 238;
 
 export function countWords(text: string): number {
-  return (text.match(/[\p{L}\p{N}]+(?:[’'-][\p{L}\p{N}]+)*/gu) || []).length;
+  return (text.match(/[\p{L}\p{N}]+(?:[''-][\p{L}\p{N}]+)*/gu) || []).length;
 }
 
 /** Count displayed article copy, excluding navigation, URLs, alt text and IDs. */

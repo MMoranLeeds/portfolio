@@ -1,4 +1,4 @@
-// Public platform context from Fruugo’s corporate website, accessed 15 October 2026.
+// Public platform context from Fruugo's corporate website, accessed 15 October 2026.
 // Visits are not unique users; retailers are businesses, not portal user accounts.
 export const fruugoAudience = {
   visitYear: 2025,

@@ -1,4 +1,4 @@
-import cardBackground from "@/assets/images/dist/cards/tahoe-bg-960.webp";
+import cardBackground from "@/assets/images/dist/cards/sonoma-bg-960.webp";
 import { nextRambleImage } from "./images";
 import type { Project } from "@/types/project";
 import mobileFallback from "@/assets/images/dist/mobile/nextramble.webp";
@@ -96,7 +96,7 @@ export const nextRambleProject: Project = {
           id: "route-reuse",
           title: "Support the first outing and the next one",
           paragraphs: [
-            "Saved routes help returning organisers avoid repeated entry, but an empty personal library does little for a new group. I paired reusable routes with a researched starter catalogue. A route supplies a starting point; the proposer still checks the details and adds the outing’s date, start time and meeting arrangements.",
+            "Saved routes help returning organisers avoid repeated entry, but an empty personal library does little for a new group. I paired reusable routes with a researched starter catalogue. A route supplies a starting point; the proposer still checks the details and adds the outing's date, start time and meeting arrangements.",
             "I developed a structured research workflow that retains source links, review dates, uncertainties and conflicts. Records requiring further research or content-reuse review are excluded from the published catalogue. That adds review work, but avoids treating generated content or a valid data format as proof that a route is current or suitable.",
           ],
           images: [
@@ -113,7 +113,7 @@ export const nextRambleProject: Project = {
           id: "planning-states",
           title: "Separate a suggestion from a confirmed plan",
           paragraphs: [
-            "I separated the ongoing group, reusable route, dated proposal, planning round and confirmed walk. Members can vote for more than one option they could join, while an organiser explicitly confirms the final choice. The voting deadline and the walk’s start time have different jobs, so they remain separate in the interface.",
+            "I separated the ongoing group, reusable route, dated proposal, planning round and confirmed walk. Members can vote for more than one option they could join, while an organiser explicitly confirms the final choice. The voting deadline and the walk's start time have different jobs, so they remain separate in the interface.",
             "Public discovery also needed a boundary. A group can introduce itself without making its planning workspace public. Public walk listings use a narrower set of information, keeping private meeting arrangements, member details and suitability questions within the member experience. Maps provide approximate area context alongside text, rather than implying a surveyed route or navigation service.",
           ],
         },
@@ -123,7 +123,7 @@ export const nextRambleProject: Project = {
       id: "iteration",
       title: "Iteration through working interfaces",
       paragraphs: [
-        "Reviewing the implemented experience exposed problems that were less obvious in an isolated screen. I moved search into the homepage so visitors could begin immediately, then shortened the mode labels to Groups and Walks. Keeping the selected place’s full locality addressed ambiguous town names, while retaining the search controls in empty states gave people a way to recover.",
+        "Reviewing the implemented experience exposed problems that were less obvious in an isolated screen. I moved search into the homepage so visitors could begin immediately, then shortened the mode labels to Groups and Walks. Keeping the selected place's full locality addressed ambiguous town names, while retaining the search controls in empty states gave people a way to recover.",
         "The proposal cards also needed a clearer hierarchy as facts, questions and organiser actions accumulated. I separated the summary, expandable expectations and role-specific actions. These were changes from my own design and functional reviews, rather than findings from a completed participant study.",
       ],
     },
@@ -141,7 +141,7 @@ export const nextRambleProject: Project = {
       title: "Delivery and outcomes",
       paragraphs: [
         "NextRamble is live, with public discovery and area guides connected to group membership, proposals, voting and confirmed plans. I took the service through domain setup and deployment, and continue to maintain its interface and supporting content.",
-        "The delivered result is a working product that people can use, rather than a static concept. Whether it reduces organising effort or earns a place alongside an existing group chat now needs to be tested through real planning cycles.",
+        "The delivered result is a working product that people can use, rather than a static concept. Whether it reduces organising effort or earns a place alongside an existing group chat now needs to be tested through real planning cycles. I have not yet established adoption, repeat use or time saved.",
       ],
     },
     {

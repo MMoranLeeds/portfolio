@@ -23,9 +23,9 @@ export function metadataFor(path: string) {
   const description = isStudio
     ? "Private portfolio image tool."
     : missing
-      ? "Return to Matthew Moran’s portfolio to explore case studies."
+      ? "Return to Matthew Moran's portfolio to explore case studies."
       : isCv
-        ? "Matthew Moran’s CV: experience in product design leadership, UX research, accessibility, design systems and frontend delivery."
+        ? "Matthew Moran's CV: experience in product design leadership, UX research, accessibility, design systems and frontend delivery."
         : project?.seoDescription ||
           "Matthew Moran, Lead Product Designer combining customer insight, data and accessibility, from early ideas through to implementation.";
   const canonical = new URL(

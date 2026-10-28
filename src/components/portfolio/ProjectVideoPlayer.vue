@@ -106,7 +106,7 @@ onBeforeUnmount(() => {
       </button>
     </div>
     <p v-if="failed" role="alert" class="project-video-error">
-      This video couldn’t be played. Please try again later or use the MP4 link
+      This video couldn't be played. Please try again later or use the MP4 link
       below.
     </p>
     <a

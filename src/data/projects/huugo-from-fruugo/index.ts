@@ -8,7 +8,7 @@ export const huugoProject: Project = {
   slug: "huugo-from-fruugo",
   overview: {
     outcome:
-      "Took the CTO’s proof of concept into a launched AI shopping experience, leading UX and implementing most of the frontend. The production page achieved a Lighthouse performance score of 99/100, while early gross transaction value reached 18.4 times the associated AI-model spend.",
+      "Took the CTO's proof of concept into a launched AI shopping experience, leading UX and implementing most of the frontend. The production page achieved a Lighthouse performance score of 99/100, while early gross transaction value reached 18.4 times the associated AI-model spend.",
     period: "Q3 2026",
     launchDate: "2026-10-08",
     launchLabel: "8 October 2026",
@@ -17,7 +17,7 @@ export const huugoProject: Project = {
     fallbackSrc: mobileFallback,
     ...{
       label: "Portrait identity illustration",
-      alt: "Portrait artwork of Huugo’s blue character with shopping and search speech bubbles.",
+      alt: "Portrait artwork of Huugo's blue character with shopping and search speech bubbles.",
       caption:
         "Huugo identity artwork, presented in portrait format rather than as an interface screenshot.",
     },
@@ -36,7 +36,7 @@ export const huugoProject: Project = {
     src: "/videos/huugo-promotion.mp4",
     poster: projectCover("huugo-shopping-journey").src,
     caption:
-      "The promotional film used to announce the launch of Huugo, Fruugo’s AI shopping assistant.",
+      "The promotional film used to announce the launch of Huugo, Fruugo's AI shopping assistant.",
     width: 1280,
     height: 720,
   },
@@ -53,7 +53,7 @@ export const huugoProject: Project = {
   ],
   url: "https://huugo.fruugo.com/",
   seoDescription:
-    "How Matthew Moran developed Fruugo’s AI shopping proof of concept into a shopper-facing experience, designed Huugo’s identity and used internal feedback to guide iteration before launch.",
+    "How Matthew Moran developed Fruugo's AI shopping proof of concept into a shopper-facing experience, designed Huugo's identity and used internal feedback to guide iteration before launch.",
   sourcesIntro:
     "Public market research provided context for exploring conversational shopping.",
   cover: {
@@ -70,7 +70,7 @@ export const huugoProject: Project = {
       id: "problem",
       title: "The problem and goal",
       paragraphs: [
-        "The project began with a bare-bones HTML proof of concept created by Fruugo’s CTO. Conversations with Google and market research into agentic commerce highlighted a strategic opportunity: prepare the marketplace for shoppers expressing their needs through AI assistants, while exploring a new route to GTV.",
+        "The project began with a bare-bones HTML proof of concept created by Fruugo's CTO. Conversations with Google and market research into agentic commerce highlighted a strategic opportunity: prepare the marketplace for shoppers expressing their needs through AI assistants, while exploring a new route to GTV.",
         "After demonstrating the concept to the wider business and board, the CTO asked me to develop the UX. The challenge was to turn a working technical demonstration into an experience that shoppers could understand, use and trust. A shopper might know the occasion, budget or problem they are buying for without knowing the right product name or search terms.",
       ],
     },
@@ -80,7 +80,7 @@ export const huugoProject: Project = {
       paragraphs: [
         "I owned the full UI and UX design and implemented most of the frontend. I researched established AI interaction patterns, used AI to prototype the designs quickly, then developed the interface states and responsive behaviour.",
         "A frontend engineer worked alongside me on the final implementation, helping with more technical aspects. The CTO created the original proof of concept, and the wider engineering team delivered backend model orchestration and commerce services.",
-        "I also created Huugo’s identity and a reusable workflow for character variants and campaign assets across markets.",
+        "I also created Huugo's identity and a reusable workflow for character variants and campaign assets across markets.",
       ],
     },
     {
@@ -92,9 +92,9 @@ export const huugoProject: Project = {
       ],
       points: [
         {
-          title: "US$3–5tn in projected agentic commerce by 2030",
+          title: "US$3-5tn in projected agentic commerce by 2030",
           description:
-            "McKinsey’s forecast for global consumer-goods commerce mediated by AI agents illustrates the scale of the strategic opportunity. This market context helped frame Fruugo’s exploration of conversational shopping.",
+            "McKinsey's forecast for global consumer-goods commerce mediated by AI agents illustrates the scale of the strategic opportunity. This market context helped frame Fruugo's exploration of conversational shopping.",
         },
       ],
       sourceIds: ["mckinsey-commerce"],
@@ -122,7 +122,7 @@ export const huugoProject: Project = {
             huugoImage(
               "basket",
               "Basket and checkout handoff",
-              "Enlarged detail of Huugo’s basket showing shipping information, cost breakdown and Checkout on Fruugo button.",
+              "Enlarged detail of Huugo's basket showing shipping information, cost breakdown and Checkout on Fruugo button.",
               "Basket detail enlarged around delivery, totals and the checkout handoff.",
             ),
           ],
@@ -131,7 +131,7 @@ export const huugoProject: Project = {
           id: "identity",
           title: "A recognisable identity with room for local context",
           paragraphs: [
-            "I chose a rounded blue character with eyes, using Fruugo’s brand blues to connect the identity to the marketplace. The eyes provide an expressive focal point and can direct attention towards another element. Keeping the face simple was intended to reduce competing visual cues.",
+            "I chose a rounded blue character with eyes, using Fruugo's brand blues to connect the identity to the marketplace. The eyes provide an expressive focal point and can direct attention towards another element. Keeping the face simple was intended to reduce competing visual cues.",
             "I used a non-human form to avoid assigning the character a particular human ethnicity. Removable accessories allow the same recognisable identity to adapt to local occasions and cultural contexts, with artwork and messaging selected for each market.",
             "Huugo has no mouth. Meaning is communicated through interface and campaign text that can be localised and maintained in translation files. Eye direction and accessories support that message; essential actions and information remain available in text.",
           ],
@@ -140,7 +140,7 @@ export const huugoProject: Project = {
             huugoImage(
               "master",
               "Huugo master character",
-              "Huugo’s rounded blue body and white oval eyes, without a mouth, limbs or event accessories.",
+              "Huugo's rounded blue body and white oval eyes, without a mouth, limbs or event accessories.",
               "The master defines the silhouette, proportions and eye style used across variants.",
             ),
             huugoImage(

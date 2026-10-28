@@ -31,11 +31,11 @@ export const onboardingProject: Project = {
     alt: "Merchant onboarding at Fruugo case study by Matthew Moran, with the merchant interface.",
   },
   card: {
-    alt: "Desktop homepage for Fruugo’s merchant application.",
+    alt: "Desktop homepage for Fruugo's merchant application.",
     header: {
       label: "",
-      alt: "Desktop homepage for Fruugo’s merchant application, matching the case-study card.",
-      caption: "The desktop entry point for Fruugo’s merchant application.",
+      alt: "Desktop homepage for Fruugo's merchant application, matching the case-study card.",
+      caption: "The desktop entry point for Fruugo's merchant application.",
       previewAspectRatio: "12 / 5",
       previewPosition: "top",
     },
@@ -48,11 +48,11 @@ export const onboardingProject: Project = {
   status: "Live, with ongoing post-launch review",
   tags: ["Merchant onboarding", "Data-informed design", "Cross-team delivery"],
   seoDescription:
-    "How Matthew Moran helped simplify Fruugo’s merchant application using Hotjar and GA4, cross-team collaboration and connected data flows, with early survey and completion-time evidence.",
+    "How Matthew Moran helped simplify Fruugo's merchant application using Hotjar and GA4, cross-team collaboration and connected data flows, with early survey and completion-time evidence.",
   cover: {
     cardBackground,
     ...projectCover("fruugo-merchant-onboarding"),
-    alt: "Perspective presentation of Fruugo’s merchant onboarding interface, showing document requirements, upload controls and completion progress.",
+    alt: "Perspective presentation of Fruugo's merchant onboarding interface, showing document requirements, upload controls and completion progress.",
     caption:
       "Merchant onboarding interface presented as a perspective cover illustration.",
     width: 960,
