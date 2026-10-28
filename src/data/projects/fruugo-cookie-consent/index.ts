@@ -47,7 +47,7 @@ export const cookieConsentProject: Project = {
   title: "Cookie consent at Fruugo",
   category: "Fruugo · Optimising cookie consent",
   summary:
-    "A/B testing a redesigned modal for a high-traffic consent touchpoint — securing a 10-percentage-point lift in acceptance that sustained through worldwide rollout.",
+    "A/B testing a redesigned modal for a high-traffic consent touchpoint - securing a 10-percentage-point lift in acceptance that sustained through worldwide rollout.",
   role: "UX discovery, interaction design, UI copy, design rationale and Legal liaison",
   status: "Live worldwide since 7 April 2026",
   tags: ["A/B testing", "Behavioural analysis", "Cross-team influence"],
