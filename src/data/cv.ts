@@ -62,7 +62,7 @@ export const cv = {
     },
   ],
   independentWork:
-    "Created and continue to maintain Accessible Trades, taking a live accessibility-focused service through discovery, design, frontend development and ongoing improvements.",
+    "Created and launched two independent products from the ground up: Accessible Trades, helping people find home-adaptation specialists, and NextRamble, helping walking groups compare routes and agree on their next outing. Own product direction, research, UX/UI design, frontend development, backend integration and ongoing maintenance.",
   recommendations: [
     {
       ...beckyRecommendation,

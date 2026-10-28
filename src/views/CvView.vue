@@ -106,8 +106,8 @@ const printCv = async () => {
         <section class="cv-portfolio" aria-labelledby="cv-portfolio">
           <h2 id="cv-portfolio">Portfolio</h2>
           <p>
-            Case studies covering localisation, merchant onboarding, Agentic AI shopping
-            and Accessible Trades.
+            Case studies covering localisation, merchant onboarding, AI
+            shopping, Accessible Trades and NextRamble.
           </p>
           <a :href="`${portfolioUrl}/#case-studies`"
             >{{ portfolioUrl.replace(/^https?:\/\//, "") }}/#case-studies</a

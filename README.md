@@ -2,7 +2,7 @@
 
 My portfolio brings together research, product design, accessibility and frontend development, with case studies explaining the decisions behind the work and what changed as a result.
 
-I designed and built the site with Vue 3 and TypeScript, using AI-assisted development alongside implementation review and testing. This repository makes the frontend available to explore, including its reusable components, interaction logic, content structure and build tools.
+I designed and built the site with Vue 3 and TypeScript. This repository makes the frontend available to explore, including its reusable components, interaction logic, content structure and build tools.
 
 **[View the portfolio](https://mdmoran.netlify.app/)** · **[View the CV](https://mdmoran.netlify.app/cv)** · **[Explore the source](https://github.com/MMoranLeeds/portfolio)**
 
