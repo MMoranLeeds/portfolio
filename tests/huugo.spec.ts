@@ -10,7 +10,7 @@ test("Huugo is selected work rather than duplicated homepage copy", async ({
       name: "Putting this into practice: Huugo from Fruugo",
     }),
   ).toHaveCount(0);
-  await expect(page.locator(".project-card")).toHaveCount(4);
+  await expect(page.locator(".project-card")).toHaveCount(5);
   await page
     .getByRole("link", {
       name: "Read case study: Huugo from Fruugo",

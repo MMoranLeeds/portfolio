@@ -14,7 +14,7 @@ import ArrowIcon from "@/components/ui/ArrowIcon.vue";
     <h2 id="case-studies-heading">Case studies</h2>
     <p>
       How research informs my design decisions, implementation and learning
-      across four projects.
+      across {{ projects.length }} projects.
     </p>
     <div class="project-grid">
       <article

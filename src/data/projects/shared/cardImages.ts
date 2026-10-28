@@ -40,11 +40,19 @@ export function projectCardImage(project: Project): ProjectImage {
 
 /** Projects can opt into using their selected card screenshot in the header. */
 export function projectHeaderImage(project: Project): ProjectImage {
-  if (!project.card?.header) return project.cover;
+  const image = project.card?.header
+    ? {
+        ...project.cover,
+        ...projectCardImage(project),
+        sizes: project.cover.sizes,
+        ...project.card.header,
+      }
+    : project.cover;
   return {
-    ...project.cover,
-    ...projectCardImage(project),
-    sizes: project.cover.sizes,
-    ...project.card.header,
+    ...image,
+    // Every article uses the same desktop canvas and proportional phone overlay.
+    // Full-size images retain their original dimensions in the image viewer.
+    previewAspectRatio: "12 / 5",
+    previewMaxWidth: undefined,
   };
 }

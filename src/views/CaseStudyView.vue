@@ -131,14 +131,17 @@ const sourceLabel = (id: string) =>
         eager
         :interactive="lightboxAvailable"
         @open="openImage"
-      />
-      <MobileProjectPreview
-        v-if="mobile"
-        :preview="mobile"
-        overlay
-        :interactive="lightboxAvailable"
-        @open="openImage"
-      />
+      >
+        <template #overlay>
+          <MobileProjectPreview
+            v-if="mobile"
+            :preview="mobile"
+            overlay
+            :interactive="lightboxAvailable"
+            @open="openImage"
+          />
+        </template>
+      </ProjectFigure>
     </div>
     <p v-if="mobile" class="case-mobile-note">
       {{ mobile.label }} · {{ mobile.caption }}
@@ -351,7 +354,7 @@ const sourceLabel = (id: string) =>
   flex-shrink: 0;
   transform: rotate(180deg);
 }
-/* Cover stays full width; the mobile preview overlays its right edge. */
+/* Shared overlay geometry is relative to the desktop image, not its text. */
 .case-cover-pair {
   position: relative;
 }

@@ -24,44 +24,47 @@ const requestOpen = (event: MouseEvent) => {
     "
   >
     <p v-if="image.label" class="figure-label">{{ image.label }}</p>
-    <component
-      :is="interactive ? 'button' : 'a'"
-      class="project-image-trigger"
-      :type="interactive ? 'button' : undefined"
-      :href="interactive ? undefined : image.fullSrc || image.src"
-      :target="interactive ? undefined : '_blank'"
-      :rel="interactive ? undefined : 'noopener noreferrer'"
-      :aria-haspopup="interactive ? 'dialog' : undefined"
-      :aria-label="
-        interactive
-          ? `Enlarge image: ${image.alt}`
-          : `Open full-size image: ${image.alt} (new tab)`
-      "
-      @click="requestOpen"
-    >
-      <img
-        :class="{ 'project-cover-image': eager }"
-        :src="image.src"
-        :alt="image.alt"
-        :srcset="image.srcset"
-        :sizes="image.sizes"
-        :width="image.width"
-        :height="image.height"
-        :style="
-          image.previewAspectRatio
-            ? {
-                aspectRatio: image.previewAspectRatio,
-                height: 'auto',
-                objectFit: 'cover',
-                objectPosition: image.previewPosition || 'top',
-              }
-            : undefined
+    <div class="project-figure-media">
+      <component
+        :is="interactive ? 'button' : 'a'"
+        class="project-image-trigger"
+        :type="interactive ? 'button' : undefined"
+        :href="interactive ? undefined : image.fullSrc || image.src"
+        :target="interactive ? undefined : '_blank'"
+        :rel="interactive ? undefined : 'noopener noreferrer'"
+        :aria-haspopup="interactive ? 'dialog' : undefined"
+        :aria-label="
+          interactive
+            ? `Enlarge image: ${image.alt}`
+            : `Open full-size image: ${image.alt} (new tab)`
         "
-        :loading="eager ? 'eager' : 'lazy'"
-        decoding="async"
-        :fetchpriority="eager ? 'high' : undefined"
-      />
-    </component>
+        @click="requestOpen"
+      >
+        <img
+          :class="{ 'project-cover-image': eager }"
+          :src="image.src"
+          :alt="image.alt"
+          :srcset="image.srcset"
+          :sizes="image.sizes"
+          :width="image.width"
+          :height="image.height"
+          :style="
+            image.previewAspectRatio
+              ? {
+                  aspectRatio: image.previewAspectRatio,
+                  height: 'auto',
+                  objectFit: 'cover',
+                  objectPosition: image.previewPosition || 'top',
+                }
+              : undefined
+          "
+          :loading="eager ? 'eager' : 'lazy'"
+          decoding="async"
+          :fetchpriority="eager ? 'high' : undefined"
+        />
+      </component>
+      <slot name="overlay" />
+    </div>
     <figcaption>
       {{ image.caption }}
       <span class="visually-hidden">{{
@@ -70,3 +73,10 @@ const requestOpen = (event: MouseEvent) => {
     </figcaption>
   </figure>
 </template>
+
+<style scoped>
+/* Overlays are positioned against the image, independently of labels/captions. */
+.project-figure-media {
+  position: relative;
+}
+</style>

@@ -5,6 +5,7 @@ test("all case-study covers open in one native modal and return keyboard focus",
   page,
 }) => {
   for (const slug of [
+    "nextramble",
     "accessible-trades",
     "huugo-from-fruugo",
     "fruugo-localisation",
@@ -198,4 +199,51 @@ test("long case-study screenshots scroll without losing the close control", asyn
   await page.keyboard.press("Escape");
   await expect(viewer).toBeHidden();
   await expect(trigger).toBeFocused();
+});
+
+test("case-study phones stay inside a consistent desktop image canvas", async ({
+  page,
+}) => {
+  for (const width of [320, 768, 1440]) {
+    await page.setViewportSize({ width, height: 1000 });
+    const dimensions: Array<{ desktop: number; phone: number }> = [];
+    for (const slug of [
+      "fruugo-localisation",
+      "fruugo-merchant-onboarding",
+      "huugo-from-fruugo",
+      "accessible-trades",
+      "nextramble",
+    ]) {
+      await page.goto(`/work/${slug}`);
+      const media = page.locator(".case-cover-pair .project-figure-media");
+      const desktop = media.locator(":scope > .project-image-trigger");
+      const phone = media.locator(".mobile-preview-device");
+      await expect(phone).toBeVisible();
+      const screenBounds = await desktop.boundingBox();
+      const phoneBounds = await phone.boundingBox();
+      expect(screenBounds).not.toBeNull();
+      expect(phoneBounds).not.toBeNull();
+      const screen = screenBounds!;
+      const device = phoneBounds!;
+      expect(device.y).toBeGreaterThanOrEqual(screen.y);
+      expect(device.y + device.height).toBeLessThanOrEqual(
+        screen.y + screen.height + 1,
+      );
+      expect(device.x).toBeGreaterThanOrEqual(screen.x);
+      expect(device.x + device.width).toBeLessThanOrEqual(
+        screen.x + screen.width + 1,
+      );
+      expect(Math.abs(screen.width / screen.height - 12 / 5)).toBeLessThan(
+        0.03,
+      );
+      expect(
+        Math.abs((device.x + device.width - screen.x) / screen.width - 0.98),
+      ).toBeLessThan(0.01);
+      dimensions.push({ desktop: screen.width, phone: device.width });
+    }
+    for (const size of dimensions) {
+      expect(Math.abs(size.desktop - dimensions[0]!.desktop)).toBeLessThan(1);
+      expect(Math.abs(size.phone - dimensions[0]!.phone)).toBeLessThan(1);
+    }
+  }
 });
