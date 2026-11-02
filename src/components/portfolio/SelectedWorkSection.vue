@@ -26,15 +26,22 @@ import ArrowIcon from "@/components/ui/ArrowIcon.vue";
           class="project-card-link"
           :to="`/work/${project.slug}`"
           :aria-label="`Read case study: ${project.title}`"
+          :aria-describedby="`project-outcome-${project.slug}`"
         >
           <ProjectCardMedia :project="project" />
           <div class="project-card-copy">
             <p class="eyebrow">{{ project.category }}</p>
             <h3>{{ project.title }}</h3>
-            <p>{{ project.summary }}</p>
+            <p>{{ project.card.summary }}</p>
             <ul class="project-tags" aria-label="Project skills">
               <li v-for="tag in project.tags" :key="tag">{{ tag }}</li>
             </ul>
+            <div class="project-card-outcome">
+              <p class="project-card-outcome-label">Outcome</p>
+              <p :id="`project-outcome-${project.slug}`">
+                {{ project.card.outcome }}
+              </p>
+            </div>
             <span class="action-link project-card-action" aria-hidden="true"
               >Read case study <ArrowIcon
             /></span>

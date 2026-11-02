@@ -15,7 +15,17 @@ export const nextRambleProject: Project = {
   url: "https://nextramble.co.uk/",
   seoDescription:
     "How Matthew Moran designed and launched NextRamble, bringing route comparison, group voting and confirmed walking plans into a focused, inclusive web service.",
+  card: {
+    summary:
+      "Helping walking groups compare proposals, vote and confirm their next outing.",
+    outcome:
+      "Launched a working group-planning service; evaluation through real outings is the next step.",
+  },
   overview: {
+    rationale:
+      "Comparable route details, shared voting and a clear final plan could help groups organise walks alongside their existing chat communities.",
+    evaluation:
+      "Desk research and reviews of working interfaces shaped the service. Observing real planning cycles will test organising effort, understanding and repeat use; these results are not yet established.",
     outcome:
       "Took an initial group-planning idea into a live service, connecting public discovery with shared planning, reusable routes and controlled membership. The next step is to test its value through real group outings.",
     period: "Personal project · Live in October 2026 · Ongoing development",

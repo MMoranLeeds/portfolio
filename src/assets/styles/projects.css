@@ -17,7 +17,8 @@
 .project-card-link {
   position: relative;
   isolation: isolate;
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   color: var(--text);
   text-decoration: none;
@@ -83,6 +84,7 @@
 }
 /* Shared wallpaper sits behind a separate, unaltered interface screenshot. */
 .project-card-media {
+  flex-shrink: 0;
   position: relative;
   isolation: isolate;
   aspect-ratio: 12 / 5;
@@ -108,7 +110,26 @@
     0 8px 24px rgb(0 0 0 / 24%);
 }
 .project-card-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 1.5rem;
+}
+.project-card-outcome {
+  margin-block: auto 1.25rem;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--line);
+}
+.project-card-outcome p {
+  margin: 0;
+}
+.project-card-outcome .project-card-outcome-label {
+  color: var(--ink);
+  font-weight: 600;
+  margin-block-end: 0.35rem;
+}
+.project-card-action {
+  align-self: flex-start;
 }
 .project-card h3 {
   font-size: 1.35rem;

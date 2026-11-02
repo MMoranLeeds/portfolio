@@ -29,6 +29,11 @@ export function caseStudyReading(project: Project, reviews: PeerReview[] = []) {
     ...(overview
       ? [
           "At a glance",
+          "Design rationale",
+          overview.rationale,
+          "Evaluation",
+          overview.evaluation,
+          "Outcome",
           overview.outcome,
           "Project period",
           overview.period,

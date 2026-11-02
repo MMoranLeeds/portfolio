@@ -78,3 +78,49 @@ test("case-study reflow works at 320px", async ({ page }) => {
     ),
   ).toBe(true);
 });
+
+test("all cards expose outcomes and their articles explain rationale and evaluation", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const cards = page.locator(".project-card");
+  await expect(cards).toHaveCount(6);
+  const destinations = await cards
+    .locator("a.project-card-link")
+    .evaluateAll((links) => links.map((link) => link.getAttribute("href")!));
+  for (const card of await cards.all()) {
+    await expect(card.locator(".project-card-outcome-label")).toHaveText(
+      "Outcome",
+    );
+    await expect(
+      card.locator(".project-card-outcome p").last(),
+    ).not.toBeEmpty();
+  }
+  for (const destination of destinations) {
+    await page.goto(destination);
+    const overview = page.getByRole("region", {
+      name: "At a glance",
+      exact: true,
+    });
+    await expect(overview.locator("dt")).toHaveText([
+      "Design rationale",
+      "Evaluation",
+      "Outcome",
+    ]);
+    for (const detail of await overview.locator("dd").all()) {
+      await expect(detail).not.toBeEmpty();
+    }
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+  }
+  await page.goto("/work/fruugo-merchant-onboarding");
+  await expect(page.locator(".case-overview")).toContainText(
+    "one observed completion, not an average",
+  );
+  await expect(page.locator("#main-content")).toContainText(
+    "do not establish average end-to-end application completion time",
+  );
+});

@@ -11,7 +11,7 @@ export const introduction = {
   paragraphs: [
     'A Lead Product Designer with 13 years of experience across UX, UI and frontend development. I lead design for global shopper and merchant products, combining user research, accessibility and hands-on implementation. I create shared systems that help teams deliver consistent experiences.',
     `At Fruugo, I design across a global marketplace and merchant tools. Fruugo reports ${audience.visits.headline} website visits in ${audience.visitYear} and a marketplace spanning ${audience.countries} countries. Working at this scale means considering different languages, cultures and access needs in shared design decisions.`,
-    'I enjoy being involved throughout that process, from speaking with users and exploring the data through to prototyping, implementation and reviewing what happens after release.',
+    'Recent works include a cookie consent redesign that recorded a 10-percentage-point higher acceptance rate in its initial production comparison, and taking an AI shopping assistant from technical proof of concept to launch. I combine hands-on delivery with research, shared systems and cross-team design leadership.',
   ],
 } as const
 

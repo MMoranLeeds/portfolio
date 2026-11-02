@@ -44,7 +44,7 @@ export interface Project {
   cover: ProjectCover;
   overview?: CaseStudyOverview;
   mobile?: ProjectMobileConfig;
-  card?: ProjectCardConfig;
+  card: ProjectCardConfig;
   video?: ProjectVideo;
   socialPreview?: SocialPreview;
   sections: ProjectSection[];
@@ -87,12 +87,17 @@ export interface ProjectMobileConfig {
 }
 
 export interface ProjectCardConfig {
+  /** Concise homepage copy; the full article keeps its own summary. */
+  summary: string;
+  outcome: string;
   alt?: string;
   /** Override header presentation when it should reuse the card screenshot. */
   header?: Partial<ProjectImage>;
 }
 
 export interface CaseStudyOverview {
+  rationale: string;
+  evaluation: string;
   outcome: string;
   period: string;
   launchDate?: string;

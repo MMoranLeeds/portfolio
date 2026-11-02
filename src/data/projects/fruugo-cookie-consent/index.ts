@@ -53,7 +53,17 @@ export const cookieConsentProject: Project = {
   tags: ["A/B testing", "Behavioural analysis", "Cross-team influence"],
   seoDescription:
     "How Matthew Moran led Fruugo's cookie consent redesign, using behavioural data, Legal collaboration and country-based A/B testing before worldwide rollout.",
+  card: {
+    summary:
+      "Making cookie choices clearer through revised wording and visual hierarchy.",
+    outcome:
+      "Acceptance was 10 percentage points higher in the initial comparison, with improvement sustained after worldwide rollout.",
+  },
   overview: {
+    rationale:
+      "Clearer wording and hierarchy could improve optional-cookie opt-in while keeping rejection visible and straightforward.",
+    evaluation:
+      "Compared acceptance rates across country-based production groups, with Data Science reviewing advertising and transaction effects. The groups were not randomised at user level.",
     outcome:
       "The first comparison recorded 66.3% acceptance with the old modal and 76.3% with the redesign. The improvement held as more markets joined, with both production environments reaching 76–79% after global rollout.",
     period: "November 2025 to April 2026",

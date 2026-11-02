@@ -6,9 +6,19 @@ import mobileFallback from "@/assets/images/mobile-placeholders/huugo-from-fruug
 
 export const huugoProject: Project = {
   slug: "huugo-from-fruugo",
-  overview: {
+  card: {
+    summary:
+      "Turning a technical proof of concept into a conversational shopping experience.",
     outcome:
-      "Took the CTO's proof of concept into a launched AI shopping experience, leading UX and implementing most of the frontend. The production page achieved a Lighthouse performance score of 99/100, while early gross transaction value reached 18.4 times the associated AI-model spend.",
+      "Launched with 1,302 opened conversations and 481 engaged conversations in early reporting.",
+  },
+  overview: {
+    rationale:
+      "Familiar conversational controls alongside structured product information could help shoppers move from describing a need to choosing products and checking out.",
+    evaluation:
+      "Used 29 staff responses to refine the experience, then reviewed early conversation engagement, GTV and model usage costs. Shopper testing across languages remains planned.",
+    outcome:
+      "Launched on 8 October 2026. Early reporting recorded 1,302 opened conversations, 481 engaged conversations and £1,011 in GTV against £55 in AI-model costs. These are early signals, not a measure of profitability or incremental sales.",
     period: "Q3 2026",
     launchDate: "2026-10-08",
     launchLabel: "8 October 2026",

@@ -4,16 +4,26 @@ import { projectCover } from "../shared/coverImages";
 import { localisationImage } from "./images";
 import type { Project } from "@/types/project";
 
-// Merchant Portal language screenshots show the test implementation, awaiting production deployment.
+// Merchant Portal screenshots were captured in test; the language picker is now live in production.
 // The screenshot methodology is Matt's direct account; figures below are from the briefing.
 import mobileFallback from "@/assets/images/mobile-placeholders/fruugo-localisation.svg";
 
 export const localisationProject: Project = {
   slug: "fruugo-localisation",
-  overview: {
+  card: {
+    summary:
+      "Connecting multilingual research with clearer typography and language controls.",
     outcome:
-      "Turned multilingual research into typography and language-control improvements across Fruugo's shopper and merchant products. The Marketplace language picker and Merchant Portal font update are now live, with further changes awaiting deployment.",
-    period: "Q3 2026 · Ongoing rollout",
+      "Typography updates and language pickers are live across Marketplace and Merchant Portal.",
+  },
+  overview: {
+    rationale:
+      "Contextual translations, consistent characters and independent language choice could address the trust and comprehension barriers found in shopper interviews and merchant recordings.",
+    evaluation:
+      "Native-language colleagues reviewed audit findings. Typography and language controls are now live; usage, feedback and task-based evaluation will assess their impact.",
+    outcome:
+      "Turned multilingual research into typography and language-control improvements across Fruugo's shopper and merchant products. The typography updates and language pickers are now live in production across Marketplace and Merchant Portal.",
+    period: "Q3 2026 · Live in production",
   },
   mobile: {
     fallbackSrc: mobileFallback,
@@ -37,14 +47,14 @@ export const localisationProject: Project = {
     "From shopper trust concerns to a contextual multilingual audit, clearer typography and language controls across Fruugo.",
   role: "UX research, multilingual auditing, prioritisation and cross-team design direction",
   status:
-    "Marketplace language picker and Merchant Portal typography live; Marketplace typography and Merchant Portal language picker awaiting deployment",
+    "Typography updates and language pickers live in production across Marketplace and Merchant Portal",
   tags: ["UX research", "AI-assisted auditing", "Global product design"],
   url: "https://www.fruugo.co.uk/",
   externalLinkLabel: "Visit Fruugo marketplace",
   seoDescription:
     "How Matthew Moran used shopper research and a Puppeteer and AI-assisted multilingual audit to drive Fruugo's typography, language-selection and merchant-localisation programme.",
   sourcesIntro:
-    "Interviews, behavioural data and a contextual interface audit informed the work. Platform scale is drawn from Fruugo's published corporate figures. The figures show marketplace reach and audit coverage. The Marketplace language picker and Merchant Portal font change are live in production. Marketplace typography and checkout wording changes, and the Merchant Portal language picker shown in test, are awaiting deployment.",
+    "Interviews, behavioural data and a contextual interface audit informed the work. Platform scale is drawn from Fruugo's published corporate figures. The figures show marketplace reach and audit coverage. Typography updates and language pickers are live in production across Marketplace and Merchant Portal. The Merchant Portal screenshots were captured in test before rollout. The German checkout wording change shown below has also been deployed.",
   cover: {
     cardBackground,
     ...projectCover("fruugo-localisation-overview"),
@@ -146,7 +156,7 @@ export const localisationProject: Project = {
           title: "German checkout: a small label with a large consequence",
           paragraphs: [
             "Beside the shopper's completed email details, ‘E-Mail sicheres Abmelden' used wording associated with logging out. At checkout, that could make the user uncertain about their account state or whether their details had been retained. The updated screen uses ‘Angemeldet als', meaning ‘Signed in as'.",
-            "The revised wording makes the account state clearer at checkout. Its effect on shopper confidence and completion will be reviewed after release.",
+            "The revised wording is now live in production and makes the account state clearer at checkout. Its effect on shopper confidence and completion remains to be evaluated.",
           ],
           images: [
             localisationImage(
@@ -157,7 +167,7 @@ export const localisationProject: Project = {
             ),
             localisationImage(
               "checkout-after",
-              "After · implemented, awaiting deployment",
+              "After · live in production",
               "Updated German checkout label: Angemeldet als.",
               "The revised label communicates that the shopper is signed in.",
             ),
@@ -178,7 +188,7 @@ export const localisationProject: Project = {
           paragraphs: [
             "Neuzeit Grotesk lacked some characters needed by supported languages, so labels fell back to a different font. We selected Noto Sans for broader script coverage and more consistent typography. It also removed the Adobe Typekit dependency and let us use the same typeface in Google Workspace documents.",
             "The same Polish category labels are enlarged below. Look at the accented ‘ó' in ‘ogród' and ‘Wystrój', and how it sits with the surrounding letters. Polish-speaking participants noticed the inconsistency even when it was easy for other readers to miss. Text also wraps differently after the font change, reinforcing the need to check layouts using real translations.",
-            "Noto Sans is now live in the Merchant Portal. The Marketplace font change is implemented but awaiting production deployment, as shown in the Polish examples below. Noto Sans requires appropriate fonts for the scripts being displayed. I recommended font-display: swap to keep text visible during loading, and the frontend team implemented the loading changes.",
+            "Noto Sans is now live in both Marketplace and Merchant Portal. The Polish examples below illustrate the typography change. Noto Sans requires appropriate fonts for the scripts being displayed. I recommended font-display: swap to keep text visible during loading, and the frontend team implemented the loading changes.",
           ],
           images: [
             localisationImage(
@@ -189,7 +199,7 @@ export const localisationProject: Project = {
             ),
             localisationImage(
               "polish-after",
-              "After · Marketplace Noto Sans, awaiting deployment",
+              "After · Marketplace Noto Sans, live in production",
               "The same Polish labels in Noto Sans, with the second label wrapping onto another line.",
               "Updated typography, showing the same words and their revised character shapes and wrapping.",
             ),
@@ -234,17 +244,17 @@ export const localisationProject: Project = {
           id: "merchant-tools",
           title: "Merchant Portal: personal interface language",
           paragraphs: [
-            "I designed a personal language picker in the Merchant Portal header, implemented in the test environment for English and Simplified Chinese and awaiting production deployment. Merchants can choose the language they prefer for their own work without changing their company's customer-reply language. Their interface preference persists across views.",
+            "I designed a personal language picker in the Merchant Portal header, now live in production for English and Simplified Chinese. Merchants can choose the language they prefer for their own work without changing their company's customer-reply language. Their interface preference persists across views.",
             "The change reaches beyond the picker: navigation, dashboard headings, task instructions and actions adapt to Simplified Chinese. The examples below show the same order, enquiry and dispute tasks in both languages. This gives merchants a supported alternative to browser translation, helping them work in familiar language while retaining consistent product terminology.",
-            "The aim is to reduce language barriers to selling, supporting Fruugo's ambition to let anyone, anywhere sell. Easier comprehension and more efficient task completion are the intended benefits; their impact will be assessed after release.",
+            "The aim is to reduce language barriers to selling, supporting Fruugo's ambition to let anyone, anywhere sell. Easier comprehension and more efficient task completion are the intended benefits; their impact will be assessed through post-launch evaluation.",
             "Changing interface language refreshes the current page. The interaction design includes a warning about unsaved edits and offers a way to keep editing before the refresh discards input. A translation-feedback route helps merchants report terminology that does not make sense in context.",
           ],
           images: [
             localisationImage(
               "merchant-picker",
-              "Personal language choice · awaiting production deployment",
+              "Personal language choice · now live in production",
               "Merchant Portal header with the Interface language menu open, English selected, Simplified Chinese available and a translation-feedback link.",
-              "A close-up of the implemented picker. Language names support recognition alongside the flags.",
+              "Captured in test before rollout, this close-up shows the picker now available in production. Language names support recognition alongside the flags.",
             ),
             {
               ...localisationImage(
@@ -275,7 +285,7 @@ export const localisationProject: Project = {
       title: "Validation and iteration",
       paragraphs: [
         "Colleagues who speak the relevant languages reviewed the flagged findings in the interface. Their feedback helped check terminology and prioritise changes with Product and Engineering.",
-        "The Marketplace language picker and Merchant Portal font change are live in production. The Merchant Portal language screenshots show the test implementation, with production deployment still pending. Ongoing validation covers keyboard and screen-reader behaviour, mobile reflow, translated strings and font loading, alongside post-launch behaviour and feedback.",
+        "Typography updates and language pickers are now live in production across Marketplace and Merchant Portal. The Merchant Portal language screenshots were captured in test before rollout. Ongoing validation covers keyboard and screen-reader behaviour, mobile reflow, translated strings and font loading, alongside post-launch behaviour and feedback.",
       ],
     },
     {
@@ -283,7 +293,7 @@ export const localisationProject: Project = {
       title: "Delivery and outcomes",
       paragraphs: [
         "The work turned a translation problem that had been difficult to scope into agreed priorities across Marketplace, Checkout and merchant tools. We established a repeatable audit process, selected shared typography and designed clearer language controls.",
-        "The Marketplace language and country picker is live in production, alongside the Noto Sans font change in the Merchant Portal. The Marketplace font change and Merchant Portal language picker remain awaiting deployment. Merchant Portal language switching is available in test for English and Simplified Chinese. I will review usage and feedback from the live changes, then assess shopper confidence and merchant task completion as the remaining updates are released.",
+        "Noto Sans typography and language pickers are now live in production across Marketplace and Merchant Portal. Shoppers can select their language independently from the country store, while merchants can switch their interface between English and Simplified Chinese. I will review usage and feedback from the released changes and assess shopper confidence and merchant task completion.",
       ],
       points: [
         {
@@ -292,9 +302,9 @@ export const localisationProject: Project = {
             "Contextual capture and targeted human review created a practical route from findings to delivery priorities.",
         },
         {
-          title: "Merchant Portal typography live",
+          title: "Shared typography live",
           description:
-            "Noto Sans is live in the Merchant Portal, with the Marketplace font change awaiting deployment. Script coverage and loading remain part of the shared approach.",
+            "Noto Sans is live across Marketplace and Merchant Portal. Script coverage and loading remain part of the shared approach.",
         },
         {
           title: "Marketplace language picker live",
@@ -302,9 +312,9 @@ export const localisationProject: Project = {
             "Shoppers can open the picker from the header flag or footer and choose their language independently from the country store.",
         },
         {
-          title: "Merchant Portal language picker awaiting deployment",
+          title: "Merchant Portal language picker live",
           description:
-            "English and Simplified Chinese adapt the Merchant Portal interface in the test environment. Production deployment is still pending.",
+            "Merchants can switch their interface between English and Simplified Chinese in production without changing their company's customer-reply language.",
         },
       ],
     },
@@ -313,7 +323,7 @@ export const localisationProject: Project = {
       title: "Learning and next steps",
       paragraphs: [
         "Localisation needs interface context. A character shape or short label can look minor but affect confidence at an important step. Automation made the review manageable, while native-language feedback helped us interpret the findings.",
-        "I will review usage and feedback from the live Marketplace language picker and Merchant Portal typography, extending that review as Marketplace typography and Merchant Portal language switching reach production. Ongoing checks will cover longer labels, right-to-left layouts, keyboard operation and font loading as templates and translations change.",
+        "With typography updates and language pickers live across Marketplace and Merchant Portal, I will review usage and feedback to assess shopper confidence and merchant task completion. Ongoing checks will cover longer labels, right-to-left layouts, keyboard operation and font loading as templates and translations change.",
       ],
     },
   ],

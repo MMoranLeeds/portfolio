@@ -203,13 +203,11 @@ assert(localisation.includes("300m"));
 assert(localisation.includes("Retailers on the marketplace"));
 assert(localisation.includes("4,500+"));
 assert(localisation.includes("Screenshots per language"));
-assert(localisation.includes("awaiting deployment"));
+assert(!localisation.includes("awaiting deployment"));
 assert(localisation.includes("Puppeteer"));
 assert(!localisation.includes("Playwright"));
 assert(
-  localisation.includes(
-    "Personal language choice · awaiting production deployment",
-  ),
+  localisation.includes("Personal language choice · now live in production"),
 );
 assert(localisation.includes("Simplified Chinese · after language change"));
 assert(!localisation.includes("Interface preview to follow"));
@@ -252,7 +250,16 @@ for (const text of [
 ]) {
   assert(onboarding.includes(text), `Onboarding evidence missing: ${text}`);
 }
-assert(onboarding.includes("rather than an average"));
+assert(
+  onboarding.includes(
+    "not an average or a controlled before-and-after comparison",
+  ),
+);
+assert(
+  onboarding.includes(
+    "do not establish average end-to-end application completion time",
+  ),
+);
 assert(!onboarding.includes("60%"));
 assert(!onboarding.includes('id="case-sources"'));
 assert(!onboarding.includes('href="#source-'));
@@ -432,7 +439,7 @@ const consent = await readFile(
 assert(homepage.includes('href="/work/fruugo-cookie-consent"'));
 assert(sitemap.includes("/work/fruugo-cookie-consent"));
 assert(consent.includes("66.3%") && consent.includes("76.3%"));
-assert(consent.includes("76-79%"));
+assert(/76[–-]79%/.test(consent));
 assert(consent.includes("rather than user-level randomisation"));
 assert(!consent.includes("9% uplift"));
 assert(!consent.includes("fruugo.slack.com"));

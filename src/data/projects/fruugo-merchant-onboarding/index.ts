@@ -3,15 +3,19 @@ import { projectCover } from "../shared/coverImages";
 import type { Project } from "@/types/project";
 import { onboardingImage } from "./images";
 
-// January feedback supplied by Matt. The year and survey scale anchors were not supplied.
+// Early feedback and session metrics supplied by Matt; exact survey scale anchors were not supplied.
 // Completion time is the fastest observed submission, not a mean or controlled comparison.
 import mobileFallback from "@/assets/images/mobile-placeholders/fruugo-merchant-onboarding.svg";
 
 export const onboardingProject: Project = {
   slug: "fruugo-merchant-onboarding",
   overview: {
+    rationale:
+      "Moving integration questions to a later stage and clarifying guidance could reduce application effort while retaining the information teams needed to assess merchants.",
+    evaluation:
+      "Reviewed Hotjar recordings, GA4 journeys and an early post-launch survey with 24 responses. Recorded completion time is distinguished from average session duration.",
     outcome:
-      "Simplified the merchant application by moving integration questions to a more appropriate stage and improving guidance throughout the journey. An early survey of 24 respondents returned a 4.5/5 rating for ease of completion.",
+      "The fastest observed new application reached submission for verification in 8m 7s, compared with earlier reports of around 20 minutes or more on the old form. Early survey feedback rated completion effort 4.5/5 and perceived time 4.3/5; the timing is one observed completion, not an average.",
     period: "Q4 2025",
   },
   mobile: {
@@ -31,6 +35,10 @@ export const onboardingProject: Project = {
     alt: "Merchant onboarding at Fruugo case study by Matthew Moran, with the merchant interface.",
   },
   card: {
+    summary:
+      "Simplifying merchant applications by collecting information at the right stage.",
+    outcome:
+      "A complete application was observed at 8m 7s, the fastest recorded after launch. Early survey feedback rated completion effort 4.5/5.",
     alt: "Desktop homepage for Fruugo's merchant application.",
     header: {
       label: "",
@@ -176,7 +184,8 @@ export const onboardingProject: Project = {
       paragraphs: [
         "Working with the process automation engineers and the teams responsible for review, verification and integration, we connected application data with Salesforce, Monday.com and in-house tools. Keeping the information in sync gave teams a shared source of merchant data and reduced manual handling as applications progressed.",
         "The early post-launch Hotjar survey received 24 responses. Merchants gave positive average ratings for the effort required and how long completion felt.",
-        "The fastest start-to-finish submission recorded in Hotjar was 8 minutes 7 seconds. The previous application had been reported as taking approximately 20 minutes; the newer figure represents the quickest observed completion, rather than an average.",
+        "A Hotjar recording showed a merchant start a brand-new application and submit it for verification in 8 minutes 7 seconds, the quickest observed after launch. Previous applicants had been reported as taking around 20 minutes or more on the old form. This is an observed end-to-end completion, not an average or a controlled before-and-after comparison.",
+        "Hotjar average session duration was 10 minutes 21 seconds shortly after deployment. The 12-month view reviewed in November 2026 showed 10 minutes 4 seconds. These figures can include incomplete applications and people returning later, so they do not establish average end-to-end application completion time.",
       ],
       evidence: [
         {

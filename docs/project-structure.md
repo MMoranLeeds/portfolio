@@ -44,15 +44,19 @@ Within each directory:
 
 The complete contract is in `src/types/project.ts`.
 
+Every project supplies `card.summary` and `card.outcome` for the homepage. Keep the description focused on the work and the outcome on verified impact, adoption or delivery. The shared card renders the same labelled outcome treatment for every project without requiring numeric results.
+
+The article opening uses `overview.rationale`, `overview.evaluation` and `overview.outcome`. Distinguish completed evaluation from planned research, and do not imply that a retrospective design rationale was a formal pre-agreed hypothesis. Reading estimates include all three fields. Session duration must not be presented as end-to-end completion time.
+
 ### Project fields
 
 | Field                                                            | Purpose                                                                                             |
 | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | `slug`, `title`, `category`, `summary`, `role`, `status`, `tags` | Identity and introductory content                                                                   |
-| `overview`                                                       | Outcome summary, delivery period and optional launch date                                           |
+| `overview`                                                       | Design rationale, evaluation approach, outcome, delivery period and optional launch date            |
 | `seoDescription`, `socialPreview`                                | Search/share description and case-specific share image                                              |
 | `cover`                                                          | Default header artwork and card background                                                          |
-| `card`                                                           | Optional card alternative text and header overrides when reusing the card screenshot                |
+| `card`                                                           | Required homepage summary and outcome; optional alternative text and header overrides               |
 | `mobile`                                                         | Portrait/mobile preview copy and SVG fallback                                                       |
 | `video`                                                          | Optional video, insertion section, poster, explanatory text and manual caption/transcript overrides |
 | `sections`, `sources`                                            | Article content and supporting references                                                           |

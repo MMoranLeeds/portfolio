@@ -93,7 +93,20 @@ const sourceLabel = (id: string) =>
         aria-labelledby="case-outcome-title"
       >
         <h2 id="case-outcome-title">At a glance</h2>
-        <p>{{ overview.outcome }}</p>
+        <dl class="case-overview">
+          <div>
+            <dt>Design rationale</dt>
+            <dd>{{ overview.rationale }}</dd>
+          </div>
+          <div>
+            <dt>Evaluation</dt>
+            <dd>{{ overview.evaluation }}</dd>
+          </div>
+          <div>
+            <dt>Outcome</dt>
+            <dd>{{ overview.outcome }}</dd>
+          </div>
+        </dl>
       </section>
       <dl class="case-facts">
         <div>
@@ -313,8 +326,21 @@ const sourceLabel = (id: string) =>
   font-size: 0.9375rem;
   margin-block-end: 0.5rem;
 }
-.case-outcome p {
+.case-overview {
+  display: grid;
+  gap: 1rem;
   margin: 0;
+}
+.case-overview dt {
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-block-end: 0.25rem;
+}
+.case-overview dd {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 .case-section-heading {
   scroll-margin-block-start: 2rem;

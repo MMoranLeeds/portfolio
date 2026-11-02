@@ -7,7 +7,17 @@ import mobileFallback from "@/assets/images/mobile-placeholders/accessible-trade
 
 export const accessibleTradesProject: Project = {
   slug: "accessible-trades",
+  card: {
+    summary:
+      "Helping people find home-adaptation companies and prepare their next steps.",
+    outcome:
+      "240 evidence-supported listings as of October 2026, with the service used and shared internally by the MND Association.",
+  },
   overview: {
+    rationale:
+      "Bringing company discovery, supporting evidence and planning tools together could give people needing home adaptations a clearer starting point.",
+    evaluation:
+      "Established feedback channels with the MND Association and review consented usage data. Direct task-based evaluation with people using the service is the next step.",
     outcome:
       "Designed, built and launched an independent service spanning the public website, backend API and administration tools, with 240 evidence-supported listings and council coverage across England. The MND Association has begun using and sharing the service internally.",
     period: "Personal project · Q2 2026 development · Ongoing development",
