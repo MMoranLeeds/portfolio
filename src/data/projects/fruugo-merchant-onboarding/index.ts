@@ -36,7 +36,7 @@ export const onboardingProject: Project = {
   },
   card: {
     summary:
-      "Simplifying merchant applications by collecting information at the right stage.",
+      "Simplifying B2B onboarding for merchants and the teams assessing their applications.",
     outcome:
       "A complete application was observed at 8m 7s, the fastest recorded after launch. Early survey feedback rated completion effort 4.5/5.",
     alt: "Desktop homepage for Fruugo's merchant application.",
@@ -49,14 +49,14 @@ export const onboardingProject: Project = {
     },
   },
   title: "Merchant onboarding",
-  category: "Fruugo · Merchant experience",
+  category: "Fruugo · B2B merchant experience",
   summary:
     "Shortening the application, moving integration questions to the right stage and connecting the information teams need to review new merchants.",
   role: "UX design, behavioural research, cross-team collaboration and implementation refinement",
   status: "Live, with ongoing post-launch review",
-  tags: ["Merchant onboarding", "Data-informed design", "Cross-team delivery"],
+  tags: ["B2B onboarding", "Data-informed design", "Cross-team delivery"],
   seoDescription:
-    "How Matthew Moran helped simplify Fruugo's merchant application using Hotjar and GA4, cross-team collaboration and connected data flows, with early survey and completion-time evidence.",
+    "How Matthew Moran redesigned Fruugo’s B2B merchant onboarding, connecting merchant research, internal review workflows and shared data, with observed completion-time and survey evidence.",
   cover: {
     cardBackground,
     ...projectCover("fruugo-merchant-onboarding"),
@@ -71,8 +71,8 @@ export const onboardingProject: Project = {
       id: "problem",
       title: "The problem and goal",
       paragraphs: [
-        "Merchants faced a lengthy application that asked for information before it was needed. Many questions belonged to the later integration stage, adding effort to the initial application without helping most merchants progress.",
-        "Simplifying the form also meant understanding the needs of the teams reviewing and supporting applicants. The challenge was to ask for less upfront while retaining the information needed for review, verification and integration.",
+        "Fruugo’s B2B onboarding service connects prospective merchants with the teams reviewing, verifying and integrating their businesses. The application asked for information before it was needed, mixing initial assessment with later technical integration requirements and adding effort for merchants.",
+        "The challenge was to reduce effort for business applicants while retaining the information internal teams needed at each stage. I used around 10 minutes as a design target, informed by competitor applications taking approximately 5 to 12 minutes in the review.",
       ],
     },
     {
@@ -96,7 +96,7 @@ export const onboardingProject: Project = {
       id: "decisions",
       title: "Design approach and decisions",
       paragraphs: [
-        "The redesign separated reducing the amount we asked from improving how we asked it. Some requirements moved to integration, some questions were removed, and others became more specific so the information would be useful to the teams receiving it.",
+        "The redesign connected the external merchant journey with the internal operational workflow. It separated reducing the amount we asked from improving how we asked it. Some requirements moved to integration, some questions were removed, and others became more specific so the information would be useful to the teams receiving it.",
       ],
       blocks: [
         {

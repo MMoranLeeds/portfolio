@@ -18,8 +18,8 @@ export const cv = {
   capabilities: [
     "UX leadership and mentoring",
     "Recruitment and onboarding",
-    "B2B and B2C research",
-    "GA4, Hotjar and Maze",
+    "B2B software and internal tools",
+    "A/B testing, GA4, Hotjar and Maze",
     "Opportunity Solution Trees",
     "Figma and design systems",
     "Accessibility and localisation",
@@ -31,16 +31,17 @@ export const cv = {
       dates: "January 2022 to present",
       role: "Lead UI UX Designer",
       paragraphs: [
-        "Lead UI and UX design across Fruugo's global shopper marketplace and merchant products, combining research, design direction and hands-on delivery.",
+        "Lead UI and UX design across Fruugo’s B2B Merchant Portal, onboarding and consumer marketplace.",
       ],
       achievements: [
-        `Owned a company-wide accessibility audit and coordinated improvements across shopper and merchant products for a marketplace reporting ${audience.visits.headline} website visits in ${audience.visitYear} (Fruugo Corporate). Used WCAG Level AA to identify barriers and worked with Engineering and Legal to prioritise changes supporting European Accessibility Act readiness.`,
-        "UX team lead, maintaining shared design direction and mentoring colleagues across multiple workstreams. Introduced embedded designers to give product teams a dedicated UX contact, and recruited and onboarded two designers.",
-        "Brought colleagues into discovery using Opportunity Solution Trees, connecting research findings with opportunities and comparing possible solutions before committing to a direction.",
-        "Led a contextual multilingual audit to turn shopper trust concerns and merchant translation problems into priorities for typography and language controls across Marketplace, Checkout and merchant tools.",
-        "Used Hotjar recordings, GA4 journey data and completion-time evidence to simplify merchant onboarding. Agreed with Sales and Technical Integration which questions could move to integration, reducing the information merchants needed to provide upfront.",
-        "Developed an AI shopping assistant from the CTO's proof of concept, leading UX, frontend implementation and product character identity.",
-        "Created and maintained the shared Figma component library, aligning with engineers on React components in Storybook. Enabled designers to build realistic, multilingual prototypes without recreating established patterns for each project.",
+        "Led the consent redesign with Legal. Country-based production comparison recorded 66.3% versus 76.3% acceptance, with improvement sustained after worldwide rollout.",
+        "Redesigned B2B onboarding with Sales and Technical Integration, deferring questions until needed. Fastest observed new submission: 8m 7s; early survey: 4.5/5 for perceived completion effort (24 responses).",
+        "Lead UX direction and mentoring across workstreams. Introduced embedded designers and recruited and onboarded two designers.",
+        `Owned the company-wide WCAG Level AA audit as primary contact, coordinating Engineering and Legal priorities for European Accessibility Act readiness. Fruugo reported ${audience.visits.headline} website visits in ${audience.visitYear} (Fruugo Corporate).`,
+        "Created and maintain the shared Figma library, aligning with engineers’ React Storybook components for consistent, multilingual prototypes.",
+        "Led a contextual multilingual audit and typography and language-control improvements across shopper and merchant products.",
+        "Took Huugo, Fruugo’s AI shopping assistant, from the CTO’s proof of concept to launch, leading UX, most frontend implementation and character identity.",
+        "Used Opportunity Solution Trees to involve colleagues in discovery and compare solutions against research findings.",
       ],
     },
     {
@@ -48,8 +49,7 @@ export const cv = {
       dates: "2019 to 2022",
       role: "UI/UX design and frontend development",
       paragraphs: [
-        "Led UI/UX design and frontend development for in-house systems. Created and maintained consistent, responsive interfaces across devices, with accessibility built into the design and implementation.",
-        "Worked with stakeholders, managers and engineers to understand user and business needs and improve existing services.",
+        "Led UX/UI design and frontend development for internal housing applications used by Legal, Finance, Customer Service and other teams. Created a shared design system, preserving familiar workflows and enabling housing tasks on desktop, tablet and mobile, including away from the office.",
       ],
     },
     {
@@ -57,12 +57,12 @@ export const cv = {
       dates: "2013 to 2019",
       role: "Design, progressing to Senior Designer",
       paragraphs: [
-        "Designed mobile-first web applications for recruitment clients, working independently and within a wider team. Worked directly with clients to create clear, accessible interfaces and supported junior designers as I moved into a senior role.",
+        "Designed a B2B applicant tracking system (ATS) for national and local employers and internal teams, covering campaigns, applications, branding and video interviews. Designed and built accessible candidate journeys across vacancy search, applications, document uploads, onboarding and HR integration. Supported clients and junior designers.",
       ],
     },
   ],
   independentWork:
-    "Created and launched two independent products from the ground up: Accessible Trades, helping people find home-adaptation specialists, and NextRamble, helping walking groups compare routes and agree on their next outing. Own product direction, research, UX/UI design, frontend development, backend integration and ongoing maintenance.",
+    "Created and launched Accessible Trades for finding home-adaptation specialists, and NextRamble for planning group walks. Own product direction, research, UX/UI, frontend development, backend integration and ongoing maintenance.",
   recommendations: [
     {
       ...beckyRecommendation,

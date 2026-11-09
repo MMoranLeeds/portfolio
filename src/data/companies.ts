@@ -27,7 +27,7 @@ export const companyGroups = [
   {
     title: "Client projects through networx",
     description:
-      "Recruitment content and interface design delivered during my time at networx.",
+      "Client work spanning B2B recruitment software, branded careers sites and candidate application journeys.",
     companies: [
       { name: "Argos", src: logo3, width: 120, height: 103 },
       { name: "Evans Cycles", src: logo4, width: 120, height: 52 },

@@ -12,7 +12,7 @@ export const localisationProject: Project = {
   slug: "fruugo-localisation",
   card: {
     summary:
-      "Connecting multilingual research with clearer typography and language controls.",
+      "Improving multilingual shopper journeys and B2B merchant tools through contextual research.",
     outcome:
       "Typography updates and language pickers are live across Marketplace and Merchant Portal.",
   },
@@ -22,7 +22,7 @@ export const localisationProject: Project = {
     evaluation:
       "Native-language colleagues reviewed audit findings. Typography and language controls are now live; usage, feedback and task-based evaluation will assess their impact.",
     outcome:
-      "Turned multilingual research into typography and language-control improvements across Fruugo's shopper and merchant products. The typography updates and language pickers are now live in production across Marketplace and Merchant Portal.",
+      "Turned multilingual research into typography and language-control improvements across Fruugo’s consumer marketplace and B2B Merchant Portal. The typography updates and language pickers are now live in production across Marketplace and Merchant Portal.",
     period: "Q3 2026 · Live in production",
   },
   mobile: {
@@ -44,7 +44,7 @@ export const localisationProject: Project = {
   title: "Localisation at Fruugo",
   category: "Fruugo · Company-wide UX",
   summary:
-    "From shopper trust concerns to a contextual multilingual audit, clearer typography and language controls across Fruugo.",
+    "Connecting shopper trust and the usability of B2B merchant software through contextual research, clearer typography and personal language controls.",
   role: "UX research, multilingual auditing, prioritisation and cross-team design direction",
   status:
     "Typography updates and language pickers live in production across Marketplace and Merchant Portal",
@@ -52,7 +52,7 @@ export const localisationProject: Project = {
   url: "https://www.fruugo.co.uk/",
   externalLinkLabel: "Visit Fruugo marketplace",
   seoDescription:
-    "How Matthew Moran used shopper research and a Puppeteer and AI-assisted multilingual audit to drive Fruugo's typography, language-selection and merchant-localisation programme.",
+    "How Matthew Moran improved multilingual consumer journeys and B2B merchant software through contextual research, typography and language controls at Fruugo.",
   sourcesIntro:
     "Interviews, behavioural data and a contextual interface audit informed the work. Platform scale is drawn from Fruugo's published corporate figures. The figures show marketplace reach and audit coverage. Typography updates and language pickers are live in production across Marketplace and Merchant Portal. The Merchant Portal screenshots were captured in test before rollout. The German checkout wording change shown below has also been deployed.",
   cover: {
@@ -71,7 +71,7 @@ export const localisationProject: Project = {
       title: "The problem and goal",
       paragraphs: [
         `The programme spanned shopper and merchant products on a marketplace reporting ${audience.visits.headline} website visits in ${audience.visitYear}, across ${audience.countries} countries. Face-to-face interviews with Polish-speaking shoppers exposed a trust problem: inconsistent characters made the marketplace look unreliable. Some participants associated the typography with possible fraud and felt uncertain about purchasing again. A small visual defect had become a barrier to confidence.`,
-        "Hotjar recordings revealed a related problem in merchant tools. Merchants used browser translation to understand English instructions, but translations sometimes changed the meaning of operational terminology. The goal was to make shopping and merchant tasks clearer in the languages people use, through typography, contextual translations and personal language choice.",
+        "Hotjar recordings revealed a related problem in the B2B Merchant Portal. Business users relied on browser translation to understand English instructions, but translations sometimes changed the meaning of operational terminology. The goal was to support both consumer shopping and the work merchants complete on the platform, through readable typography, contextual translations and personal language choice.",
       ],
       evidence: [
         {

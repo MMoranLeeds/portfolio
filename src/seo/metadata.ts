@@ -25,9 +25,9 @@ export function metadataFor(path: string) {
     : missing
       ? "Return to Matthew Moran's portfolio to explore case studies."
       : isCv
-        ? "Matthew Moran's CV: experience in product design leadership, UX research, accessibility, design systems and frontend delivery."
+        ? "Matthew Moran’s CV: B2B recruitment software, internal enterprise systems and consumer products, with design leadership, accessibility and frontend development."
         : project?.seoDescription ||
-          "Matthew Moran, Lead Product Designer combining customer insight, data and accessibility, from early ideas through to implementation.";
+          "Matthew Moran, Lead Product Designer with 13 years across B2B software, internal tools and consumer products, combining research, accessibility and frontend delivery.";
   const canonical = new URL(
     project ? `/work/${project.slug}` : normalisedPath,
     site.origin,
