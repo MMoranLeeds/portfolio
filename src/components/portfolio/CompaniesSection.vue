@@ -7,7 +7,7 @@ import { companyGroups } from "@/data/companies";
     <h3 id="companies-heading">Organisations I've designed for</h3>
     <p>
       A selection of organisations I've worked with through in-house roles and
-      client projects at networx.
+      client projects.
     </p>
     <div
       v-for="group in companyGroups"
