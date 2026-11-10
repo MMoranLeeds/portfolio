@@ -135,6 +135,7 @@
   font-size: 1.35rem;
   color: var(--ink);
   line-height: 1.3;
+  margin-top: 0;
   margin-bottom: 0.75rem;
 }
 .project-card p:not(.eyebrow) {
