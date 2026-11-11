@@ -12,9 +12,9 @@ export const introduction = {
   ],
   source: audience.source,
   paragraphs: [
-    "I’m a Lead Product Designer with 13 years of experience across UX, UI and frontend development. At Fruugo, I lead e-commerce design across shopper and merchant products, focusing on accessible experiences for a global audience. I combine hands-on research and delivery with setting design direction and mentoring colleagues, drawing on a background in B2B recruitment software and internal enterprise systems.",
-    `My work at Fruugo spans the B2B Merchant Portal, merchant onboarding and the consumer facing marketplace. Fruugo reports ${audience.visits.headline} website visits in ${audience.visitYear} and a marketplace spanning ${audience.countries} countries. Working at this scale means considering different languages, cultures and access needs in shared design decisions.`,
-    "I take products from idea to launch, including Huugo, Fruugo’s AI shopping assistant, and my independent services Accessible Trades and NextRamble.",
+    "I’m a Lead Product Designer with 13+ years of experience across UX, UI and frontend development. At Fruugo, I lead e-commerce design across shopper and merchant products, focusing on accessible experiences for a global audience. I combine hands-on research and delivery with setting design direction and mentoring colleagues, drawing on a background in B2B recruitment software and internal enterprise systems.",
+    `My work at Fruugo spans the B2B Merchant Portal, merchant onboarding and the consumer marketplace. Fruugo reports ${audience.visits.headline} website visits in ${audience.visitYear} and a marketplace spanning ${audience.countries} countries. Working at this scale means considering different languages, cultures and access needs in shared design decisions.`,
+    "I also take products from idea to launch, including Huugo, Fruugo’s AI shopping assistant, and my independent services Accessible Trades and NextRamble.",
   ],
 } as const;
 
@@ -82,9 +82,9 @@ export const approachSections: readonly PortfolioSection[] = [
       "atomic design",
     ],
     paragraphs: [
-      `I lead design across Fruugo's B2B merchant software and consumer facing marketplace, setting design direction and acting as the main contact for UX across the business. I work with colleagues and external partners to keep our products aligned with a shared design language.`,
+      `I lead design across Fruugo's B2B merchant software and consumer marketplace, setting design direction and acting as the main contact for UX across the business. I work with colleagues and external partners to keep our products aligned with a shared design language.`,
       `I worked with Product to introduce embedded designers into the Shop, Retailer and Onboarding teams. This gave each product team a named design contact involved in its day-to-day work. We meet weekly to share findings, support one another and maintain consistency across products.`,
-      `I have owned end-to-end recruitment for design roles within the team, including maternity cover and permanent positions. I defined role requirements, worked with HR and recruitment on shortlisting, and interviewed candidates alongside my own delivery work. I then handled onboarding, including software access, product context and a clear route to support.`,
+      `I have led end-to-end recruitment and onboarding for designers across Fruugo, Incommunities and networx. At Fruugo, this included maternity cover and a permanent position. I defined roles, worked with HR and recruitment on shortlisting, and interviewed candidates alongside my delivery work. I then handled onboarding, including software access, product context and a clear route to support.`,
       `I also helped reshape a colleague's role to support their progression into a lead position, reflecting the responsibility they had taken on and the expectations of the business.`,
       `Mentoring is part of how I work day to day. During our move from Adobe XD to Figma, I shared what I had learned about the tools and frontend implementation. I also helped designers apply atomic design so they could work confidently with reusable components.`,
       `For a recent CTA update across Marketplace and the Merchant Portal, another designer and I agreed the shared approach. She then owned the Marketplace research and design changes across the affected pages. This let us improve consistency across products while giving her ownership of a substantial piece of work.`,
@@ -124,15 +124,15 @@ export const approachSections: readonly PortfolioSection[] = [
       },
       {
         title: "Frontend development",
-        items: ["Vue 3", "TypeScript", "JavaScript", "HTML", "CSS"],
+        items: ["Vue 3", "React", "TypeScript", "JavaScript", "HTML", "CSS"],
       },
       {
         title: "Backend & data",
-        items: ["Node.js", "Express", "SQLite", "API development"],
+        items: ["Node.js", "Express", "SQLite"],
       },
       {
         title: "AI-assisted workflows",
-        items: ["Claude", "ChatGPT"],
+        items: ["Claude", "ChatGPT", "Gemini", "Custom Agent Workflows", "Research Synthesis"],
       },
     ],
     links: [
