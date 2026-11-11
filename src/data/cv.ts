@@ -1,4 +1,3 @@
-import { fruugoAudience as audience } from "./fruugoAudience";
 import { introduction, approachSections } from "./portfolio";
 import { featuredPeerReviews } from "./peerReviews";
 
