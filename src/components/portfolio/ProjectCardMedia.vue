@@ -4,10 +4,18 @@ import type { Project } from "@/types/project";
 import { projectCardImage } from "@/data/projects/shared/cardImages";
 import { projectMobilePreview } from "@/data/projects/shared/mobilePreview";
 import MobileProjectPreview from "./MobileProjectPreview.vue";
+import artworkBackground from "@/assets/images/dist/cards/tahoe-bg-960.webp";
 
 const props = defineProps<{ project: Project }>();
 const image = computed(() => projectCardImage(props.project));
 const mobile = computed(() => projectMobilePreview(props.project));
+const background = computed(
+  () =>
+    props.project.cover.cardBackground ||
+    (props.project.card.presentation === "artwork"
+      ? artworkBackground
+      : undefined),
+);
 </script>
 <template>
   <div
@@ -16,9 +24,9 @@ const mobile = computed(() => projectMobilePreview(props.project));
       'project-card-media--artwork': project.card.presentation === 'artwork',
     }"
     :style="
-      project.cover.cardBackground
+      background
         ? {
-            '--card-media-background': `url('${project.cover.cardBackground}')`,
+            '--card-media-background': `url('${background}')`,
           }
         : {}
     "
@@ -43,17 +51,6 @@ const mobile = computed(() => projectMobilePreview(props.project));
   </div>
 </template>
 <style scoped>
-.project-card-media--artwork .project-card-screenshot {
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  background: transparent;
-}
-
 /* Keep the original 12:5 desktop composition; only the phone is overlaid. */
 .project-card-mobile {
   position: absolute;

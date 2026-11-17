@@ -1,3 +1,4 @@
+import cardBackground from "@/assets/images/dist/cards/big-sur-colour-night-bg-960.webp";
 import type { Project } from "@/types/project";
 import { designSystemImage } from "./images";
 
@@ -35,13 +36,16 @@ export const designSystemProject: Project = {
       "The connected library is available to Fruugo’s Design and Frontend teams. Completed FAB and calendar updates demonstrate both directions, with calendar text contrast improved from 3.49:1 to 11.80:1.",
     period: "2026",
   },
-  cover: designSystemImage(
-    "overview",
-    "Connected component library",
-    "Chip variants in the Figma library beside their corresponding solid and outline examples in Storybook.",
-    "Fruugo’s maintained component library provides the foundation for the connected Figma design system.",
-    "12 / 5",
-  ),
+  cover: {
+    cardBackground,
+    ...designSystemImage(
+      "overview",
+      "Connected component library",
+      "Chip variants in the Figma library beside their corresponding solid and outline examples in Storybook.",
+      "Fruugo’s maintained component library provides the foundation for the connected Figma design system.",
+      "12 / 5",
+    ),
+  },
   socialPreview: {
     path: "/images/social/design-system-integration.png",
     width: 1200,

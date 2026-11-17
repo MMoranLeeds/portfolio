@@ -26,4 +26,4 @@ The optimiser reads the PNG original and creates the responsive WebP files. It d
 
 The genuine connected-library screenshot is preserved at `src/assets/images/original/design-system-integration/overview.png`. The project image helper now uses this separate source for the case-study opening. Replacing the card artwork therefore does not replace the article screenshot.
 
-Only this project selects `card.presentation: "artwork"`. That gives its illustration the full existing card image area without a screenshot frame. The article still displays the real connected-library evidence, and other projects keep their current card presentation.
+Only this project selects `card.presentation: "artwork"`. That selects a fallback wallpaper while retaining the same screen frame, inset and sizing as the other cards. The article still displays the real connected-library evidence, and other projects keep their current card presentation.

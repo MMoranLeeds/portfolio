@@ -145,7 +145,7 @@ These refinements can be adopted within the existing process. They are not repre
 
 The homepage uses a dedicated Figma, Claude/MCP and code illustration, with two-way connectors. The editable source and rendering instructions are in `docs/artwork/`. The card original keeps the existing `cards/design-system-integration.png` path, while the genuine article screenshot has been preserved independently as `design-system-integration/overview.png`. The article opening and its caption remain evidence of the actual connected component library.
 
-The card uses the optional artwork presentation to fill the existing 12:5 card header without a device frame. No phone mockup is added. The SVG is a first-draft editorial illustration with replaceable marks, not an official partnership or integration badge.
+The card uses the optional artwork presentation to select a fallback wallpaper. The illustration sits inside the shared desktop screen frame, with the same inset, border, shadow and sizing as the other cards. No phone mockup is added. The SVG is a first-draft editorial illustration with replaceable marks, not an official partnership or integration badge.
 
 ## Homepage outcome and discovery polish
 

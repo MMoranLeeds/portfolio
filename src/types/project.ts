@@ -87,7 +87,7 @@ export interface ProjectMobileConfig {
 }
 
 export interface ProjectCardConfig {
-  /** Display artwork edge to edge instead of framing it as an interface screenshot. */
+  /** Identify illustration cards, which retain the shared screen frame and use a fallback wallpaper. */
   presentation?: "artwork";
   /** Concise homepage copy; the full article keeps its own summary. */
   summary: string;
