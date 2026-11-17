@@ -64,7 +64,7 @@ export const cv = {
         {
           title: "Research & commercial impact",
           items: [
-            "Led the cookie consent redesign with Legal. The country-based production comparison recorded 66.3% versus 76.3% acceptance, a 10-percentage-point difference, with improvement sustained after worldwide rollout.",
+            "Led the cookie consent redesign with Legal, balancing clear privacy choices with commercial measurement needs. The initial country-based production comparison recorded acceptance 10 percentage points higher, with improvement sustained after worldwide rollout.",
             "Redesigned B2B merchant onboarding with Sales and Technical Integration. Early survey feedback rated completion effort 4.5/5; the fastest observed completed application took 8m 7s.",
             "Led a contextual multilingual audit and typography and language-control improvements across shopper and merchant products. Used Opportunity Solution Trees to connect research findings with opportunities and compare solutions with colleagues.",
           ],
@@ -73,7 +73,7 @@ export const cv = {
           title: "Accessibility & shared systems",
           items: [
             "Owned the company-wide WCAG Level AA audit as primary contact, coordinating improvements across Design, Engineering, and Legal to ensure European Accessibility Act (EAA) readiness.",
-            "Created and maintain Fruugo’s shared design system, including its Figma component library, interaction patterns and documentation, aligned with React components in Storybook. Integrated the design system with Claude Code and Model Context Protocol (MCP), enabling reviewed updates between Figma and code for Design and Frontend teams.",
+            "Created and maintain Fruugo’s shared design system, aligning Figma components, interaction patterns and documentation with React components in Storybook. Integrated Claude Code and Model Context Protocol (MCP) for bidirectional updates, retaining human design review and existing commit and code-review processes before production.",
           ],
         },
         {
