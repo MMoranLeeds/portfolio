@@ -119,7 +119,7 @@
 }
 .cv-columns {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 54mm;
+  grid-template-columns: minmax(0, 1fr) 60mm;
   gap: 7mm;
 }
 .cv-columns > * {
@@ -302,18 +302,56 @@
     display: none !important;
   }
   .cv-workspace {
+    min-height: 0;
     padding: 0;
     background: white;
   }
+  .cv-document,
   .cv-page {
+    display: block;
+  }
+  .cv-page {
+    /* Let the content determine print height. Full-A4 flex boxes can create
+       an empty fragment before the following section's forced page break. */
+    width: auto;
+    min-height: 0;
+    height: auto;
     margin: 0;
     box-shadow: none;
-    break-after: page;
+    break-after: auto;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
-  .cv-page:last-child {
-    break-after: auto;
+  .cv-page + .cv-page {
+    break-before: page;
+    page-break-before: always;
+  }
+  /* Keep both content sections inside A4 without clipping or scaling text. */
+  .cv-page {
+    padding: 9mm 12mm 7mm;
+  }
+  .cv-columns {
+    column-gap: 6mm;
+  }
+  .cv-header {
+    margin-bottom: 3mm;
+  }
+  .cv-page h4 {
+    margin: 2.5mm 0 1mm;
+  }
+  .cv-achievements li {
+    margin-bottom: 1.5mm;
+  }
+  .cv-continuation {
+    margin-bottom: 4mm;
+  }
+  .cv-recommendations {
+    margin-top: 3mm;
+    padding-top: 2mm;
+  }
+  .cv-page > .cv-page-footer {
+    margin-top: 3mm;
+    break-inside: avoid;
   }
   .cv-page :is(h2, h3, h4),
   .cv-job-role,
