@@ -6,12 +6,15 @@ import { accessibleTradesProject } from "./accessible-trades";
 import { nextRambleProject } from "./nextramble";
 import { cookieConsentProject } from "./fruugo-cookie-consent";
 
+import { designSystemProject } from "./design-system-integration";
+
 // One ordered registry drives cards, routes, next-study links and prerendering.
 export const projects: Project[] = [
-  localisationProject,
   cookieConsentProject,
+  designSystemProject,
   onboardingProject,
   huugoProject,
+  localisationProject,
   accessibleTradesProject,
   nextRambleProject,
 ];

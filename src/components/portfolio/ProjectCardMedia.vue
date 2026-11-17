@@ -12,6 +12,9 @@ const mobile = computed(() => projectMobilePreview(props.project));
 <template>
   <div
     class="project-card-media"
+    :class="{
+      'project-card-media--artwork': project.card.presentation === 'artwork',
+    }"
     :style="
       project.cover.cardBackground
         ? {
@@ -40,6 +43,17 @@ const mobile = computed(() => projectMobilePreview(props.project));
   </div>
 </template>
 <style scoped>
+.project-card-media--artwork .project-card-screenshot {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
 /* Keep the original 12:5 desktop composition; only the phone is overlaid. */
 .project-card-mobile {
   position: absolute;

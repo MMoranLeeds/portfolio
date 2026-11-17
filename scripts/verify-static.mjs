@@ -84,9 +84,12 @@ for (const location of locations) {
       heroStart,
       html.indexOf("<figcaption", heroStart),
     );
-    assert(
-      heroStart >= 0 && heroMedia.includes("mobile-project-preview"),
-      "The phone must be anchored inside the desktop image media wrapper, before its caption",
+    assert(heroStart >= 0, "Every case study needs a hero media wrapper");
+    const singleHero = html.includes("case-cover-pair--single");
+    assert.equal(
+      heroMedia.includes("mobile-project-preview"),
+      !singleHero,
+      "Phone previews belong inside paired heroes; single-image studies must not invent one",
     );
     assert(
       heroMedia.includes("aspect-ratio:12 / 5"),
@@ -456,4 +459,26 @@ assert(consent.includes('href="/work/fruugo-merchant-onboarding"'));
 assert(localisation.includes('href="/work/fruugo-cookie-consent"'));
 console.log(
   "Cookie-consent study, results context, placeholders and next-study order passed.",
+);
+
+const integration = await readFile(
+  "dist/work/design-system-integration/index.html",
+  "utf8",
+);
+
+assert(homepage.includes('href="/work/design-system-integration"'));
+assert(sitemap.includes("/work/design-system-integration"));
+assert(huugo.includes('href="/work/design-system-integration"'));
+assert(integration.includes('href="/work/accessible-trades"'));
+assert(integration.includes("/images/social/design-system-integration.png"));
+assert(integration.includes("Active internal workflow"));
+assert(
+  integration.includes("Code to Figma") &&
+    integration.includes("Figma to code"),
+);
+assert(integration.includes("Approx. "));
+assert(integration.includes("case-cover-pair--single"));
+assert(!integration.includes("Mobile screenshot to follow"));
+console.log(
+  "Design-system workflow, single-image hero, metadata and next-study links passed.",
 );

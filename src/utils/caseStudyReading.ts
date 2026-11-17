@@ -29,9 +29,9 @@ export function caseStudyReading(project: Project, reviews: PeerReview[] = []) {
     ...(overview
       ? [
           "At a glance",
-          "Design rationale",
+          overview.rationaleLabel || "Design rationale",
           overview.rationale,
-          "Evaluation",
+          overview.evaluationLabel || "Evaluation",
           overview.evaluation,
           "Outcome",
           overview.outcome,

@@ -87,6 +87,8 @@ export interface ProjectMobileConfig {
 }
 
 export interface ProjectCardConfig {
+  /** Display artwork edge to edge instead of framing it as an interface screenshot. */
+  presentation?: "artwork";
   /** Concise homepage copy; the full article keeps its own summary. */
   summary: string;
   outcome: string;
@@ -96,6 +98,8 @@ export interface ProjectCardConfig {
 }
 
 export interface CaseStudyOverview {
+  rationaleLabel?: string;
+  evaluationLabel?: string;
   rationale: string;
   evaluation: string;
   outcome: string;

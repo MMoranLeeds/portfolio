@@ -151,7 +151,7 @@ const printCv = async () => {
             </section>
             <div class="cv-portfolio">
               <h3>Explore the case studies</h3>
-              <p>Research, decisions and outcomes across six projects.</p>
+              <p>Research, decisions and outcomes across my projects.</p>
               <a :href="`${portfolioUrl}/#case-studies`"
                 >{{ portfolioUrl.replace(/^https?:\/\//, "") }}/#case-studies</a
               >

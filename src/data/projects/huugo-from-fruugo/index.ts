@@ -10,7 +10,7 @@ export const huugoProject: Project = {
     summary:
       "Turning a technical proof of concept into a conversational shopping experience.",
     outcome:
-      "Launched with 1,302 opened conversations and 481 engaged conversations in early reporting.",
+      "Early reporting recorded £18.38 in GTV per £1 of AI-model spend and 481 engaged conversations. This measures transaction value against model costs, not profit or incremental sales.",
   },
   overview: {
     rationale:

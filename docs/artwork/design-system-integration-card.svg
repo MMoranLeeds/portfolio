@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="667" viewBox="0 0 1600 667">
+<title>Design and code connected through Claude and MCP</title>
+<desc>Figma, Claude with MCP, and a component library connected by arrows in both directions.</desc>
+<defs>
+ <linearGradient id="background" x2="1" y2="1"><stop stop-color="#0d2826"/><stop offset="1" stop-color="#203d35"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#85cdb3" stop-opacity=".18"/><stop offset="1" stop-color="#85cdb3" stop-opacity="0"/></radialGradient>
+ <linearGradient id="panel" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#e7eee8"/></linearGradient>
+ <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#accbb8" stroke-opacity=".06"/></pattern>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dy="14" stdDeviation="16" flood-color="#001611" flood-opacity=".24"/></filter>
+ <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M2 2L8 6L2 10" fill="none" stroke="#b5dfcc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="1600" height="667" fill="url(#background)"/>
+<rect width="1600" height="667" fill="url(#grid)"/>
+<ellipse cx="800" cy="300" rx="760" ry="420" fill="url(#glow)"/>
+<!-- Two-way connections, no automatic-sync claim. -->
+<g fill="none" stroke="#b5dfcc" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)">
+ <path d="M446 247H603"/><path d="M605 306H448"/>
+ <path d="M996 247H1153"/><path d="M1155 306H998"/>
+</g>
+<g filter="url(#shadow)">
+ <rect x="100" y="110" width="320" height="350" rx="40" fill="url(#panel)"/>
+ <rect x="640" y="110" width="320" height="350" rx="40" fill="#f4e9dd"/>
+ <rect x="1180" y="110" width="320" height="350" rx="40" fill="url(#panel)"/>
+</g>
+<!-- Editable five-part Figma symbol. -->
+<g transform="translate(200 169) scale(1.2)">
+ <path d="M0 0H50V50H25A25 25 0 0 1 25 0Z" fill="#f24e1e"/>
+ <path d="M50 0H75A25 25 0 0 1 75 50H50Z" fill="#ff7262"/>
+ <path d="M25 50H50V100H25A25 25 0 0 1 25 50Z" fill="#a259ff"/>
+ <circle cx="75" cy="75" r="25" fill="#1abcfe"/>
+ <path d="M25 100H50V125A25 25 0 1 1 25 100Z" fill="#0acf83"/>
+</g>
+<!-- Stylised Claude mark. Replace this group if preferred. -->
+<g stroke="#c26e50" stroke-width="16" stroke-linecap="square"><path d="M819.81 260.22 L883.18 251.31"/><path d="M818.54 270.49 L866.76 289.97"/><path d="M812.31 278.76 L851.72 329.19"/><path d="M802.78 282.81 L810.02 334.30"/><path d="M792.51 281.54 L768.53 340.88"/><path d="M784.24 275.31 L743.26 307.33"/><path d="M780.19 265.78 L716.82 274.69"/><path d="M781.46 255.51 L733.24 236.03"/><path d="M787.69 247.24 L748.28 196.81"/><path d="M797.22 243.19 L789.98 191.70"/><path d="M807.49 244.46 L831.47 185.12"/><path d="M815.76 250.69 L856.74 218.67"/></g>
+<!-- Framework-agnostic code symbol. -->
+<g fill="none" stroke="#20463b" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M1302 209L1250 263L1302 317"/>
+ <path d="M1378 209L1430 263L1378 317"/>
+ <path d="M1357 192L1323 334"/>
+</g>
+<g font-family="Arial, Helvetica, sans-serif" text-anchor="middle" fill="#192e28" font-size="56" font-weight="700">
+ <text x="260" y="415">Figma</text><text x="800" y="415">Claude</text><text x="1340" y="415">Code</text>
+</g>
+<rect x="724" y="82" width="152" height="57" rx="28" fill="#bde4cf" stroke="#203d35" stroke-width="5"/>
+<text x="800" y="121" font-family="Arial, Helvetica, sans-serif" font-size="36" text-anchor="middle" font-weight="700" fill="#153d30">MCP</text>
+<text x="800" y="587" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700" fill="#f0f6ef">Design ↔ Code</text>
+</svg>

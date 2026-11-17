@@ -67,6 +67,12 @@ export const approachSections: readonly PortfolioSection[] = [
       "Internal and external designers use the library to build realistic prototypes without recreating established patterns for each project. I maintain it as requirements change, including flexible slots where components need to accommodate different content.",
       "I also standardised iconography using Google Material Symbols, replacing several separate libraries with a shared set across Marketplace and merchant tools. Clear labels, keyboard interaction, visible focus and feedback remain part of how we use those components.",
     ],
+    links: [
+      {
+        label: "Read the design system case study",
+        to: "/work/design-system-integration",
+      },
+    ],
   },
   {
     id: "leadership-and-collaboration",
@@ -99,12 +105,15 @@ export const approachSections: readonly PortfolioSection[] = [
       "prototype interfaces",
       "frontend implementation",
       "repeatable workflow for SaaS-style product videos",
+      "bidirectional updates",
+      "Claude and MCP",
       "Recordly",
       "review the output against the user need",
     ],
     paragraphs: [
       `I use AI to explore ideas, prototype interfaces and reduce repetitive work. For Huugo, Fruugo's AI shopping assistant, this helped me move from initial design into frontend implementation and create a reusable workflow for character variants and campaign assets.`,
       `I developed a repeatable workflow for SaaS-style product videos, combining AI-assisted production with screen recordings made in Recordly. This lets me produce videos independently with a short turnaround, bringing together work that would typically involve several contributors. I applied the workflow to create a product video for Accessible Trades.`,
+      `Building on design-system work since networx, I connected Fruugo’s maintained component library with Figma through Claude and MCP. The workflow is available to Design and Frontend for reviewed updates between design and code, with code changes following our existing commit and review process.`,
       `I give these workflows clear constraints and review the output against the user need. The aim is to make useful approaches repeatable for the wider team, while keeping design decisions and implementation quality under our control.`,
     ],
     skillsIntro:
@@ -132,10 +141,20 @@ export const approachSections: readonly PortfolioSection[] = [
       },
       {
         title: "AI-assisted workflows",
-        items: ["Claude", "ChatGPT", "Gemini", "Custom Agent Workflows", "Research Synthesis"],
+        items: [
+          "Claude",
+          "ChatGPT",
+          "Gemini",
+          "Custom Agent Workflows",
+          "Research Synthesis",
+        ],
       },
     ],
     links: [
+      {
+        label: "Explore the connected design-system workflow",
+        to: "/work/design-system-integration",
+      },
       { label: "Read the Huugo case study", to: "/work/huugo-from-fruugo" },
       {
         label: "See the Accessible Trades video workflow",

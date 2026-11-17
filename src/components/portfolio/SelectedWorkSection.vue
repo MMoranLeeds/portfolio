@@ -2,6 +2,10 @@
 import ProjectCardMedia from "./ProjectCardMedia.vue";
 import { projects } from "@/data/projects/index";
 import ArrowIcon from "@/components/ui/ArrowIcon.vue";
+const alphabeticalTags = (tags: readonly string[]) =>
+  [...tags].sort((a, b) =>
+    a.localeCompare(b, "en-GB", { sensitivity: "base" }),
+  );
 </script>
 <template>
   <section
@@ -34,7 +38,9 @@ import ArrowIcon from "@/components/ui/ArrowIcon.vue";
             <h3>{{ project.title }}</h3>
             <p>{{ project.card.summary }}</p>
             <ul class="project-tags" aria-label="Project skills">
-              <li v-for="tag in project.tags" :key="tag">{{ tag }}</li>
+              <li v-for="tag in alphabeticalTags(project.tags)" :key="tag">
+                {{ tag }}
+              </li>
             </ul>
             <div class="project-card-outcome">
               <p class="project-card-outcome-label">Outcome</p>

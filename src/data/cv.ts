@@ -33,7 +33,7 @@ export const cv = {
         "Product and interaction design",
         "Accessibility specialist",
         "Localisation",
-        "Design systems",
+        "Design system ownership and governance",
         "Responsive design",
         "Interactive prototyping",
       ],
@@ -65,7 +65,7 @@ export const cv = {
           title: "Research & commercial impact",
           items: [
             "Led the cookie consent redesign with Legal. The country-based production comparison recorded 66.3% versus 76.3% acceptance, a 10-percentage-point difference, with improvement sustained after worldwide rollout.",
-            "Redesigned B2B onboarding with Sales and Technical Integration, deferring questions until needed. Fastest observed new submission: 8m 7s down from the previous application taking 20 minutes. Post deployment response survey rated perceived completion effort 4.5/5.",
+            "Redesigned B2B merchant onboarding with Sales and Technical Integration. Early survey feedback rated completion effort 4.5/5; the fastest observed completed application took 8m 7s.",
             "Led a contextual multilingual audit and typography and language-control improvements across shopper and merchant products. Used Opportunity Solution Trees to connect research findings with opportunities and compare solutions with colleagues.",
           ],
         },
@@ -73,7 +73,7 @@ export const cv = {
           title: "Accessibility & shared systems",
           items: [
             "Owned the company-wide WCAG Level AA audit as primary contact, coordinating improvements across Design, Engineering, and Legal to ensure European Accessibility Act (EAA) readiness.",
-            "Created and maintain the shared Figma library, including components, interaction patterns, documentation and multilingual prototypes. Work with engineers to align it with React components in Storybook.",
+            "Created and maintain Fruugo’s shared design system, including its Figma component library, interaction patterns and documentation, aligned with React components in Storybook. Integrated the design system with Claude Code and Model Context Protocol (MCP), enabling reviewed updates between Figma and code for Design and Frontend teams.",
           ],
         },
         {
@@ -107,6 +107,7 @@ export const cv = {
       achievements: [
         "Designed campaign management, application handling, configurable branding and video interviews for the employer-facing ATS.",
         "Designed and built accessible candidate journeys across vacancy search, branded applications, document uploads, onboarding and HR portal integration.",
+        "Used Sass variables, mixins and reusable frontend patterns to maintain consistent interfaces across recruitment products and client branding.",
         "Worked directly with clients, recruited two designers and supported junior colleagues.",
       ],
     },

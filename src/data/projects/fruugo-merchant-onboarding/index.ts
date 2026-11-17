@@ -38,7 +38,7 @@ export const onboardingProject: Project = {
     summary:
       "Simplifying B2B onboarding for merchants and the teams assessing their applications.",
     outcome:
-      "A complete application was observed at 8m 7s, the fastest recorded after launch. Early survey feedback rated completion effort 4.5/5.",
+      "Designed around a 10-minute target. Average Hotjar session duration was 10m 04s over 12 months, distinct from application completion time. Early survey feedback rated completion effort 4.5/5.",
     alt: "Desktop homepage for Fruugo's merchant application.",
     header: {
       label: "",

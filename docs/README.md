@@ -13,4 +13,6 @@ This directory contains setup, architecture and maintenance guidance for Matthew
 | [Analytics setup](ANALYTICS_SETUP.md)                 | Consent-gated GA4 configuration and verification               |
 | [Applying the structure update](structure-update.md)  | Installing the changed-files patch and removing obsolete paths |
 
+[Design-system case study](design-system-integration-case-study.md) explains the screenshot placeholders and how to replace them.
+
 The root [README](../README.md) introduces the portfolio. Files in [archive](archive/) record previous delivery notes and are not current instructions.
