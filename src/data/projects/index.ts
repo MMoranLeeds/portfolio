@@ -3,6 +3,7 @@ import { localisationProject } from "./fruugo-localisation";
 import { onboardingProject } from "./fruugo-merchant-onboarding";
 import { huugoProject } from "./huugo-from-fruugo";
 import { accessibleTradesProject } from "./accessible-trades";
+import { nextRambleAndroidProject } from "./nextramble-android";
 import { nextRambleProject } from "./nextramble";
 import { cookieConsentProject } from "./fruugo-cookie-consent";
 
@@ -17,6 +18,7 @@ export const projects: Project[] = [
   localisationProject,
   accessibleTradesProject,
   nextRambleProject,
+  nextRambleAndroidProject,
 ];
 
 export const findProject = (slug: string) =>

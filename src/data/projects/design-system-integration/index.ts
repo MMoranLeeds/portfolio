@@ -27,7 +27,7 @@ export const designSystemProject: Project = {
   },
   overview: {
     rationaleLabel: "Problem",
-    evaluationLabel: "What I did",
+    evaluationLabel: "My approach",
     rationale:
       "Keep the design library aligned with maintained components as AI-assisted workflows become part of design and frontend delivery.",
     evaluation:

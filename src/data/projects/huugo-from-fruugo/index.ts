@@ -32,7 +32,7 @@ export const huugoProject: Project = {
     rationaleLabel: "Problem",
     rationale:
       "Establish whether shoppers would use conversational shopping and purchase through it before committing to integration across the marketplace.",
-    evaluationLabel: "What I did",
+    evaluationLabel: "My approach",
     evaluation:
       "Led UX and substantial frontend delivery from standalone validation to marketplace integration, including a non-AI fallback and repeatable, country-specific campaign workflows.",
     outcome:

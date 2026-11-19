@@ -88,7 +88,7 @@ export interface ProjectMobileConfig {
 
 export interface ProjectCardConfig {
   /** Identify illustration cards, which retain the shared screen frame and use a fallback wallpaper. */
-  presentation?: "artwork";
+  presentation?: "artwork" | "native";
   /** Concise homepage copy; the full article keeps its own summary. */
   summary: string;
   outcome: string;

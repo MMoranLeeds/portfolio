@@ -133,7 +133,7 @@ These refinements can be adopted within the existing process. They are not repre
 
 ## Final editorial refinements
 
-- The case study alone uses the overview labels Problem and What I did, supplied through optional labels in the shared overview model. Other studies retain their labels, and reading-time calculations use the displayed labels.
+- The case study alone uses the overview labels Problem and My approach, supplied through optional labels in the shared overview model. Other studies retain their labels, and reading-time calculations use the displayed labels.
 - Localisation leads with the need to accommodate translated content. On-demand translation is described as a design-exploration choice, separate from production localisation.
 - The Chip audit’s retained outcome is the gap list, not retained changes or a completed token-resolution programme.
 - Next steps describe joint token decisions, a clearer contribution route and adoption feedback as future work.

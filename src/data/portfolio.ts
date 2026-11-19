@@ -114,6 +114,7 @@ export const approachSections: readonly PortfolioSection[] = [
       `I use AI to explore ideas, prototype interfaces and reduce repetitive work. For Huugo, Fruugo's AI shopping assistant, I took a standalone proof of concept into marketplace integration, starting with the Netherlands. I created reusable workflows for country-specific scenes, character variants and campaign assets, including 156 advertising variants across 13 languages and 12 sizes.`,
       `I developed a repeatable workflow for SaaS-style product videos, combining AI-assisted production with screen recordings made in Recordly. This lets me produce videos independently with a short turnaround, bringing together work that would typically involve several contributors. I applied the workflow to create a product video for Accessible Trades.`,
       `Building on design-system work since networx, I connected Fruugo’s maintained component library with Figma through Claude and MCP. The workflow is available to Design and Frontend for reviewed updates between design and code, with code changes following our existing commit and review process.`,
+      "I am also exploring native Android design through NextRamble, using Material 3 in Figma and a working Jetpack Compose build tested locally on my Samsung Galaxy S23 FE.",
       `I give these workflows clear constraints and review the output against the user need. The aim is to make useful approaches repeatable for the wider team, while keeping design decisions and implementation quality under our control.`,
     ],
     skillsIntro:
@@ -154,6 +155,10 @@ export const approachSections: readonly PortfolioSection[] = [
       {
         label: "Explore the connected design-system workflow",
         to: "/work/design-system-integration",
+      },
+      {
+        label: "Read the native Android case study",
+        to: "/work/nextramble-android",
       },
       { label: "Read the Huugo case study", to: "/work/huugo-from-fruugo" },
       {

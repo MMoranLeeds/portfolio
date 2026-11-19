@@ -53,6 +53,16 @@ export const nextRambleProject: Project = {
       "12 / 5",
     ),
   },
+  sources: [
+    {
+      id: "android-companion",
+      publisher: "Matthew Moran",
+      title: "Read the NextRamble for Android case study",
+      url: "/work/nextramble-android",
+      date: "Personal exploration",
+      note: "A separate working Android test build, adapting the live web service to native patterns.",
+    },
+  ],
   sections: [
     {
       id: "problem",
@@ -152,6 +162,13 @@ export const nextRambleProject: Project = {
       paragraphs: [
         "NextRamble is live, with public discovery and area guides connected to group membership, proposals, voting and confirmed plans. I took the service through domain setup and deployment, and continue to maintain its interface and supporting content.",
         "The delivered result is a working product that people can use, rather than a static concept. Whether it reduces organising effort or earns a place alongside an existing group chat now needs to be tested through real planning cycles. I have not yet established adoption, repeat use or time saved.",
+      ],
+    },
+    {
+      id: "native-companion",
+      title: "A separate native Android exploration",
+      paragraphs: [
+        "I am also adapting NextRamble into a native Android companion, using Material 3 and a working test build on my Samsung Galaxy S23 FE. The separate NextRamble for Android case study focuses on platform interactions, theming and accessibility learning. It has not been publicly released.",
       ],
     },
     {

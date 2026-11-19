@@ -22,6 +22,7 @@ const background = computed(
     class="project-card-media"
     :class="{
       'project-card-media--artwork': project.card.presentation === 'artwork',
+      'project-card-media--native': project.card.presentation === 'native',
     }"
     :style="
       background

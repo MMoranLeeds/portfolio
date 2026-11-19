@@ -427,7 +427,7 @@ assert(sitemap.includes("/work/nextramble"));
 assert(nextRamble.includes("https://nextramble.co.uk/"));
 assert(nextRamble.includes("/images/social/nextramble.png"));
 assert(
-  nextRamble.includes('href="/work/fruugo-localisation"'),
+  nextRamble.includes('href="/work/fruugo-cookie-consent"'),
   "Last study must link to the first",
 );
 assert(
@@ -462,8 +462,8 @@ for (const image of [
   "mobile-after",
 ])
   assert(consent.includes(image), `Consent screenshot missing: ${image}`);
-assert(consent.includes('href="/work/fruugo-merchant-onboarding"'));
-assert(localisation.includes('href="/work/fruugo-cookie-consent"'));
+assert(consent.includes('href="/work/design-system-integration"'));
+assert(localisation.includes('href="/work/accessible-trades"'));
 console.log(
   "Cookie-consent study, results context, placeholders and next-study order passed.",
 );
@@ -475,8 +475,8 @@ const integration = await readFile(
 
 assert(homepage.includes('href="/work/design-system-integration"'));
 assert(sitemap.includes("/work/design-system-integration"));
-assert(huugo.includes('href="/work/design-system-integration"'));
-assert(integration.includes('href="/work/accessible-trades"'));
+assert(huugo.includes('href="/work/nextramble-android"'));
+assert(integration.includes('href="/work/fruugo-merchant-onboarding"'));
 assert(integration.includes("/images/social/design-system-integration.png"));
 assert(integration.includes("Active internal workflow"));
 assert(
@@ -488,4 +488,31 @@ assert(integration.includes("case-cover-pair--single"));
 assert(!integration.includes("Mobile screenshot to follow"));
 console.log(
   "Design-system workflow, single-image hero, metadata and next-study links passed.",
+);
+
+const android = await readFile(
+  "dist/work/nextramble-android/index.html",
+  "utf8",
+);
+assert.equal(caseLocations.length, 8, "Eight case studies must be generated");
+assert(homepage.includes('href="/work/nextramble-android"'));
+assert(homepage.includes("across 8 projects"));
+assert(homepage.includes("project-card-media--native"));
+assert(android.includes("Not publicly released"));
+assert(android.includes("Samsung Galaxy S23 FE"));
+assert(android.includes("Material 3"));
+assert(android.includes("TalkBack"));
+assert(android.includes("haptic"));
+assert(android.includes('rel="next"'));
+assert(android.includes('href="/work/fruugo-localisation"'));
+assert(android.includes("/images/social/nextramble-android.png"));
+assert(!android.includes("Mobile screenshot to follow"));
+for (const match of android.matchAll(/href="#(source-[^"]+)"/g)) {
+  assert(
+    android.includes(`id="${match[1]}"`),
+    "Android source links must resolve",
+  );
+}
+console.log(
+  "Native Android study, honest status, images and eight-study navigation passed.",
 );
