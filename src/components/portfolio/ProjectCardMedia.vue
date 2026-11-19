@@ -4,6 +4,7 @@ import type { Project } from "@/types/project";
 import { projectCardImage } from "@/data/projects/shared/cardImages";
 import { projectMobilePreview } from "@/data/projects/shared/mobilePreview";
 import MobileProjectPreview from "./MobileProjectPreview.vue";
+import nativeArtworkBackground from "@/assets/images/dist/cards/golden-gate-dark-bg.webp";
 import artworkBackground from "@/assets/images/dist/cards/tahoe-bg-960.webp";
 
 const props = defineProps<{ project: Project }>();
@@ -12,9 +13,11 @@ const mobile = computed(() => projectMobilePreview(props.project));
 const background = computed(
   () =>
     props.project.cover.cardBackground ||
-    (props.project.card.presentation === "artwork"
-      ? artworkBackground
-      : undefined),
+    (props.project.card.presentation === "native"
+      ? nativeArtworkBackground
+      : props.project.card.presentation === "artwork"
+        ? artworkBackground
+        : undefined),
 );
 </script>
 <template>
