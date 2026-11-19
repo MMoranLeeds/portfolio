@@ -189,7 +189,14 @@ const huugo = await readFile("dist/work/huugo-from-fruugo/index.html", "utf8");
 assert(homepage.includes('href="/work/huugo-from-fruugo"'));
 assert(!homepage.includes("Putting this into practice: Huugo from Fruugo"));
 assert(huugo.includes("From character design to an agent-supported workflow"));
-assert(huugo.includes("Proposed next phase"));
+assert(huugo.includes("Prove the shopping journey before integrating"));
+assert(huugo.includes("Netherlands"));
+assert(huugo.includes("391"));
+assert(
+  !huugo.includes(
+    "Proposed next phase work includes Marketplace homepage integration",
+  ),
+);
 assert(huugo.includes("front-end implementation"));
 assert(huugo.includes("The problem"));
 for (const match of huugo.matchAll(/href="#(source-[^"]+)"/g)) {

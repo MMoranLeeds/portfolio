@@ -10,7 +10,7 @@ test("Huugo is selected work rather than duplicated homepage copy", async ({
       name: "Putting this into practice: Huugo from Fruugo",
     }),
   ).toHaveCount(0);
-  await expect(page.locator(".project-card")).toHaveCount(6);
+  await expect(page.locator(".project-card")).toHaveCount(7);
   await page
     .getByRole("link", {
       name: "Read case study: Huugo from Fruugo",
@@ -36,10 +36,13 @@ test("Huugo content, evidence and future scope are accessible", async ({
   await page.goto("/work/huugo-from-fruugo");
   await expect(page.locator(".case-evidence li")).toHaveCount(3);
   await expect(
-    page.getByText("Proposed next phase", { exact: true }),
+    page.getByRole("heading", {
+      name: "Staged deployment and early findings",
+      exact: true,
+    }),
   ).toBeVisible();
   await page.locator(".evidence-source").first().click();
-  await expect(page.locator("#source-google-shopping")).toBeInViewport();
+  await expect(page.locator("#source-nl-integration")).toBeInViewport();
   const scan = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
     .analyze();

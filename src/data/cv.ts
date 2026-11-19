@@ -80,7 +80,7 @@ export const cv = {
           title: "Leadership & product delivery",
           items: [
             "Set design direction, mentor colleagues and lead recruitment and onboarding. Introduced embedded designers into product teams, with shared reviews and weekly collaboration to maintain consistency.",
-            "Took Huugo, Fruugo’s AI shopping assistant, from a proof of concept to launch, leading UX, creating a flexible global character identity and implementing most of the frontend.",
+            "Led Huugo’s UX from standalone proof of concept to marketplace integration, starting in the Netherlands, with substantial frontend delivery and reusable AI campaign workflows.",
             "Developed repeatable AI-assisted workflows for prototypes, campaign assets and product videos, reducing repetitive production work while maintaining shared design standards.",
           ],
         },

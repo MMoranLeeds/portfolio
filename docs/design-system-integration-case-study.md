@@ -153,6 +153,6 @@ The design-system card now includes the calendar text-contrast result alongside 
 
 The onboarding card now leads with the 10-minute design target and the 12-month average Hotjar session duration of 10m 04s. It explicitly distinguishes session duration from application completion time. The fastest observed completed application remains supporting evidence inside that case study.
 
-The Huugo card uses the already-published early GTV-to-model-spend ratio (£18.38 per £1) and retains its scope: transaction value relative to model costs, not profit or incremental sales.
+The Huugo card leads with the Netherlands marketplace launch and initial assistant adoption. The case study retains the standalone proof-of-concept GTV-to-model-spend ratio in its original reporting context, separate from marketplace findings.
 
 This update does not change the project registry or overwrite the locally chosen card order. Country figures, card copy and cross-links can be applied independently of ordering changes.

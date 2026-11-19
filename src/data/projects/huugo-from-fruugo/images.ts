@@ -14,7 +14,15 @@ type ImageName =
   | "campaign-tennis"
   | "campaign-baking"
   | "campaign-festival"
-  | "early-results";
+  | "early-results"
+  | "marketplace-home"
+  | "marketplace-chat"
+  | "marketplace-scenes"
+  | "marketplace-identity"
+  | "marketplace-mobile-chat"
+  | "black-friday-desktop"
+  | "black-friday-mobile"
+  | "black-friday-advertising";
 
 export function huugoImage(
   name: ImageName,
@@ -50,6 +58,11 @@ export function huugoImage(
     label,
     alt,
     caption,
-    previewMaxWidth: name === "basket" ? "24rem" : undefined,
+    previewMaxWidth:
+      name === "marketplace-mobile-chat" || name === "black-friday-mobile"
+        ? "12rem"
+        : name === "basket"
+          ? "24rem"
+          : undefined,
   };
 }
