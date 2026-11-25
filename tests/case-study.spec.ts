@@ -103,8 +103,8 @@ test("all cards expose outcomes and their articles explain rationale and evaluat
       exact: true,
     });
     await expect(overview.locator("dt")).toHaveText([
-      "Design rationale",
-      "Evaluation",
+      "Problem",
+      "My approach",
       "Outcome",
     ]);
     for (const detail of await overview.locator("dd").all()) {

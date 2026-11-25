@@ -11,7 +11,7 @@ export const huugoProject: Project = {
   summary:
     "Taking a standalone AI shopping proof of concept into Fruugo’s marketplace, with contextual entry points, a coherent fallback and reusable campaign workflows.",
   role: "UX research and design, front-end implementation, identity and AI creative workflows",
-  status: "Live across 10 markets · Black Friday marketplace rollout",
+  status: "Live across 10 markets · Black Friday campaign delivered · Further campaign pages in progress",
   tags: [
     "AI creative workflows",
     "Front-end implementation",
@@ -25,7 +25,7 @@ export const huugoProject: Project = {
     summary:
       "Taking a proven standalone AI shopping concept into the marketplace, with contextual discovery and a coherent fallback.",
     outcome:
-      "Validated through a standalone email campaign, where shoppers engaged and purchased, then progressed into production marketplace integration across 10 markets.",
+      "The standalone campaign recorded £18.38 GTV per £1 of AI-model spend, supporting integration. Now live across 10 markets, with AI-assisted workflows speeding up campaign pages and assets.",
     alt: "Fruugo’s Netherlands homepage with Huugo search, product scenes and contextual shopping entry points.",
   },
   overview: {
@@ -36,7 +36,7 @@ export const huugoProject: Project = {
     evaluation:
       "Led UX and substantial frontend delivery from standalone validation to marketplace integration, including a non-AI fallback and repeatable, country-specific campaign workflows.",
     outcome:
-      "The standalone email campaign recorded engagement and purchases, supporting the decision to integrate. Following the Netherlands launch, the Black Friday marketplace experience is now live across 10 markets.",
+      "The standalone email campaign recorded 481 engaged conversations and £18.38 GTV per £1 of AI-model spend, supporting the decision to integrate. Following the Netherlands launch, the Black Friday marketplace experience went live across 10 markets, with reusable AI-assisted workflows producing the campaign assets and pages, and further post-Black Friday pages to follow.",
     period:
       "2026 · standalone launch in October, marketplace integration in November",
     launchDate: "2026-10-08",

@@ -61,9 +61,9 @@ export const cookieConsentProject: Project = {
   },
   overview: {
     rationale:
-      "Clearer wording and hierarchy could improve optional-cookie opt-in while keeping rejection visible and straightforward.",
+      "Improve optional-cookie opt-in on a high-traffic consent touchpoint, while keeping rejection visible and straightforward.",
     evaluation:
-      "Compared acceptance rates across country-based production groups, with Data Science reviewing advertising and transaction effects. The groups were not randomised at user level.",
+      "Revised the wording and visual hierarchy, then compared acceptance rates across country-based production groups, with Data Science reviewing advertising and transaction effects. The groups were not randomised at user level.",
     outcome:
       "The first comparison recorded 66.3% acceptance with the old modal and 76.3% with the redesign. The improvement held as more markets joined, with both production environments reaching 76–79% after global rollout.",
     period: "November 2025 to April 2026",

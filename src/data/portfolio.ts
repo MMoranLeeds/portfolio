@@ -12,7 +12,7 @@ export const introduction = {
   ],
   source: audience.source,
   paragraphs: [
-    "I’m a Lead Product Designer with 13+ years of experience across UX, UI and frontend development. At Fruugo, I lead e-commerce design across shopper and merchant products, focusing on accessible experiences for a global audience. I combine hands-on research and delivery with setting design direction and mentoring colleagues, drawing on a background in B2B recruitment software and internal enterprise systems.",
+    "I’m a Lead Product Designer with 13+ years of experience across UX, UI and frontend development. At Fruugo, I lead e-commerce design across shopper and merchant products, focusing on accessible experiences for a global audience. I combine hands-on research and delivery with setting design direction and mentoring colleagues, drawing on a background in B2B recruitment software and internal enterprise systems. Recent work includes a cookie consent redesign that lifted acceptance by 10 percentage points, a company-wide accessibility audit for the European Accessibility Act and Huugo, an AI shopping assistant now live in 10 markets.",
     `My work at Fruugo spans the B2B Merchant Portal, merchant onboarding and the consumer marketplace. Fruugo reports ${audience.visits.headline} website visits in ${audience.visitYear} and a marketplace spanning ${audience.countries} countries. Working at this scale means considering different languages, cultures and access needs in shared design decisions.`,
     "I also take products from idea to launch, including Huugo, Fruugo’s AI shopping assistant, and my independent services Accessible Trades and NextRamble.",
   ],

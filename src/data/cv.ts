@@ -65,7 +65,7 @@ export const cv = {
           title: "Research & commercial impact",
           items: [
             "Led the cookie consent redesign with Legal, balancing clear privacy choices with commercial measurement needs. The initial country-based production comparison recorded acceptance 10 percentage points higher, with improvement sustained after worldwide rollout.",
-            "Redesigned B2B merchant onboarding with Sales and Technical Integration. Early survey feedback rated completion effort 4.5/5; the fastest observed completed application took 8m 7s.",
+            "Redesigned B2B merchant onboarding with Sales and Technical Integration around a 10-minute target set from competitor research. Average session duration was 10m 04s over 12 months, and early survey feedback rated completion effort 4.5/5.",
             "Led a contextual multilingual audit and typography and language-control improvements across shopper and merchant products. Used Opportunity Solution Trees to connect research findings with opportunities and compare solutions with colleagues.",
           ],
         },

@@ -15,9 +15,9 @@ export const accessibleTradesProject: Project = {
   },
   overview: {
     rationale:
-      "Bringing company discovery, supporting evidence and planning tools together could give people needing home adaptations a clearer starting point.",
+      "Give people needing home adaptations a clearer starting point for finding specialists, checking supporting evidence and planning their next steps.",
     evaluation:
-      "Established feedback channels with the MND Association and review consented usage data. Direct task-based evaluation with people using the service is the next step.",
+      "Brought company discovery, supporting evidence and planning tools together in one service, established feedback channels with the MND Association and reviewed consented usage data. Direct task-based evaluation with people using the service is the next step.",
     outcome:
       "Designed, built and launched an independent service spanning the public website, backend API and administration tools, with 240 evidence-supported listings and council coverage across England. The MND Association has begun using and sharing the service internally.",
     period: "Personal project · Q2 2026 development · Ongoing development",

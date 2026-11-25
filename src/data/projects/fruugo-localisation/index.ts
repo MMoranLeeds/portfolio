@@ -18,9 +18,9 @@ export const localisationProject: Project = {
   },
   overview: {
     rationale:
-      "Contextual translations, consistent characters and independent language choice could address the trust and comprehension barriers found in shopper interviews and merchant recordings.",
+      "Address the trust and comprehension barriers found in shopper interviews and merchant recordings across Fruugo’s multilingual marketplace and Merchant Portal.",
     evaluation:
-      "Native-language colleagues reviewed audit findings. Typography and language controls are now live; usage, feedback and task-based evaluation will assess their impact.",
+      "Proposed contextual translations, consistent characters and independent language choice, with native-language colleagues reviewing audit findings. Usage, feedback and task-based evaluation will assess the impact of the live changes.",
     outcome:
       "Turned multilingual research into typography and language-control improvements across Fruugo’s consumer marketplace and B2B Merchant Portal. The typography updates and language pickers are now live in production across Marketplace and Merchant Portal.",
     period: "Q3 2026 · Live in production",

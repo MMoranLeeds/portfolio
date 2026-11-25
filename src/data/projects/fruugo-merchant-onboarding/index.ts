@@ -11,11 +11,11 @@ export const onboardingProject: Project = {
   slug: "fruugo-merchant-onboarding",
   overview: {
     rationale:
-      "Moving integration questions to a later stage and clarifying guidance could reduce application effort while retaining the information teams needed to assess merchants.",
+      "Reduce the effort of applying to sell on Fruugo, while retaining the information teams needed to assess new merchants.",
     evaluation:
-      "Reviewed Hotjar recordings, GA4 journeys and an early post-launch survey with 24 responses. Recorded completion time is distinguished from average session duration.",
+      "Moved integration questions to a later stage, clarified guidance and designed around a 10-minute target informed by competitor research. Reviewed Hotjar recordings, GA4 journeys and an early post-launch survey with 24 responses.",
     outcome:
-      "The fastest observed new application reached submission for verification in 8m 7s, compared with earlier reports of around 20 minutes or more on the old form. Early survey feedback rated completion effort 4.5/5 and perceived time 4.3/5; the timing is one observed completion, not an average.",
+      "Average Hotjar session duration was 10m 04s over 12 months, close to the 10-minute target and distinct from application completion time. Early survey feedback rated completion effort 4.5/5 and perceived time 4.3/5. The fastest observed application reached submission in 8m 7s, compared with earlier reports of around 20 minutes or more on the old form.",
     period: "Q4 2025",
   },
   mobile: {

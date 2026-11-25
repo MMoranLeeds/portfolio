@@ -93,7 +93,7 @@ onBeforeUnmount(() => {
       >
         <img
           :src="video.poster"
-          alt=""
+          :alt="`Preview frame from the video: ${video.title}`"
           :width="video.width"
           :height="video.height"
           loading="lazy"

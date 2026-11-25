@@ -96,11 +96,11 @@ const sourceLabel = (id: string) =>
         <h2 id="case-outcome-title">At a glance</h2>
         <dl class="case-overview">
           <div>
-            <dt>{{ overview.rationaleLabel || "Design rationale" }}</dt>
+            <dt>{{ overview.rationaleLabel || "Problem" }}</dt>
             <dd>{{ overview.rationale }}</dd>
           </div>
           <div>
-            <dt>{{ overview.evaluationLabel || "Evaluation" }}</dt>
+            <dt>{{ overview.evaluationLabel || "My approach" }}</dt>
             <dd>{{ overview.evaluation }}</dd>
           </div>
           <div>

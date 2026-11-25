@@ -66,7 +66,7 @@ const emit = defineEmits<{
         :sizes="preview.sizes"
         :width="preview.width"
         :height="preview.height"
-        :alt="compact ? '' : preview.alt"
+        :alt="preview.alt"
         loading="lazy"
         decoding="async"
       />

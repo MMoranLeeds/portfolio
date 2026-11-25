@@ -412,7 +412,7 @@ onBeforeUnmount(() => {
       @click="open(trigger)"
     >
       <span class="intro-orb">
-        <img :src="introVideo.poster" alt="" width="96" height="96" decoding="async" />
+        <img :src="introVideo.poster" alt="Portrait of Matthew Moran" width="96" height="96" decoding="async" />
         <video
           v-if="previewEligible"
           ref="preview"

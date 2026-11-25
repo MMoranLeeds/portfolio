@@ -23,9 +23,9 @@ export const nextRambleProject: Project = {
   },
   overview: {
     rationale:
-      "Comparable route details, shared voting and a clear final plan could help groups organise walks alongside their existing chat communities.",
+      "Help walking groups compare route ideas, vote and agree a clear final plan, alongside their existing chat communities.",
     evaluation:
-      "Desk research and reviews of working interfaces shaped the service. Observing real planning cycles will test organising effort, understanding and repeat use; these results are not yet established.",
+      "Shaped comparable route details, shared voting and a clear final plan through desk research and reviews of working interfaces. Observing real planning cycles will test organising effort, understanding and repeat use; these results are not yet established.",
     outcome:
       "Took an initial group-planning idea into a live service, connecting public discovery with shared planning, reusable routes and controlled membership. The next step is to test its value through real group outings.",
     period: "Personal project · Live in October 2026 · Ongoing development",

@@ -9,7 +9,7 @@ import portraitSmall from "@/assets/images/dist/profile-320.webp";
     :src="portrait"
     :srcset="`${portraitSmall} 320w, ${portrait} 640w`"
     sizes="(min-width: 960px) 96px, 40px"
-    alt=""
+    alt="Portrait of Matthew Moran"
     width="96"
     height="96"
     decoding="async"
