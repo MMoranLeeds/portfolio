@@ -16,7 +16,7 @@ const visible = computed(() => publicPage.value && showPrompt.value);
 const banner = ref<HTMLElement | null>(null);
 const { offset: consentOffset } = useFloatingControl(
   banner,
-  ".case-progress, .cv-cookie-settings",
+  ".cv-cookie-settings",
 );
 const cvDialog = ref<HTMLDialogElement | null>(null);
 const cvMotion = useDialogMotion(cvDialog);

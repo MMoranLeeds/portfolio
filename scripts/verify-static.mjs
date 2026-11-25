@@ -427,8 +427,8 @@ assert(sitemap.includes("/work/nextramble"));
 assert(nextRamble.includes("https://nextramble.co.uk/"));
 assert(nextRamble.includes("/images/social/nextramble.png"));
 assert(
-  nextRamble.includes('href="/work/fruugo-cookie-consent"'),
-  "Last study must link to the first",
+  nextRamble.includes('href="/work/nextramble-android"'),
+  "Web study must link to the Android study",
 );
 assert(
   accessibleTrades.includes('href="/work/nextramble"'),
@@ -475,7 +475,7 @@ const integration = await readFile(
 
 assert(homepage.includes('href="/work/design-system-integration"'));
 assert(sitemap.includes("/work/design-system-integration"));
-assert(huugo.includes('href="/work/nextramble-android"'));
+assert(huugo.includes('href="/work/fruugo-localisation"'));
 assert(integration.includes('href="/work/fruugo-merchant-onboarding"'));
 assert(integration.includes("/images/social/design-system-integration.png"));
 assert(integration.includes("Active internal workflow"));
@@ -504,7 +504,7 @@ assert(android.includes("Material 3"));
 assert(android.includes("TalkBack"));
 assert(android.includes("haptic"));
 assert(android.includes('rel="next"'));
-assert(android.includes('href="/work/fruugo-localisation"'));
+assert(android.includes('href="/work/fruugo-cookie-consent"'));
 assert(android.includes("/images/social/nextramble-android.png"));
 assert(!android.includes("Mobile screenshot to follow"));
 for (const match of android.matchAll(/href="#(source-[^"]+)"/g)) {

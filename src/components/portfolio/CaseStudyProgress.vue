@@ -7,6 +7,7 @@ import {
 } from "@/utils/caseStudyReading";
 import { findProject } from "@/data/projects/index";
 import { projectPeerReviews } from "@/data/peerReviews";
+import { useFloatingControl } from "@/composables/useFloatingControl";
 import { useMotion } from "@/composables/useMotion";
 import { createCompletionBurst } from "@/utils/completionBurst";
 import { useTooltip } from "@/composables/useTooltip";
@@ -22,6 +23,11 @@ const props = defineProps<{
   slug: string;
 }>();
 const percent = ref(0);
+const progressControl = ref<HTMLElement | null>(null);
+const { offset: progressOffset } = useFloatingControl(
+  progressControl,
+  ".cookie-banner",
+);
 const tooltip = useTooltip();
 // Use the same content counter as the introductory read time, without rounding
 // the total first. Recomputes when the project content or route changes.
@@ -167,7 +173,9 @@ onUnmounted(() => {
 </script>
 <template>
   <div
+    ref="progressControl"
     class="case-progress"
+    :style="{ '--progress-offset': `${progressOffset}px` }"
     @mouseenter="tooltip.show"
     @mouseleave="tooltip.hide"
   >
@@ -233,7 +241,7 @@ onUnmounted(() => {
       v-if="tooltip.active.value"
       class="contact-tooltip floating-tooltip"
       aria-hidden="true"
-      >Time left is estimated from content length and scroll position.</span
+      >Time left is estimated from content length and current scroll position on the page.</span
     >
     <div class="case-progress-line" aria-hidden="true">
       <span :style="{ width: `${percent}%` }" />
@@ -243,9 +251,11 @@ onUnmounted(() => {
 <style scoped>
 .case-progress {
   position: fixed;
-  z-index: 15;
+  z-index: 24;
   right: max(1.5rem, env(safe-area-inset-right));
-  bottom: max(1.5rem, env(safe-area-inset-bottom));
+  bottom: calc(
+    max(1.5rem, env(safe-area-inset-bottom)) + var(--progress-offset, 0px)
+  );
   color: var(--accent);
   pointer-events: none;
   isolation: isolate;
@@ -264,7 +274,7 @@ onUnmounted(() => {
 .case-completion-confetti {
   position: absolute;
   left: 50%;
-  bottom: 28px;
+  bottom: 38px;
   width: 0;
   height: 0;
   z-index: 0;
@@ -291,8 +301,8 @@ onUnmounted(() => {
 .case-progress-ring {
   position: relative;
   z-index: 1;
-  width: 56px;
-  height: 56px;
+  width: 76px;
+  height: 76px;
   margin: auto;
   border-radius: 50%;
   background: var(--surface);
@@ -300,9 +310,11 @@ onUnmounted(() => {
 }
 @media (min-width: 1440px) {
   .case-progress {
-    /* Lift the parent stacking context so confetti clears the back-to-top button. */
-    z-index: 17;
+    /* Confetti must clear the introduction launcher (19) and player (22). */
+    z-index: 24;
     display: flex;
+    width: 240px;
+    justify-content: space-between;
     align-items: center;
     gap: 0.75rem;
     padding: 0.2rem 0.2rem 0.2rem 1rem;
@@ -315,14 +327,14 @@ onUnmounted(() => {
     display: block;
   }
   .case-progress-ring {
-    flex: 0 0 56px;
+    flex: 0 0 76px;
     margin: 0;
     background: transparent;
   }
   .case-completion-confetti {
     /* The wider pill must not move the burst away from the ring centre. */
     left: auto;
-    right: 28px;
+    right: 38px;
   }
 
   .case-progress-accessible {
@@ -347,7 +359,7 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
@@ -363,7 +375,7 @@ onUnmounted(() => {
     bottom: calc(0.4rem + env(safe-area-inset-bottom) + 1.5px);
   }
   .case-progress {
-    inset: auto 0 0 var(--sidebar-width);
+    inset: auto 0 var(--progress-offset, 0px) var(--sidebar-width);
     padding: 0.35rem 1.5rem calc(0.4rem + env(safe-area-inset-bottom));
     background: var(--surface);
     border-top: 1px solid var(--line);

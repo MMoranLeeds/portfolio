@@ -1,5 +1,15 @@
 # Case-study updates and local video transcripts
 
+## Personal introduction
+
+`meet-matt.mp4` is registered alongside the case-study films. Use the same generate, review and publish process with `--project meet-matt`. The floating introduction player resolves the reviewed caption track from the registry by MP4 basename. Its readable TXT transcript is available in `public/videos/captions/meet-matt.en.txt`, but is not repeated below the player.
+
+```bash
+npm run transcript:generate -- --project meet-matt
+# Check both drafts against the audio before publishing.
+npm run transcript:publish -- --project meet-matt --captions yes
+```
+
 ## How transcripts connect to the site
 
 Video configuration belongs to each project's `video` field in
@@ -76,7 +86,13 @@ For Accessible Trades:
 npm run transcript:generate -- --project accessible-trades-workflow
 ```
 
-Or generate both in sequence:
+For Matt's introduction:
+
+```bash
+npm run transcript:generate -- --project meet-matt
+```
+
+Or generate all registered recordings in sequence:
 
 ```bash
 npm run transcript:generate

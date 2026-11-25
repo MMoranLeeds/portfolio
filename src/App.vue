@@ -3,7 +3,8 @@ import { computed, nextTick, watch } from "vue";
 import { useRoute } from "vue-router";
 import AppHeader from "@/components/app/AppHeader.vue";
 import AppFooter from "@/components/app/AppFooter.vue";
-import BackToTop from "@/components/app/BackToTop.vue";
+import { introVideo } from "@/config/introVideo";
+import IntroVideo from "@/components/app/IntroVideo.vue";
 import CookieConsent from "@/components/privacy/CookieConsent.vue";
 import { navigation } from "@/data/portfolio";
 import { useActiveSection } from "@/composables/useActiveSection";
@@ -44,8 +45,13 @@ watch(
       <AppFooter />
     </div>
   </div>
+  <IntroVideo
+    v-if="
+      introVideo.enabled &&
+      (route.name === 'home' || route.name === 'case-study')
+    "
+  />
   <CookieConsent />
-  <BackToTop v-if="route.name === 'home' || route.name === 'case-study'" />
 </template>
 <style>
 .app-shell .reading-column {

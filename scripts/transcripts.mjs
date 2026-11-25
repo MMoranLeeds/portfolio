@@ -14,6 +14,7 @@ import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const videos = {
+  "meet-matt": "meet-matt.mp4",
   "huugo-promotion": "huugo-promotion.mp4",
   "accessible-trades-workflow": "accessible-trades-workflow.mp4",
 };

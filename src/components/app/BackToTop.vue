@@ -8,7 +8,7 @@ const button = ref<HTMLElement | null>(null);
 const { visible, backToTop } = useBackToTop();
 const { offset, fits } = useFloatingControl(
   button,
-  ".cookie-banner, .case-progress, .cv-cookie-settings",
+  ".cookie-banner, .case-progress, .cv-cookie-settings, .intro-launcher, .intro-player[open]:not(.intro-player--modal)",
 );
 </script>
 <template>

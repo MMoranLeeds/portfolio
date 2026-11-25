@@ -61,7 +61,12 @@ export function useFloatingControl(
     if (typeof ResizeObserver !== "undefined")
       resize = new ResizeObserver(schedule);
     mutation = new MutationObserver(schedule);
-    mutation.observe(document.body, { childList: true, subtree: true });
+    mutation.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["class", "open", "hidden"],
+    });
     window.addEventListener("resize", schedule, { passive: true });
     window.addEventListener("portfolio-floating-layout-change", schedule);
     window.visualViewport?.addEventListener("resize", schedule);

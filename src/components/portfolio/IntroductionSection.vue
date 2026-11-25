@@ -2,6 +2,7 @@
 import { computed } from "vue";
 import { introduction } from "@/data/portfolio";
 import { profile, emailHref } from "@/config/profile";
+import IntroVideoLink from "@/components/app/IntroVideoLink.vue";
 import ActionLink from "@/components/ui/ActionLink.vue";
 const paragraphs = computed(() =>
   introduction.paragraphs.map((text) => ({
@@ -43,6 +44,7 @@ const paragraphs = computed(() =>
       ><ActionLink :href="emailHref" variant="secondary" external
         >Get in touch</ActionLink
       >
+      <IntroVideoLink />
     </div>
   </section>
 </template>

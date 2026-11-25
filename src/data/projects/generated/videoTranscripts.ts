@@ -21,5 +21,16 @@ export const projectVideoTranscripts: Record<string, ProjectVideoTranscript> = {
     "transcript": [
       "Start by entering where the work is needed and choosing a suitable search distance. Describe the difficulty you want to address and Accessible Trades suggests relevant trade categories for you to review before searching. Compare nearby companies using details such as distance, supporting evidence and stated coverage. Switch to the map to understand where registered offices are located within the search area. Enhanced profiles bring useful company information together including services, recent work, supporting evidence, customer review summaries and practical project details. Contact options make it easier to continue your research directly with the company. The planning and support area also provides guidance for different stages of a home adaptation including an initial disabled facilities grant checker. Answer six simple questions to explore whether a disabled facilities grant route may be relevant. The checker does not ask for income, savings or medical details. The result explains whether the route may be worth exploring and highlights the next steps including a needs assessment, any applicable financial assessment and securing approval before work begins."
     ]
+  },
+  "meet-matt": {
+    "captionsSrc": "/videos/captions/meet-matt.en.vtt",
+    "transcriptSrc": "/videos/captions/meet-matt.en.txt",
+    "transcript": [
+      "Hi, I'm Matt, a Lead Product Designer based in West Yorkshire.",
+      "My experience spans B2B software and global e-commerce, designing for both complex business workflows and everyday shopping needs.",
+      "I take a user-centred approach, combining both accessible design with hands-on development to turn complex problems into clear, working products.",
+      "I also enjoy mentoring other designers, helping them find the confidence that they need to take the lead on their own projects.",
+      "Have a look around, and if you think we'd work well together, I'd love to hear from you. Thank you!"
+    ]
   }
 };

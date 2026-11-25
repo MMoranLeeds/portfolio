@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref, nextTick } from "vue";
 import { profile } from "@/config/profile";
+import ProfilePortrait from "./ProfilePortrait.vue";
 import SectionNavigation from "./SectionNavigation.vue";
-import MeetMatt from "./MeetMatt.vue";
 import ThemeControl from "./ThemeControl.vue";
 import ContactIcons from "./ContactIcons.vue";
 defineProps<{ activeId: string }>();
@@ -37,7 +37,7 @@ onUnmounted(() => {
   <header class="app-header">
     <div class="identity-row">
       <div class="identity">
-        <MeetMatt />
+        <ProfilePortrait />
         <span class="identity-copy">
           <span class="identity-name">{{ profile.name }}</span>
           <span class="identity-role">{{ profile.role }}</span>

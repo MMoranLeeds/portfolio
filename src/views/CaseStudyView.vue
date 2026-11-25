@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import IntroVideoLink from "@/components/app/IntroVideoLink.vue";
 import { computed, onMounted, ref, watch } from "vue";
 import type { ProjectImage } from "@/types/project";
 import ImageLightbox from "@/components/portfolio/ImageLightbox.vue";
@@ -133,6 +134,7 @@ const sourceLabel = (id: string) =>
       <ActionLink v-if="project.url" :href="project.url" external>{{
         project.externalLinkLabel || `Visit ${project.title}`
       }}</ActionLink>
+      <div class="case-intro-video-link"><IntroVideoLink /></div>
     </header>
     <div
       class="case-cover-pair"
