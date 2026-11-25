@@ -34,14 +34,16 @@ test("Huugo content, evidence and future scope are accessible", async ({
   page,
 }) => {
   await page.goto("/work/huugo-from-fruugo");
-  await expect(page.locator(".case-evidence li")).toHaveCount(3);
+  await expect(page.locator(".case-evidence li")).toHaveCount(2);
   await expect(
     page.getByRole("heading", {
       name: "Staged deployment and early findings",
       exact: true,
     }),
   ).toBeVisible();
-  await page.locator(".evidence-source").first().click();
+  await page
+    .locator('.section-sources a[href="#source-nl-integration"]')
+    .click();
   await expect(page.locator("#source-nl-integration")).toBeInViewport();
   const scan = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])

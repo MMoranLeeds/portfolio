@@ -45,6 +45,14 @@ test("preferences preserve modal focus, accessibility and scroll at 320px", asyn
     await viewer
       .getByRole("combobox", { name: "Colour theme" })
       .selectOption(theme);
+    // Let the opening animation finish so the contrast check reads final colours.
+    await viewer.evaluate((element) =>
+      Promise.all(
+        element.getAnimations({ subtree: true }).map((animation) =>
+          animation.finished.catch(() => undefined),
+        ),
+      ),
+    );
     await viewer.getByRole("button", { name: "Done", exact: true }).focus();
     await page.keyboard.press("Tab");
     await expect(

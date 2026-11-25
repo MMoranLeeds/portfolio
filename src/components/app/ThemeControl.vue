@@ -37,6 +37,26 @@ let previousGutter = "";
 let scrollLocked = false;
 let disposed = false;
 let backgroundPointer = false;
+const focusableSelector =
+  'button:not([disabled]), select:not([disabled]), input:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])';
+/** Wrap Tab and Shift+Tab inside the preferences dialog so focus never leaves it. */
+const wrapFocus = (event: KeyboardEvent) => {
+  if (!panel.value) return;
+  const focusable = [
+    ...panel.value.querySelectorAll<HTMLElement>(focusableSelector),
+  ].filter((element) => element.getClientRects().length > 0);
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  const active = document.activeElement;
+  if (event.shiftKey && active === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && active === last) {
+    event.preventDefault();
+    first.focus();
+  }
+};
 const restoreScroll = () => {
   if (!scrollLocked) return;
   document.documentElement.style.overflow = previousOverflow;
@@ -147,6 +167,7 @@ onBeforeUnmount(() => {
       @close="closed"
       @cancel.prevent="closePanel"
       @keydown.esc.stop
+      @keydown.tab="wrapFocus"
       @pointerdown="backgroundPointer = outside($event)"
       @pointerup="backgroundPointer = backgroundPointer && outside($event)"
       @pointercancel="backgroundPointer = false"

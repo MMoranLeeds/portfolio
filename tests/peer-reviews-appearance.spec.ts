@@ -41,7 +41,7 @@ test("preferences dismiss outside and fit a narrow viewport", async ({
   expect(box!.x).toBeGreaterThanOrEqual(0);
   expect(box!.x + box!.width).toBeLessThanOrEqual(320);
   await viewer
-    .getByText("Customise display settings and motion preferences.")
+    .getByText("Customise display, motion and privacy preferences.")
     .click();
   await expect(viewer).toBeVisible();
   await page.mouse.click(4, 4);

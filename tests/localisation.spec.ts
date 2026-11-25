@@ -20,21 +20,22 @@ test("localisation card opens its shared case-study view", async ({ page }) => {
       exact: true,
     }),
   ).toBeVisible();
-  await expect(page.locator(".case-evidence li")).toHaveCount(3);
+  await expect(page.locator(".case-evidence li")).toHaveCount(5);
   await expect(page.locator('a[href*="atlassian.net"]')).toHaveCount(0);
 });
 
-test("internal evidence is readable without a fake external link", async ({
+test("published platform source is listed with its external link", async ({
   page,
 }) => {
   await page.goto("/work/fruugo-localisation");
-  await page.locator("#source-localisation-briefing").scrollIntoViewIfNeeded();
-  await expect(page.locator("#source-localisation-briefing")).toBeInViewport();
-  await expect(page.locator("#source-localisation-briefing a")).toHaveCount(0);
-  await expect(page.locator("#source-noto-reference a")).toHaveAttribute(
+  const source = page.locator("#source-fruugo-public-platform");
+  await source.scrollIntoViewIfNeeded();
+  await expect(source).toBeInViewport();
+  await expect(source.locator("a")).toHaveAttribute(
     "href",
-    "https://notofonts.github.io/noto-docs/website/use/",
+    "https://corporate.fruugo.com/",
   );
+  await expect(page.locator('a[href*="atlassian.net"]')).toHaveCount(0);
   const scan = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
     .analyze();

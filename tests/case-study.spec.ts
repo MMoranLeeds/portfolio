@@ -84,7 +84,7 @@ test("all cards expose outcomes and their articles explain rationale and evaluat
 }) => {
   await page.goto("/");
   const cards = page.locator(".project-card");
-  await expect(cards).toHaveCount(6);
+  await expect(cards).toHaveCount(8);
   const destinations = await cards
     .locator("a.project-card-link")
     .evaluateAll((links) => links.map((link) => link.getAttribute("href")!));
@@ -118,7 +118,7 @@ test("all cards expose outcomes and their articles explain rationale and evaluat
   }
   await page.goto("/work/fruugo-merchant-onboarding");
   await expect(page.locator(".case-overview")).toContainText(
-    "one observed completion, not an average",
+    "10m 04s over 12 months",
   );
   await expect(page.locator("#main-content")).toContainText(
     "do not establish average end-to-end application completion time",

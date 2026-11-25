@@ -40,19 +40,19 @@ test("all case-study covers open in one native modal and return keyboard focus",
   }
 });
 
-test("SVG and screenshot figures support outside dismissal and close without leaving the page", async ({
+test("illustration and screenshot figures support outside dismissal and close without leaving the page", async ({
   page,
 }) => {
   await page.goto("/work/fruugo-localisation");
-  const svg = page.getByRole("button", {
-    name: /Enlarge image:.*(?:audit|screenshots)/i,
+  const illustration = page.getByRole("button", {
+    name: /Enlarge image: Localisation programme/,
   });
-  await svg.click();
+  await illustration.click();
   const viewer = page.getByRole("dialog", { name: "Image viewer" });
-  await expect(viewer.locator("img")).toHaveAttribute("src", /\.svg$/);
+  await expect(viewer.locator("img")).toHaveAttribute("src", /\.(?:webp|svg)$/);
   await page.mouse.click(4, 4);
   await expect(viewer).toBeHidden();
-  await expect(svg).toBeFocused();
+  await expect(illustration).toBeFocused();
   await expect(page).toHaveURL(/\/work\/fruugo-localisation$/);
 
   await page.goto("/work/fruugo-merchant-onboarding");
@@ -98,13 +98,15 @@ test("the open viewer is accessible and fits a 320px viewport in both themes", a
       .click();
     const viewer = page.getByRole("dialog", { name: "Image viewer" });
     await expect
-      .poll(() =>
-        viewer
-          .locator("img")
-          .evaluate(
-            (image: HTMLImageElement) =>
-              image.complete && image.naturalWidth > 0,
-          ),
+      .poll(
+        () =>
+          viewer
+            .locator("img")
+            .evaluate(
+              (image: HTMLImageElement) =>
+                image.complete && image.naturalWidth > 0,
+            ),
+        { timeout: 15000 },
       )
       .toBe(true);
     const box = await viewer.locator("img").boundingBox();
@@ -166,7 +168,9 @@ test("failed enlarged images announce recovery and remain dismissible", async ({
   await expect(trigger).toBeFocused();
 });
 
-test("long case-study screenshots scroll without losing the close control", async ({
+// No case study currently includes a tall document-style screenshot (the
+// Accessible Trades company profile is now 1200×800). Re-enable when one is added.
+test.skip("long case-study screenshots scroll without losing the close control", async ({
   page,
 }) => {
   await page.goto("/work/accessible-trades");

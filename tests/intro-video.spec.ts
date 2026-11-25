@@ -6,7 +6,7 @@ test("introduction is lazy, minimises and remains available", async ({
   await page.setViewportSize({ width: 1920, height: 1080 });
   await page.goto("/");
   const launcher = page.getByRole("button", {
-    name: "Play Meet Matt",
+    name: "Play A little about me",
     exact: true,
   });
   const panel = page.locator("#intro-video-player");
@@ -130,6 +130,7 @@ test("preview respects motion settings and can be paused without dismissal", asy
   ).toHaveCount(0);
   await expect(page.locator(".intro-launcher")).toBeVisible();
   await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.reload();
   await expect(page.locator(".intro-preview-video")).toHaveAttribute(
     "loop",
     "",
@@ -148,7 +149,7 @@ test("preview respects motion settings and can be paused without dismissal", asy
     true,
   );
   await page
-    .getByRole("button", { name: "Play Meet Matt", exact: true })
+    .getByRole("button", { name: "Play A little about me", exact: true })
     .click();
   await expect(page.locator(".intro-preview-video")).toHaveJSProperty(
     "paused",
@@ -167,7 +168,7 @@ test("preview resumes after minimising the compact introduction", async ({
   await page.emulateMedia({ reducedMotion: "no-preference" });
   await page.goto("/");
   await page
-    .getByRole("button", { name: "Play Meet Matt", exact: true })
+    .getByRole("button", { name: "Play A little about me", exact: true })
     .click();
   await page
     .getByRole("button", { name: "Minimise video introduction", exact: true })
@@ -180,7 +181,7 @@ test("preview resumes after minimising the compact introduction", async ({
     "paused",
     false,
   );
-  await expect(page.locator(".intro-orb")).toHaveCSS("width", "110px");
+  await expect(page.locator(".intro-orb")).toHaveCSS("width", "108px");
 });
 
 test("compact player offers contact without duplicate copy or status", async ({
@@ -189,7 +190,7 @@ test("compact player offers contact without duplicate copy or status", async ({
   await page.setViewportSize({ width: 1920, height: 1080 });
   await page.goto("/work/design-system-integration");
   await page
-    .getByRole("button", { name: "Play Meet Matt", exact: true })
+    .getByRole("button", { name: "Play A little about me", exact: true })
     .click();
   const panel = page.locator("#intro-video-player");
   await expect(
@@ -228,7 +229,7 @@ test("video sits above case-study progress and alone on the homepage", async ({
     })
     .toBe(true);
   await page
-    .getByRole("button", { name: "Play Meet Matt", exact: true })
+    .getByRole("button", { name: "Play A little about me", exact: true })
     .click();
   await expect(page.getByText("Read transcript", { exact: true })).toHaveCount(
     0,
@@ -242,10 +243,10 @@ for (const route of ["/", "/work/design-system-integration"]) {
     await page.setViewportSize({ width: 1920, height: 1080 });
     await page.goto(route);
     await page
-      .getByRole("button", { name: "Play Meet Matt", exact: true })
+      .getByRole("button", { name: "Play A little about me", exact: true })
       .click();
     await page
-      .locator(".intro-player-footer")
+      .locator(".intro-player-header")
       .getByRole("link", { name: "Get in touch" })
       .click();
     await expect(page).toHaveURL(/\/#contact$/);
@@ -265,12 +266,12 @@ test("player surface preserves crop and alignment without moving the layout anch
     "50% 0%",
   );
   await page
-    .getByRole("button", { name: "Play Meet Matt", exact: true })
+    .getByRole("button", { name: "Play A little about me", exact: true })
     .click();
   await expect(page.locator(".intro-player-surface")).toBeVisible();
   await expect(page.locator(".intro-player-header")).toHaveCSS(
     "align-items",
-    "center",
+    "flex-start",
   );
   await expect(page.locator("#intro-video-heading")).toHaveCSS(
     "margin-top",
@@ -281,6 +282,6 @@ test("player surface preserves crop and alignment without moving the layout anch
     .click();
   await expect(page.locator("#intro-video-player")).not.toBeVisible();
   await expect(
-    page.getByRole("button", { name: "Play Meet Matt", exact: true }),
+    page.getByRole("button", { name: "Play A little about me", exact: true }),
   ).toBeFocused();
 });
