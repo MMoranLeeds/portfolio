@@ -328,7 +328,7 @@
   }
   /* Keep both content sections inside A4 without clipping or scaling text. */
   .cv-page {
-    padding: 9mm 12mm 7mm;
+    padding: 6mm 6mm;
   }
   .cv-columns {
     column-gap: 6mm;
